@@ -1,13 +1,14 @@
 let data = [];
 let currentPage = 1;
-let rowsPerPage = 300;
+let rowsPerPage = 50;
 let sortColumn = null;
 let sortAsc = true;
 
- 
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Load data
+  // Load JSON data
   fetch('json/uploadedList.json')
     .then(res => {
       if (!res.ok) throw new Error('Network response was not ok');
@@ -30,7 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-  // Add input filters debounce
+  // Handle rows per page selection
+  const rowsSelect = document.getElementById('rowsPerPage');
+  if (rowsSelect) {
+    rowsSelect.addEventListener('change', () => {
+      const val = parseInt(rowsSelect.value, 10);
+      if (!isNaN(val) && val > 0) {
+        rowsPerPage = val;
+        currentPage = 1;
+        renderTable();
+
+        console.log(rowsPerPage);
+      }
+    });
+  }
+
+  // Debounced input filters
   ['symbolSearch', 'ClientId', 'uploadedBy', 'bidQSearch'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
@@ -45,27 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Add date filters change
+  // Date filters
   ['startDate', 'endDate'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener('change', () => {
-      currentPage = 1;
-      renderTable();
-    });
-  });
-
-  // rowsPerPage select listener — **correctly inside DOMContentLoaded**
-  const rowsSelect = document.getElementById('rowsPerPage');
-  if (rowsSelect) {
-    rowsSelect.addEventListener('change', () => {
-      const val = parseInt(rowsSelect.value, 10);
-      if (!isNaN(val) && val > 0) {
-        rowsPerPage = val;
+    if (el) {
+      el.addEventListener('change', () => {
         currentPage = 1;
         renderTable();
-      }
-    });
-  }
+      });
+    }
+  });
 });
 
 function getFilters() {
@@ -153,11 +158,11 @@ function renderTable() {
       </tr>`;
   } else {
     tableBody.innerHTML = paginatedData.map(row => {
-      const responseClass = 
+      const responseClass =
         row.response?.toLowerCase() === 'verified' ? 'text-green-600' :
-        row.response?.toLowerCase() === 'success' ? 'text-green-600' :
-        row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
-        row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
+          row.response?.toLowerCase() === 'success' ? 'text-green-600' :
+            row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
+              row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
 
       return `
         <tr class="hover:bg-gray-50">
@@ -180,7 +185,10 @@ function renderTable() {
     }).join('');
   }
 
-  document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
+  const pageInfo = document.getElementById('pageInfo');
+  if (pageInfo) {
+    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+  }
 }
 
 function prevPage() {
@@ -202,7 +210,7 @@ function nextPage() {
 }
 
 function sortTable(colIndex) {
-  if (colIndex === 8) return; // Ignore "View" button column
+  if (colIndex === 8) return; // Ignore "View" column
 
   if (sortColumn === colIndex) {
     sortAsc = !sortAsc;

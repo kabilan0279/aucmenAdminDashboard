@@ -50,12 +50,13 @@
       <div class="flex items-center space-x-2">
         <select id="rowsPerPage"
           class="rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          <option value="5" selected>5 rows</option>
+          <option value="5">5 rows</option>
           <option value="7">7 rows</option>
-          <option value="50">50 rows</option>
-          <option value="100">250 rows</option>
-
+          <option value="50" selected>50 rows</option>
+          <option value="250">250 rows</option>
         </select>
+
+          <button id="rowSelect" onclick="rowSelect()">Select</button>
 
       </div>
 
@@ -95,7 +96,7 @@
 
 
 <script>
-   const inputsToUppercase = ['symbolSearch', 'ClientId', 'uploadedBy'];
+  const inputsToUppercase = ['symbolSearch', 'ClientId', 'uploadedBy'];
 
   inputsToUppercase.forEach(id => {
     const input = document.getElementById(id);
@@ -105,4 +106,8 @@
       });
     }
   });
+
+
+ 
+
 </script>
