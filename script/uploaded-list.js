@@ -1,6 +1,6 @@
 let data = [];
 let currentPage = 1;
-let rowsPerPage = 50;  // Global variable
+let rowsPerPage = 7;  // Global variable
 let sortColumn = null;
 let sortAsc = true;
 
