@@ -1,10 +1,17 @@
 let data = [];
 let currentPage = 1;
-let rowsPerPage = 50;
+let rowsPerPage = 50;  // Global variable
 let sortColumn = null;
 let sortAsc = true;
 
+function rowSelect() {
+  const selectedValue = parseInt(document.getElementById('rowsPerPage').value);
+  console.log('Selected value:', selectedValue);
 
+  rowsPerPage = selectedValue; // Update the global variable
+  currentPage = 1; // Optionally reset to first page after change
+  renderTable();   // Call your function to refresh the table (assuming you have one)
+}
 
 
 document.addEventListener('DOMContentLoaded', () => {

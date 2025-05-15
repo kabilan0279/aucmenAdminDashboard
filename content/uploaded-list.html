@@ -8,10 +8,10 @@
 
   <div class="w-full py-2 bg-white rounded-md  flex flex-wrap gap-4 items-end">
 
-    <input type="text" id="symbolSearch" placeholder="Symbol"
+    <input type="text" id="ClientId" placeholder="Client ID"
       class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
 
-    <input type="text" id="ClientId" placeholder="Client ID"
+    <input type="text" id="symbolSearch" placeholder="Symbol"
       class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
 
     <input type="text" id="uploadedBy" placeholder="Uploaded By"
@@ -34,7 +34,7 @@
 
     <!-- id="filterSearch" -->
     <button onclick="sortTable(0)"
-      class=" px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">
+      class=" px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">
       Search
     </button>
   </div>
@@ -56,7 +56,7 @@
           <option value="250">250 rows</option>
         </select>
 
-          <button id="rowSelect" onclick="rowSelect()">Select</button>
+          <button id="rowSelect" onclick="rowSelect()" class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Select</button>
 
       </div>
 
@@ -64,9 +64,9 @@
 
     <!-- Pagination -->
     <div class="flex items-center gap-2">
-      <button onclick="prevPage()" class="px-4 py-2 bg-blue-500 text-white rounded">Prev</button>
-      <span id="pageInfo" class="text-gray-700"></span>
-      <button onclick="nextPage()" class="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
+      <button onclick="prevPage()" class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Prev</button>
+      <span id="pageInfo" class="text-gray-900 text-sm font-medium "></span>
+      <button onclick="nextPage()" class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Next</button>
     </div>
 
   </div>
