@@ -1,0 +1,108 @@
+<!-- Sticky Toolbar/Header -->
+<div class="sticky top-0 z-30 bg-white border-b border-gray-200  p-1">
+  <!-- Title -->
+  <div class="max-w-md h-auto">
+    <h3 class="text-md text-gray-800 font-semibold mb-2">Transaction Uploaded List</h3>
+    <hr class=" bg-blue-500 w-[15px] h-[6px] border-none" />
+  </div>
+
+  <div class="w-full py-2 bg-white rounded-md  flex flex-wrap gap-4 items-end">
+
+    <input type="text" id="symbolSearch" placeholder="Symbol"
+      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+    <input type="text" id="ClientId" placeholder="Client ID"
+      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+    <input type="text" id="uploadedBy" placeholder="Uploaded By"
+      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+    <input type="number" id="bidQSearch" placeholder="Bid Quantity"
+      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+    <div class="flex flex-col min-w-[100px]">
+      <label for="startDate" class="mb-1 text-sm text-gray-600">Start Date</label>
+      <input type="date" id="startDate"
+        class="rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    </div>
+
+    <div class="flex flex-col min-w-[100px]">
+      <label for="endDate" class="mb-1 text-sm text-gray-600">End Date</label>
+      <input type="date" id="endDate"
+        class="rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    </div>
+
+    <!-- id="filterSearch" -->
+    <button onclick="sortTable(0)"
+      class=" px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">
+      Search
+    </button>
+  </div>
+
+
+  <!-- Controls -->
+  <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+
+    <!-- Search & Rows Per Page -->
+    <div class="flex items-center gap-4 w-full sm:w-auto">
+
+
+      <div class="flex items-center space-x-2">
+        <select id="rowsPerPage"
+          class="rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <option value="5" selected>5 rows</option>
+          <option value="7">7 rows</option>
+          <option value="50">50 rows</option>
+          <option value="100">250 rows</option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex items-center gap-2">
+      <button onclick="prevPage()" class="px-4 py-2 bg-blue-500 text-white rounded">Prev</button>
+      <span id="pageInfo" class="text-gray-700"></span>
+      <button onclick="nextPage()" class="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="overflow-auto max-h-[70vh] bg-white rounded-2xl">
+  <table class="min-w-full text-sm text-left">
+
+    <thead class="sticky top-[-1px] z-20 bg-white border-b border-gray-200 ">
+      <tr class="cursor-pointer">
+        <th class="p-3 border-b" onclick="sortTable(0)">Client ID <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(1)">Symbol <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(2)">BID Quantity <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(3)">UPI ID <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(4)">Uploaded By <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(5)">Response <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(6)">Date <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(7)">Time <i class="fa-solid fa-sort text-gray-400"></i></th>
+        <th class="p-3 border-b" onclick="sortTable(8)">View <i class="fa-solid fa-sort text-gray-400"></i></th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+  </table>
+</div>
+
+
+<script>
+   const inputsToUppercase = ['symbolSearch', 'ClientId', 'uploadedBy'];
+
+  inputsToUppercase.forEach(id => {
+    const input = document.getElementById(id);
+    if (input) {
+      input.addEventListener('input', () => {
+        input.value = input.value.toUpperCase();
+      });
+    }
+  });
+</script>

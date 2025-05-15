@@ -1,0 +1,88 @@
+<div class="max-w-6xl bg-white rounded-2xl ">
+    <div class="flex flex-col md:flex-row gap-6 ">
+        <!-- Box 1 -->
+        <div class="w-full md:w-1/2 py-1 bg-white ">
+            <h3 class="text-md text-gray-800 font-semibold mb-2">Upload Allotted IPO LIST</h3>
+            <hr class="mb-5 bg-blue-500 w-4 h-[6px] rounded" />
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <input type="file" class="border border-gray-300 rounded-lg p-2 w-full md:w-64" />
+                <button class="px-8 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+                    Upload
+                </button>
+            </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="w-full md:w-1/2 py-1 bg-white ">
+            <h3 class="text-md text-gray-800 font-semibold mb-2">Export Allotted IPO</h3>
+            <hr class="mb-5 bg-blue-500 w-4 h-[6px] rounded" />
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="max-w-sm">
+                    <select id="client-select"
+                        class="block px-6 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="" disabled selected>Select a Symbol</option>
+                        <option value="client1">Client 1</option>
+                        <option value="client2">Client 2</option>
+                        <option value="client3">Client 3</option>
+                        <option value="client4">Client 4</option>
+                    </select>
+                </div> <button
+                    class="px-8 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+                    Upload
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Include jQuery and DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.tailwindcss.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <div class="max-w-md mt-3 h-auto ">
+        <h3 class="text-md text-gray-800 font-semibold mb-2"> Allotted IPO List</h3>
+        <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" />
+    </div>
+
+    <div class="max-w-full  bg-white rounded-2xl overflow-x-auto">  
+        <table id="clientTable" class="table-auto w-full text-sm text-left">
+            <thead class="text-gray-700">
+                <tr class="border-b border-gray-300">
+                    <th class="px-4 py-2">SYMBOL</th>
+                    <th class="px-4 py-2">APPLICATION NO</th>
+                    <th class="px-4 py-2">PAN</th>
+                    <th class="px-4 py-2">CLIENT iD</th>
+                    <th class="px-4 py-2">APPLIED QUANTITY</th>
+                    <th class="px-4 py-2">ALLOTTED QUANTITY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-black-700">
+                    <td class="px-4 py-2">123456</td>
+                    <td class="px-4 py-2">987654</td>
+                    <td class="px-4 py-2 text-green-600">Verified</td>
+                    <td class="px-4 py-2 text-blue-600">Logged In</td>
+                    <td class="px-4 py-2">2025-05-13</td>
+                    <td class="px-4 py-2">10:30 AM</td>
+                </tr>
+                <tr class="border-b border-black-700">
+                    <td class="px-4 py-2">654321</td>
+                    <td class="px-4 py-2">123456</td>
+                    <td class="px-4 py-2 text-red-600">Failed</td>
+                    <td class="px-4 py-2 text-gray-500">Not Logged In</td>
+                    <td class="px-4 py-2">2025-05-12</td>
+                    <td class="px-4 py-2">09:15 AM</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <!-- Initialize DataTable -->
+    <script>
+        $(document).ready(function () {
+            $('#clientTable').DataTable();
+        });
+    </script>

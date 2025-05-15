@@ -1,0 +1,89 @@
+
+
+<!-- Include jQuery and DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.tailwindcss.min.css">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<div class="max-w-md h-auto ">
+  <h3 class="text-md text-gray-800 font-semibold mb-2"> Client Login Details</h3>
+  <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" />
+</div>
+
+<div class="w-full  bg-white rounded-2xl overflow-x-auto">
+  <table id="filter-table" class="table-auto w-full text-sm text-left">
+        <thead class="text-gray-700">
+            <tr class="border-b border-gray-300">
+                <th class="px-4 py-2">Symbol</th>
+                <th class="px-4 py-2">Issuse Type</th>
+                <th class="px-4 py-2">Issuse Price</th>
+                <th class="px-4 py-2">Open Date</th>
+                <th class="px-4 py-2">Close Date</th>
+                <th class="px-4 py-2">Min QTY</th>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Link</th>
+                <th class="px-4 py-2">View</th>
+                <th class="px-4 py-2">Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-gray-200">
+                <td class="px-4 py-2">123456</td>
+                <td class="px-4 py-2">987654</td>
+                <td class="px-4 py-2">10</td>
+                <td class="px-4 py-2 text-blue-600">abc@upi</td>
+                <td class="px-4 py-2">John</td>
+                <td class="px-4 py-2 text-green-600">Verified</td>
+                <td class="px-4 py-2">2025-05-13</td>
+                <td class="px-4 py-2">10:30 AM</td>
+
+                <td class="px-4 py-2">
+                    <button
+                        class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150 flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> 
+                    </button>
+                </td>
+                <td class="px-4 py-2">
+                    <button
+                        class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150 flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> 
+                    </button>
+                </td>
+
+            </tr>
+            <tr class="border-b border-gray-200">
+                <td class="px-4 py-2">654321</td>
+                <td class="px-4 py-2">123456</td>
+                <td class="px-4 py-2">15</td>
+                <td class="px-4 py-2 text-gray-500">xyz@upi</td>
+                <td class="px-4 py-2">Jane</td>
+                <td class="px-4 py-2 text-red-600">Failed</td>
+                <td class="px-4 py-2">2025-05-12</td>
+                <td class="px-4 py-2">09:15 AM</td>
+                <td class="px-4 py-2">
+                    <button
+                        class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150 flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> 
+                    </button>
+                </td>
+                <td class="px-4 py-2">
+                    <button
+                        class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150 flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> 
+                    </button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+  
+</div>
+
+
+<!-- Initialize DataTable -->
+<script>
+    $(document).ready(function () {
+        $('#clientTable').DataTable();
+    });
+</script>

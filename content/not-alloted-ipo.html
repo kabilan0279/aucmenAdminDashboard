@@ -1,0 +1,91 @@
+<div class="max-w-md   bg-white rounded-2xl ">
+    <h3 class="text-md text-gray-800 font-semibold mb-2"> Client Login Details</h3>
+    <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" />
+
+    <label for="search-client" class="text-md text-gray-800 font-semibold mb-2 mb-2">
+        Select Transaction List
+    </label>
+    <div class="flex flex-col sm:flex-col md:flex-row items-center gap-4">
+        <div class="max-w-sm p-4">
+            <select id="client-select"
+                class="block px-6 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="" disabled selected>Select a Symbol</option>
+                <option value="client1">AADHAAR HDFC</option>
+                <option value="client2">Client 2</option>
+                <option value="client3">Client 3</option>
+                <option value="client4">Client 4</option>
+            </select>
+        </div>
+
+        <button class="px-[60px] py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+            EXPORT
+        </button>
+    </div>
+
+</div>
+
+<!-- Include jQuery and DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.tailwindcss.min.css">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+
+<div class="max-w-md h-auto ">
+    <h3 class="text-md text-gray-800 font-semibold mb-2">Transaction List</h3>
+    <hr class="mb-4 bg-blue-500 w-4 h-[6px]" />
+</div>
+
+
+<div class="max-w-full  bg-white rounded-2xl overflow-x-auto">
+    <table id="clientTable" class="table-auto w-full text-sm text-left">
+        <thead class="text-gray-700">
+            <tr class="border-b border-gray-300">
+                <th class="px-4 py-2">Symbol</th>
+                <th class="px-4 py-2">Applicattion No</th>
+                <th class="px-4 py-2">Pan</th>
+                <th class="px-4 py-2">Client ID</th>
+                <th class="px-4 py-2">Applied Quantity </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-gray-200">
+                <td class="px-4 py-2">123456</td>
+                <td class="px-4 py-2">987654</td>
+                <td class="px-4 py-2">10</td>
+                <td class="px-4 py-2 text-blue-600">abc@upi</td>
+                <td class="px-4 py-2">John</td>
+
+                <td class="px-4 py-2">
+                    <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
+                        View
+                    </button>
+                </td>
+                <td class="px-4 py-2">
+                    <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
+                        Action
+                    </button>
+                </td>
+            </tr>
+            <tr class="border-b border-gray-200">
+                <td class="px-4 py-2">654321</td>
+                <td class="px-4 py-2">123456</td>
+                <td class="px-4 py-2">15</td>
+                <td class="px-4 py-2 text-gray-500">xyz@upi</td>
+                <td class="px-4 py-2">Jane</td>
+
+
+            </tr>
+        </tbody>
+    </table>
+   
+</div>
+
+
+<!-- Initialize DataTable -->
+<script>
+    $(document).ready(function () {
+        $('#clientTable').DataTable();
+    });
+</script>

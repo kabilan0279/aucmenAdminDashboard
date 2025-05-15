@@ -1,0 +1,66 @@
+
+<div class="max-w-md h-auto ">
+  <h3 class="text-md text-gray-800 font-semibold mb-2"> Offline Orders</h3>
+  <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" />
+</div>
+
+
+<div class="max-w-full  bg-white rounded-2xl overflow-x-auto">
+
+
+  <table id="clientTable" class="table-auto w-full text-sm text-left">
+    <thead class="text-gray-700">
+      <tr class="border-b border-gray-300">
+        <th class="px-4 py-2">Client ID</th>
+        <th class="px-4 py-2">Symbol</th>
+        <th class="px-4 py-2">BID Quantity</th>
+        <th class="px-4 py-2">UPI ID</th>
+      
+        <th class="px-4 py-2">Date</th>
+        <th class="px-4 py-2">Time</th>
+        <th class="px-4 py-2">View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-gray-200">
+        <td class="px-4 py-2">123456</td>
+        <td class="px-4 py-2">987654</td>
+        <td class="px-4 py-2">10</td>
+        <td class="px-4 py-2 text-blue-600">abc@upi</td>
+ 
+        <td class="px-4 py-2">2025-05-13</td>
+        <td class="px-4 py-2">10:30 AM</td>
+        <td class="px-4 py-2">
+          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
+            View
+          </button>
+        </td>
+       
+      </tr>
+      <tr class="border-b border-gray-200">
+        <td class="px-4 py-2">654321</td>
+        <td class="px-4 py-2">123456</td>
+        <td class="px-4 py-2">15</td>
+        <td class="px-4 py-2 text-gray-500">xyz@upi</td>
+   
+        <td class="px-4 py-2">2025-05-12</td>
+        <td class="px-4 py-2">09:15 AM</td>
+        <td class="px-4 py-2">
+          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
+            View
+          </button>
+        </td>
+       
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+
+<!-- Initialize DataTable -->
+<script>
+  $(document).ready(function () {
+    $('#clientTable').DataTable();
+  });
+</script>
