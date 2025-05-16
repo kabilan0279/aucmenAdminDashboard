@@ -8,38 +8,78 @@
 
   <div class="w-full py-1 bg-white rounded-md shadow-xs flex flex-wrap gap-4 items-end">
 
-    <input type="text" id="ClientId" placeholder="Client ID"
-      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    <!-- Client ID -->
+    <div class="relative flex-1 min-w-[100px]">
+      <input type="text" id="ClientId" placeholder="Client ID"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('ClientId').value=''"
+        class="absolute right-2 top-1.5 text-2xl cursor-pointer text-gray-400 hover:text-red-500 text-lg">
+        &times;
+      </span>
+    </div>
 
-    <input type="text" id="symbolSearch" placeholder="Symbol"
-      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    <!-- Symbol -->
+    <div class="relative flex-1 min-w-[100px]">
+      <input type="text" id="symbolSearch" placeholder="Symbol"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('symbolSearch').value=''"
+        class="absolute right-2 top-1.5 text-2xl cursor-pointer text-gray-400 hover:text-red-500 text-lg">
+        &times;
+      </span>
+    </div>
 
-    <input type="text" id="uploadedBy" placeholder="Uploaded By"
-      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    <!-- Uploaded By -->
+    <div class="relative flex-1 min-w-[100px]">
+      <input type="text" id="uploadedBy" placeholder="Uploaded By"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('uploadedBy').value=''"
+        class="absolute right-2 top-1.5 text-2xl cursor-pointer text-gray-400 hover:text-red-500 text-2xl">
+        &times;
+      </span>
+    </div>
 
-    <input type="number" id="bidQSearch" placeholder="Bid Quantity"
-      class="flex-1 min-w-[100px] rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    <!-- Bid Quantity -->
+    <div class="relative flex-1 min-w-[100px]">
+      <input type="number" id="bidQSearch" placeholder="Bid Quantity"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('bidQSearch').value=''"
+        class="absolute right-2 top-1.5 text-2xl cursor-pointer text-gray-400 hover:text-red-500 text-2xl">
+        &times;
+      </span>
+    </div>
 
-    <div class="flex flex-col min-w-[100px]">
+    <!-- Start Date -->
+    <div class="relative flex flex-col min-w-[100px]">
       <label for="startDate" class="mb-1 text-sm text-gray-600">Start Date</label>
       <input type="date" id="startDate"
-        class="rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('startDate').value=''"
+        class="absolute right-2 top-7.5 text-2xl cursor-pointer text-gray-400 hover:text-red-500 text-2xl">
+        &times;
+      </span>
     </div>
 
-    <div class="flex flex-col min-w-[100px]">
+    <!-- End Date -->
+    <div class="relative flex flex-col min-w-[100px]">
       <label for="endDate" class="mb-1 text-sm text-gray-600">End Date</label>
       <input type="date" id="endDate"
-        class="rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('endDate').value=''"
+        class="absolute right-2 top-7.5 text-2xl cursor-pointer text-gray-400 hover:text-red-500 text-2xl">
+        &times;
+      </span>
     </div>
 
-    <!-- id="filterSearch" -->
-    <button onclick="sortTable(0)"
-      class=" px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">
+
+    <!--  -->
+    <button onclick="filterSearchFunction()"
+      class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">
       Search
     </button>
+
   </div>
 
-<div class="w-full  mb-4"></div>
+  <div class="w-full  mb-4"></div>
 
   <!-- Controls -->
   <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -53,11 +93,12 @@
           class="rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
           <option value="5">5 rows</option>
           <option value="7" selected>7 rows</option>
-          <option value="50" >50 rows</option>
+          <option value="50">50 rows</option>
           <option value="250">250 rows</option>
         </select>
 
-          <button id="rowSelect" onclick="rowSelect()" class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Select</button>
+        <button id="rowSelect" onclick="rowSelect()"
+          class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Select</button>
 
       </div>
 
@@ -65,9 +106,11 @@
 
     <!-- Pagination -->
     <div class="flex items-center gap-2">
-      <button onclick="prevPage()" class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Prev</button>
+      <button onclick="prevPage()"
+        class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Prev</button>
       <span id="pageInfo" class="text-gray-900 text-sm font-medium "></span>
-      <button onclick="nextPage()" class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Next</button>
+      <button onclick="nextPage()"
+        class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">Next</button>
     </div>
 
   </div>
@@ -109,6 +152,6 @@
   });
 
 
- 
+
 
 </script>

@@ -227,3 +227,18 @@ function sortTable(colIndex) {
   }
   renderTable();
 }
+
+function filterSearchFunction() {
+  const symbol = (document.getElementById('symbolSearch')?.value || '').toLowerCase().trim();
+  const clientId = (document.getElementById('ClientId')?.value || '').toUpperCase().trim();
+  const uploadedBy = (document.getElementById('uploadedBy')?.value || '').toLowerCase().trim();
+  const bidQty = (document.getElementById('bidQSearch')?.value || '').toString().trim();
+  const startDate = (document.getElementById('startDate')?.value || '').trim();
+  const endDate = (document.getElementById('endDate')?.value || '').trim();
+
+  if (symbol || clientId || uploadedBy || bidQty || startDate || endDate) {
+    renderTable();
+  } else {
+    alert("Please select At least one.");
+  }
+}
