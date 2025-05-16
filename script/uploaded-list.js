@@ -169,7 +169,7 @@ function renderTable() {
 
       return `
             <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
-          <td class="py-2 pr-3 pl-4 text-sm whitespace-nowrap text-gray-500 sm:pl-0">${row.clientId || ''}</td>
+          <td class="py-2 pr-3 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">${row.clientId || ''}</td>
           <td class="px-2 py-2 text-sm font-medium whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
           <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.bidQty || ''}</td>
           <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.upiId || ''}</td>
@@ -292,7 +292,7 @@ function SelectPage() {
 
     return `
       <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
-  <td class="py-2 pr-3 pl-4 text-sm whitespace-nowrap text-gray-500 sm:pl-0">${row.clientId || ''}</td>
+  <td class="py-2 pr-3 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">${row.clientId || ''}</td>
   <td class="px-2 py-2 text-sm font-medium whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
   <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.bidQty || ''}</td>
   <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.upiId || ''}</td>
