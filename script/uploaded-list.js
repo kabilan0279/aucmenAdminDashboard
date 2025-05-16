@@ -167,7 +167,7 @@ function renderTable() {
             row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
               row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
 
-              return `
+      return `
             <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
           <td class="py-2 pr-3 pl-4 text-sm whitespace-nowrap text-gray-500 sm:pl-0">${row.clientId || ''}</td>
           <td class="px-2 py-2 text-sm font-medium whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
@@ -177,10 +177,11 @@ function renderTable() {
           <td class="px-2 py-2 text-sm whitespace-nowrap ${responseClass}">${row.response || ''}</td>
           <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.date || ''}</td>
           <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.time || ''}</td>
-          <td class="relative py-2 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0">
-            <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-900">
-              View<span class="sr-only">, ${row.clientId || 'record'}</span>
-            </a>
+          <td class="px-2 py-2 text-sm whitespace-nowrap text-indigo-900">
+            <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-indigo-600 p-1 rounded-sm">
+            View<span class="sr-only">, ${row.clientId || 'record'}</span>
+          </a>
+
           </td>
         </tr>
         `;
@@ -299,10 +300,10 @@ function SelectPage() {
   <td class="px-2 py-2 text-sm whitespace-nowrap ${responseClass}">${row.response || ''}</td>
   <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.date || ''}</td>
   <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.time || ''}</td>
-  <td class="relative py-2 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0">
-    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-900">
-      View<span class="sr-only">, ${row.clientId || 'record'}</span>
-    </a>
+  <td class="px-2 py-2 text-sm whitespace-nowrap text-indigo-900">
+    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-indigo-600 p-1 rounded-sm">
+            View<span class="sr-only">, ${row.clientId || 'record'}</span>
+          </a>
   </td>
 </tr>
 `;
@@ -316,4 +317,21 @@ function SelectPage() {
 }
 
 
+
+
+
+ function toggleDropdown() {
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    dropdownMenu.classList.toggle("hidden");
+  }
+
+  // Close when clicking outside
+  document.addEventListener("click", function (event) {
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    const dropdownButton = document.getElementById("dropdownButton");
+
+    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.add("hidden");
+    }
+  });
 
