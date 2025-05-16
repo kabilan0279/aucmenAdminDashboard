@@ -62,9 +62,6 @@ function loadPage(url, updateUrl = false) {
         });
 }
 
-
-
-
 // Function to fetch and load page content
 function loadPage(url, updateUrl = false, clickedLink = null) {
     fetch(url)
