@@ -1,21 +1,12 @@
 let data = [];
 let currentPage = 1;
-let rowsPerPage = 7;  // Global variable
+var rowsPerPage = 7;
 let sortColumn = null;
 let sortAsc = true;
 
-function rowSelect() {
-  const selectedValue = parseInt(document.getElementById('rowsPerPage').value);
-  console.log('Selected value:', selectedValue);
-
-  rowsPerPage = selectedValue; // Update the global variable
-  currentPage = 1; // Optionally reset to first page after change
-  renderTable();   // Call your function to refresh the table (assuming you have one)
-}
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Load JSON data
   fetch('json/uploadedList.json')
     .then(res => {
       if (!res.ok) throw new Error('Network response was not ok');
@@ -23,8 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(json => {
       data = json;
-      renderTable();
+      console.log('Data loaded:', data.length); // ✅ Add this
+
+      setTimeout(function () {
+        renderTable();
+      }, 300);
     })
+
     .catch(err => {
       console.error('Failed to load JSON:', err);
       const tableBody = document.getElementById('tableBody');
@@ -38,22 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-  // Handle rows per page selection
   const rowsSelect = document.getElementById('rowsPerPage');
   if (rowsSelect) {
-    rowsSelect.addEventListener('change', () => {
-      const val = parseInt(rowsSelect.value, 10);
-      if (!isNaN(val) && val > 0) {
-        rowsPerPage = val;
-        currentPage = 1;
-        renderTable();
-
-        console.log(rowsPerPage);
-      }
-    });
+    rowsSelect.addEventListener('change', rowSelect);
   }
 
-  // Debounced input filters
   ['symbolSearch', 'ClientId', 'uploadedBy', 'bidQSearch'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
@@ -68,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Date filters
   ['startDate', 'endDate'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
@@ -78,7 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+
+
+  function rowSelect() {
+    const selectedValue = parseInt(document.getElementById('rowsPerPage').value);
+    rowsPerPage = selectedValue;
+    currentPage = 1;
+    renderTable();
+  }
 });
+
+
+
+
 
 function getFilters() {
   return {
@@ -155,42 +152,39 @@ function renderTable() {
 
   const tableBody = document.getElementById('tableBody');
   if (!tableBody) return;
+if (paginatedData.length === 0) {
+  tableBody.innerHTML = `
+    <tr>
+      <td colspan="9" class="text-center p-4 text-sm text-gray-900">
+        No records found matching your criteria
+      </td>
+    </tr>`;
+} else {
+  tableBody.innerHTML = paginatedData.map(row => {
+    const responseClass =
+      row.response?.toLowerCase() === 'verified' ? 'text-green-600' :
+      row.response?.toLowerCase() === 'success' ? 'text-green-600' :
+      row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
+      row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
 
-  if (paginatedData.length === 0) {
-    tableBody.innerHTML = `
-      <tr>
-        <td colspan="9" class="text-center p-4 text-gray-500">
-          No records found matching your criteria
+    return `
+      <tr class="hover:bg-gray-50">
+        <td class="border-b border-gray-200 py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6 lg:pl-8">${row.clientId || ''}</td>
+        <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-900 sm:table-cell">${row.symbol || ''}</td>
+        <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-900 lg:table-cell">${row.bidQty || ''}</td>
+        <td class="border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-900">${row.upiId || ''}</td>
+        <td class="border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-900">${row.uploadedBy || ''}</td>
+        <td class="border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap ${responseClass}">${row.response || ''}</td>
+        <td class="border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-900">${row.date || ''}</td>
+        <td class="border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-900">${row.time || ''}</td>
+        <td class="relative border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-8 lg:pr-8">
+          <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-900">
+            View<span class="sr-only">, ${row.clientId || 'record'}</span>
+          </a>
         </td>
       </tr>`;
-  } else {
-    tableBody.innerHTML = paginatedData.map(row => {
-      const responseClass =
-        row.response?.toLowerCase() === 'verified' ? 'text-green-600' :
-          row.response?.toLowerCase() === 'success' ? 'text-green-600' :
-            row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
-              row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
-
-      return `
-        <tr class="hover:bg-gray-50">
-          <td class="p-3 border-b">${row.clientId || ''}</td>
-          <td class="p-3 border-b">${row.symbol || ''}</td>
-          <td class="p-3 border-b">${row.bidQty || ''}</td>
-          <td class="p-3 border-b">${row.upiId || ''}</td>
-          <td class="p-3 border-b">${row.uploadedBy || ''}</td>
-          <td class="p-3 border-b ${responseClass}">${row.response || ''}</td>
-          <td class="p-3 border-b">${row.date || ''}</td>
-          <td class="p-3 border-b">${row.time || ''}</td>
-          <td class="p-3 border-b text-center">
-            <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer">
-              <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-                View
-              </button>
-            </a>
-          </td>
-        </tr>`;
-    }).join('');
-  }
+  }).join('');
+}
 
   const pageInfo = document.getElementById('pageInfo');
   if (pageInfo) {
@@ -241,4 +235,12 @@ function filterSearchFunction() {
   } else {
     alert("Please select At least one.");
   }
+}
+
+
+function rowSelect() {
+  const selectedValue = parseInt(document.getElementById('rowsPerPage').value);
+  rowsPerPage = selectedValue;
+  currentPage = 1;
+  renderTable();
 }

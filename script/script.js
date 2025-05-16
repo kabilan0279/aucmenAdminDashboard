@@ -81,7 +81,6 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
                 history.pushState(null, "", newUrl);
             }
 
-            // Highlight active menu link
             highlightActiveLink(clickedLink);
         })
         .catch(error => {
@@ -90,32 +89,33 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
         });
 }
 
-// Function to highlight the clicked menu item
 function highlightActiveLink(activeLink) {
     const menuLinks = document.querySelectorAll(".load-page");
 
     menuLinks.forEach(link => {
-        link.classList.remove("bg-indigo-700", "text-white");
-        link.classList.add("text-indigo-200", "hover:bg-indigo-700", "hover:text-white");
+        link.classList.remove("bg-zinc-300", "text-white");
+        link.classList.add("text-black", "hover:bg-zinc-200", "hover:text-zinc-900");
 
         const icon = link.querySelector("svg");
         if (icon) {
-            icon.classList.remove("text-white");
-            icon.classList.add("text-indigo-200", "group-hover:text-white");
+            icon.classList.remove("text-black", "group-hover:text-white", "group-hover:text-zinc-900");
+            icon.classList.add("text-zinc-800", "group-hover:text-zinc-900");
         }
     });
 
     if (activeLink) {
-        activeLink.classList.add("bg-indigo-700", "text-white");
-        activeLink.classList.remove("text-indigo-200", "hover:bg-indigo-700", "hover:text-white");
+        // Set active link background and text color
+        activeLink.classList.add("bg-zinc-300", "text-white");
+        activeLink.classList.remove("text-black", "hover:bg-zinc-200", "hover:text-zinc-900");
 
         const icon = activeLink.querySelector("svg");
         if (icon) {
-            icon.classList.remove("text-indigo-200", "group-hover:text-white");
-            icon.classList.add("text-white");
+            icon.classList.remove("text-zinc-800", "group-hover:text-zinc-900");
+            icon.classList.add("text-black"); 
         }
     }
 }
+
 
 // Add event listeners to menu items after DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
