@@ -32,8 +32,8 @@
 
 
 <div class="max-w-md h-auto ">
-    <h3 class="text-md text-gray-800 font-semibold mb-2">Transaction List</h3>
-    <hr class="mb-4 bg-blue-500 w-4 h-[6px]" />
+    <h3 class="text-md text-gray-600 font-semibold mb-2">Transaction List</h3>
+    <!-- <hr class="mb-4 bg-blue-500 w-4 h-[6px]" /> -->
 </div>
 
 
@@ -41,45 +41,20 @@
     <table id="clientTable" class="table-auto w-full text-sm text-left">
         <thead class="text-gray-700">
             <tr class="border-b border-gray-300">
-                <th class="px-4 py-2">Symbol</th>
-                <th class="px-4 py-2">Applicattion No</th>
-                <th class="px-4 py-2">Pan</th>
-                <th class="px-4 py-2">Client ID</th>
-                <th class="px-4 py-2">Applied Quantity </th>
+                <th class="px-4 py-2 text-center">Symbol</th>
+                <th class="px-4 py-2 text-center">Applicattion No</th>
+                <th class="px-4 py-2 text-center">Pan</th>
+                <th class="px-4 py-2 text-center">Client ID</th>
+                <th class="px-4 py-2 text-center">Applied Quantity </th>
 
             </tr>
         </thead>
-        <tbody>
-            <tr class="border-b border-gray-200">
-                <td class="px-4 py-2">123456</td>
-                <td class="px-4 py-2">987654</td>
-                <td class="px-4 py-2">10</td>
-                <td class="px-4 py-2 text-blue-600">abc@upi</td>
-                <td class="px-4 py-2">John</td>
+        <tbody id="notAllote-Body">
+           
 
-                <td class="px-4 py-2">
-                    <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-                        View
-                    </button>
-                </td>
-                <td class="px-4 py-2">
-                    <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-                        Action
-                    </button>
-                </td>
-            </tr>
-            <tr class="border-b border-gray-200">
-                <td class="px-4 py-2">654321</td>
-                <td class="px-4 py-2">123456</td>
-                <td class="px-4 py-2">15</td>
-                <td class="px-4 py-2 text-gray-500">xyz@upi</td>
-                <td class="px-4 py-2">Jane</td>
-
-
-            </tr>
         </tbody>
     </table>
-   
+
 </div>
 
 
@@ -89,16 +64,3 @@
         $('#clientTable').DataTable();
     });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
