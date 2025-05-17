@@ -225,40 +225,36 @@
         </table>
       </div>
 
-      <div class="bg-white border-t p-2 pb-1 text-sm font-semibold sticky bottom-0 z-30">
-  <div class="flex flex-row flex-wrap items-center justify-between gap-2">
-
-    <!-- Rows Per Page Selector -->
-    <div class="flex items-center gap-2">
-      <select id="rowsPerPage"
-        class="rounded-md border border-gray-300 px-2 py-1.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        <option value="10">10 rows</option>
-        <option value="15" selected>15 rows</option>
-        <option value="50">50 rows</option>
-        <option value="250">250 rows</option>
-      </select>
-      <button onclick="rowSelect()"
-        class="px-4 py-1 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
-        Go
-      </button>
-    </div>
-
-    <!-- Pagination Buttons -->
-    <div class="flex items-center gap-2">
-      <button onclick="prevPage()"
-        class="px-4 py-1 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
-        Prev
-      </button>
-      <span id="pageInfo" class="text-gray-900 text-sm font-medium whitespace-nowrap"></span>
-      <button onclick="nextPage()"
-        class="px-4 py-1 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
-        Next
-      </button>
-    </div>
-
-  </div>
-</div>
-
+      <div class="bg-white border-t p-2 sm:mt-4 relative pb-1 text-sm font-semibold sticky bottom-0 z-30 ">
+        <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 ">
+          <!-- Rows Per Page Selector -->
+          <div class="flex items-center gap-1 sm:gap-2">
+            <select id="rowsPerPage"
+              class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <option value="10">10 rows</option>
+              <option value="15" selected>15 rows</option>
+              <option value="50">50 rows</option>
+              <option value="250">250 rows</option>
+            </select>
+            <button onclick="rowSelect()"
+              class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+              Go
+            </button>
+          </div>
+          <!-- Pagination Buttons -->
+          <div class="flex items-center gap-1 sm:gap-2">
+            <button onclick="prevPage()"
+              class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+              Prev
+            </button>
+            <span id="pageInfo" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
+            <button onclick="nextPage()"
+              class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
