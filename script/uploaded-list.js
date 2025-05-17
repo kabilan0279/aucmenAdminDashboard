@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (rowsSelect) {
     rowsSelect.addEventListener('change', rowSelect);
   }
-
+  // Inputs for filtering
   ['symbolSearch', 'ClientId', 'uploadedBy', 'bidQSearch'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
@@ -63,30 +63,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
-
-  function rowSelect() {
-    const selectedValue = parseInt(document.getElementById('rowsPerPage').value);
-    rowsPerPage = selectedValue;
-    currentPage = 1;
-    renderTable();
-  }
+  // Add event listener for dropdown checkboxes for RESPONSE filter
+  const dropdownCheckboxes = document.querySelectorAll('#dropdownMenu input[type="checkbox"]');
+  dropdownCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      currentPage = 1;
+      renderTable();
+    });
+  });
 });
 
 
 
 
-
 function getFilters() {
+  const selectedResponses = Array.from(document.querySelectorAll('#dropdownMenu input[type="checkbox"]:checked'))
+    .map(cb => cb.nextElementSibling?.textContent?.trim().toLowerCase() || '');
+
   return {
     symbol: (document.getElementById('symbolSearch')?.value || '').toLowerCase(),
     clientId: (document.getElementById('ClientId')?.value || '').toUpperCase().trim(),
     uploadedBy: (document.getElementById('uploadedBy')?.value || '').toLowerCase(),
     bidQty: (document.getElementById('bidQSearch')?.value || '').toString().trim(),
     startDate: document.getElementById('startDate')?.value || '',
-    endDate: document.getElementById('endDate')?.value || ''
+    endDate: document.getElementById('endDate')?.value || '',
+    responses: selectedResponses // ✅ add this line
   };
 }
+
 
 function filterData(data, filters) {
   return data.filter(item => {
@@ -95,6 +99,7 @@ function filterData(data, filters) {
     const itemUploadedBy = (item.uploadedBy || '').toString().toLowerCase();
     const itemBidQty = (item.bidQty || '').toString();
     const itemDate = item.date || '';
+    const itemResponse = (item.response || '').toLowerCase().trim();
 
     return (
       (filters.symbol === '' || itemSymbol.includes(filters.symbol)) &&
@@ -102,10 +107,12 @@ function filterData(data, filters) {
       (filters.uploadedBy === '' || itemUploadedBy.includes(filters.uploadedBy)) &&
       (filters.bidQty === '' || itemBidQty === filters.bidQty) &&
       (filters.startDate === '' || itemDate >= filters.startDate) &&
-      (filters.endDate === '' || itemDate <= filters.endDate)
+      (filters.endDate === '' || itemDate <= filters.endDate) &&
+      (filters.responses.length === 0 || filters.responses.includes(itemResponse)) // ✅ response match
     );
   });
 }
+
 
 function sortData(data, colIndex, asc) {
   const keys = ["clientId", "symbol", "bidQty", "upiId", "uploadedBy", "response", "date", "time"];
@@ -232,7 +239,11 @@ function filterSearchFunction() {
   const startDate = (document.getElementById('startDate')?.value || '').trim();
   const endDate = (document.getElementById('endDate')?.value || '').trim();
 
-  if (symbol || clientId || uploadedBy || bidQty || startDate || endDate) {
+   const checkedResponses = Array.from(document.querySelectorAll('#dropdownMenu input[type="checkbox"]:checked'))
+    .map(cb => cb.nextElementSibling?.textContent?.trim().toLowerCase() || '');
+
+
+  if (symbol || clientId || uploadedBy || bidQty || startDate || endDate ||  checkedResponses ) {
     renderTable();
   } else {
     alert("Please select At least one.");
@@ -314,6 +325,9 @@ function SelectPage() {
   if (pageInfo) {
     pageInfo.textContent = `Search result in page ${currentPage}`;
   }
+
+
+  
 }
 
 
@@ -335,3 +349,12 @@ function SelectPage() {
     }
   });
 
+ function clearDropdownCheckboxes() {
+    const checkboxes = document.querySelectorAll('#dropdownMenu input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = false);
+  }
+
+  function toggleDropdown() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.classList.toggle('hidden');
+  }

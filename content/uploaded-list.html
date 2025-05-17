@@ -39,98 +39,89 @@
     </div> -->
 
     <!-- Bid Quantity -->
-    <div class="relative flex-1 min-w-full sm:min-w-[100px]">
+    <!-- <div class="relative flex-1 min-w-full sm:min-w-[100px]">
       <input type="number" id="bidQSearch" placeholder="Bid Quantity"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
       <span onclick="document.getElementById('bidQSearch').value=''"
         class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
         &times;
       </span>
-    </div>
+    </div> -->
 
-      
 
-   <!-- Dropdown -->
-<div class="relative inline-block text-left">
+<!-- Dropdown -->
+<div class="relative flex-1 min-w-full sm:min-w-[100px]">
   <div>
-    <button
-      onclick="toggleDropdown()"
-      id="dropdownButton"
-      type="button"
-      class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
-      aria-expanded="false"
-      aria-haspopup="true"
-    >
+    <button onclick="toggleDropdown()" id="dropdownButton" type="button"
+      class="w-full inline-flex justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm text-zinc-400 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
+      aria-expanded="false" aria-haspopup="true">
       RESPONSE
       <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        <path fill-rule="evenodd"
+          d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+          clip-rule="evenodd" />
       </svg>
+      <span onclick="clearDropdownCheckboxes()"
+        class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
+        &times;
+      </span>
     </button>
   </div>
 
-  <div
-    id="dropdownMenu"
+  <div id="dropdownMenu"
     class="hidden absolute right-0 z-30 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
-    role="menu"
-    aria-orientation="vertical"
-    tabindex="-1"
-  >
-    <div class="py-1" role="none">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Success</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pending</a>
+    role="menu" aria-orientation="vertical" tabindex="-1">
+
+    <!-- Group 1 -->
+    <div class="py-1 space-y-1" role="none">
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>System Error</span>
+      </label>
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>Invalid Ben.Id</span>
+      </label>
     </div>
-    <div class="py-1" role="none">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Failed</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Move</a>
+
+    <!-- Group 2 -->
+    <div class="py-1 space-y-1" role="none">
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>Application Submitted</span>
+      </label>
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>Bid Canceled</span>
+      </label>
     </div>
-    <div class="py-1" role="none">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Share</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Add to favorites</a>
+
+    <!-- Group 3 -->
+    <div class="py-1 space-y-1" role="none">
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>Market is not open</span>
+      </label>
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>Invalid Depository Name</span>
+      </label>
     </div>
-    <div class="py-1" role="none">
-      <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">Delete</a>
+
+    <!-- Group 4 -->
+    <div class="py-1 space-y-1" role="none">
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>Waiting To Submit</span>
+      </label>
+      <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2">
+        <input type="checkbox">
+        <span>Invalid field: UPI</span>
+      </label>
     </div>
+
   </div>
 </div>
-
-
-
-
-    <!-- <div class="relative w-full sm:min-w-[150px]">
-  <button id="dropdownButton" class="flex w-full items-center justify-between rounded-md border border-gray-300 px-2 py-2 pr-8 text-left text-sm text-gray-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-    Select Responses
-    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
-
-  <div id="dropdownMenu" class="absolute z-10 mt-1 hidden max-h-48 w-full overflow-auto rounded-md border border-gray-300 bg-white shadow-lg">
-    <label class="flex cursor-pointer items-center px-3 py-2 hover:bg-gray-100">
-      <input type="checkbox" value="Success" class="mr-2" />
-      Success
-    </label>
-    <label class="flex cursor-pointer items-center px-3 py-2 hover:bg-gray-100">
-      <input type="checkbox" value="Pending" class="mr-2" />
-      Pending
-    </label>
-    <label class="flex cursor-pointer items-center px-3 py-2 hover:bg-gray-100">
-      <input type="checkbox" value="Failed" class="mr-2" />
-      Failed
-    </label>
-    <label class="flex cursor-pointer items-center px-3 py-2 hover:bg-gray-100">
-      <input type="checkbox" value="Error" class="mr-2" />
-      Error
-    </label>
-    <div class="flex justify-end border-t border-gray-200 px-3 py-2">
-      <button id="clearSelection" class="text-sm text-red-600 hover:underline">Clear</button>
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
 
 
 
@@ -167,23 +158,23 @@
 
 
   <div class="w-full  mb-4"></div>
-<div class="flex justify-end items-center gap-2 w-full">
-  <!-- Search input with clear button -->
-  <div class="relative flex-1 sm:flex-none sm:w-48">
-    <input type="text" id="searchPage" placeholder="Selected Row Search"
-      class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-    <span onclick="document.getElementById('searchPage').value=''"
-      class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
-      &times;
-    </span>
-  </div>
+  <div class="flex justify-end items-center gap-2 w-full">
+    <!-- Search input with clear button -->
+    <div class="relative flex-1 sm:flex-none sm:w-48">
+      <input type="text" id="searchPage" placeholder="Selected Row Search"
+        class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('searchPage').value=''"
+        class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
+        &times;
+      </span>
+    </div>
 
-  <!-- Select button -->
-  <button id="rowSelect" onclick="SelectPage()"
-    class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition whitespace-nowrap">
-    Select
-  </button>
-</div>
+    <!-- Select button -->
+    <button id="rowSelect" onclick="SelectPage()"
+      class="px-4 py-2 bg-indigo-500 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition whitespace-nowrap">
+      Select
+    </button>
+  </div>
   <!-- End Controls -->
 
 
@@ -210,50 +201,51 @@
   </div>
   <!-- Fixed Footer -->
   <div class="bg-white border-t p-2 sm:p-3 text-sm font-semibold sticky bottom-0 z-30 ">
-  <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 ">
-    <!-- Rows Per Page Selector -->
-    <div class="flex items-center gap-1 sm:gap-2">
-      <select id="rowsPerPage"
-        class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        <option value="10">10 rows</option>
-        <option value="15" selected>15 rows</option>
-        <option value="50">50 rows</option>
-        <option value="250">250 rows</option>
-      </select>
-      <button onclick="rowSelect()"
-        class="px-3 py-1.5 sm:px-4 sm:py-2 bg-indigo-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-indigo-700 transition whitespace-nowrap">
-        Go
-      </button>
-    </div>
-    <!-- Pagination Buttons -->
-    <div class="flex items-center gap-1 sm:gap-2">
-      <button onclick="prevPage()"
-        class="px-3 py-1.5 sm:px-4 sm:py-2 bg-indigo-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-indigo-700 transition">
-        Prev
-      </button>
-      <span id="pageInfo" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
-      <button onclick="nextPage()"
-        class="px-3 py-1.5 sm:px-4 sm:py-2 bg-indigo-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-indigo-700 transition">
-        Next
-      </button>
+    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 ">
+      <!-- Rows Per Page Selector -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        <select id="rowsPerPage"
+          class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <option value="10">10 rows</option>
+          <option value="15" selected>15 rows</option>
+          <option value="50">50 rows</option>
+          <option value="250">250 rows</option>
+        </select>
+        <button onclick="rowSelect()"
+          class="px-3 py-1.5 sm:px-4 sm:py-2 bg-indigo-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-indigo-700 transition whitespace-nowrap">
+          Go
+        </button>
+      </div>
+      <!-- Pagination Buttons -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        <button onclick="prevPage()"
+          class="px-3 py-1.5 sm:px-4 sm:py-2 bg-indigo-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-indigo-700 transition">
+          Prev
+        </button>
+        <span id="pageInfo" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
+        <button onclick="nextPage()"
+          class="px-3 py-1.5 sm:px-4 sm:py-2 bg-indigo-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-indigo-700 transition">
+          Next
+        </button>
+      </div>
     </div>
   </div>
-</div>
 
 
 
-<script>
-  const inputsToUppercase = ['symbolSearch', 'ClientId', 'uploadedBy', 'searchPage'];
+  <script>
+    const inputsToUppercase = ['symbolSearch', 'ClientId', 'uploadedBy', 'searchPage'];
 
-  inputsToUppercase.forEach(id => {
-    const input = document.getElementById(id);
-    if (input) {
-      input.addEventListener('input', () => {
-        input.value = input.value.toUpperCase();
-      });
-    }
-  });
+    inputsToUppercase.forEach(id => {
+      const input = document.getElementById(id);
+      if (input) {
+        input.addEventListener('input', () => {
+          input.value = input.value.toUpperCase();
+        });
+      }
+    });
 
 
+ 
 
-</script>
+  </script>

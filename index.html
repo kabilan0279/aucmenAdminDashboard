@@ -17,13 +17,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Inter Font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
         #symbolSearch,
         #ClientId,
         #uploadedBy {
             text-transform: uppercase;
+        }
+
+        body {
+            --default-font-family: 'Roboto', ui-sans-serif, system-ui, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji",
+                "Segoe UI Symbol", "Noto Color Emoji";
+            font-family: var(--default-font-family);
         }
     </style>
 
