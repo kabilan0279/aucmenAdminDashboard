@@ -336,15 +336,7 @@ function SelectPage() {
     dropdownMenu.classList.toggle("hidden");
   }
 
-  // Close when clicking outside
-  document.addEventListener("click", function (event) {
-    const dropdownMenu = document.getElementById("dropdownMenu");
-    const dropdownButton = document.getElementById("dropdownButton");
-
-    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-      dropdownMenu.classList.add("hidden");
-    }
-  });
+ 
 
  function clearDropdownCheckboxes() {
     const checkboxes = document.querySelectorAll('#dropdownMenu input[type="checkbox"]');
@@ -355,3 +347,15 @@ function SelectPage() {
     const menu = document.getElementById('dropdownMenu');
     menu.classList.toggle('hidden');
   }
+
+
+  
+//  // Close when clicking outside
+//   document.addEventListener("click", function (event) {
+//     const dropdownMenu = document.getElementById("dropdownMenu");
+//     const dropdownButton = document.getElementById("dropdownButton");
+
+//     if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+//       dropdownMenu.classList.add("hidden");
+//     }
+//   });

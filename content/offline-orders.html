@@ -1,66 +1,153 @@
+<div class="sticky top-0 z-30 bg-white border-b border-gray-200">
+  <!-- Title -->
+  <div class="max-w-md h-auto">
+    <h3 class="text-lg text-gray-800 font-semibold mt-1">Offline Orders</h3>
+  </div>
 
-<div class="max-w-md h-auto ">
-  <h3 class="text-md text-gray-800 font-semibold mb-2"> Offline Orders</h3>
-  <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" />
-</div>
+  <div class="w-full bg-white rounded-md shadow-xs flex flex-wrap gap-4 justify-center items-end">
 
-
-<div class="max-w-full  bg-white rounded-2xl overflow-x-auto">
-
-
-  <table id="clientTable" class="table-auto w-full text-sm text-left">
-    <thead class="text-gray-700">
-      <tr class="border-b border-gray-300">
-        <th class="px-4 py-2">Client ID</th>
-        <th class="px-4 py-2">Symbol</th>
-        <th class="px-4 py-2">BID Quantity</th>
-        <th class="px-4 py-2">UPI ID</th>
+    <div class="  relative flex-1 min-w-full sm:min-w-[100px]">
       
-        <th class="px-4 py-2">Date</th>
-        <th class="px-4 py-2">Time</th>
-        <th class="px-4 py-2">View</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="border-b border-gray-200">
-        <td class="px-4 py-2">123456</td>
-        <td class="px-4 py-2">987654</td>
-        <td class="px-4 py-2">10</td>
-        <td class="px-4 py-2 text-blue-600">abc@upi</td>
- 
-        <td class="px-4 py-2">2025-05-13</td>
-        <td class="px-4 py-2">10:30 AM</td>
-        <td class="px-4 py-2">
-          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-            View
-          </button>
-        </td>
-       
-      </tr>
-      <tr class="border-b border-gray-200">
-        <td class="px-4 py-2">654321</td>
-        <td class="px-4 py-2">123456</td>
-        <td class="px-4 py-2">15</td>
-        <td class="px-4 py-2 text-gray-500">xyz@upi</td>
-   
-        <td class="px-4 py-2">2025-05-12</td>
-        <td class="px-4 py-2">09:15 AM</td>
-        <td class="px-4 py-2">
-          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-            View
-          </button>
-        </td>
-       
-      </tr>
-    </tbody>
-  </table>
-  
+    </div>
+
+    <!-- Client ID -->
+    <div class="relative flex-1 min-w-full sm:min-w-[100px]">
+      <input type="text" id="offlineClientId" placeholder="Client ID"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('offlineClientId').value=''"
+        class="absolute top-1.5 right-2 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
+
+
+    
+
+    <!-- Symbol -->
+    <div class="relative flex-1 min-w-full sm:min-w-[100px]">
+      <input type="text" id="offlineSymbolSearch" placeholder="Symbol"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('offlineSymbolSearch').value=''"
+        class="absolute top-1.5 right-2 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
+
+    <!-- Start Date -->
+    <div class="relative flex flex-col min-w-full sm:min-w-[100px]">
+      <label for="offlineStartDate" class="mb-1 text-sm text-gray-600">Start Date</label>
+      <input type="date" id="offlineStartDate"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('offlineStartDate').value=''"
+        class="absolute top-7.5 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
+
+    <!-- End Date -->
+    <div class="relative flex flex-col min-w-full sm:min-w-[100px]">
+      <label for="offlineEndDate" class="mb-1 text-sm text-gray-600">End Date</label>
+      <input type="date" id="offlineEndDate"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('offlineEndDate').value=''"
+        class="absolute top-7.5 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
+
+    <!-- Search Button -->
+    <button onclick="filterOfflineSearch()"
+      class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
+      Search
+    </button>
+  </div>
+
+  <div class="w-full  mb-4"></div>
+
+  <div class="flex justify-end items-center gap-2 w-full">
+    <div class="relative flex-1 py-[4px] sm:flex-none sm:w-48">
+      <input type="text" id="offlineSearchPage" placeholder="Selected Page Search"
+        class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <span onclick="document.getElementById('offlineSearchPage').value=''"
+        class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
+        &times;
+      </span>
+    </div>
+    <button id="offlineRowSelect" onclick="selectOfflinePage()"
+      class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+      Select
+    </button>
+  </div>
+
+  <!-- Table -->
+  <div class="relative bg-white max-h-[70vh] overflow-auto">
+    <table class="min-w-full text-sm text-left">
+      <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
+        <tr class="cursor-pointer bg-stone-100 ">
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
+            onclick="sortOfflineTable(0)">Client ID</th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
+            onclick="sortOfflineTable(1)">Symbol</th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
+            onclick="sortOfflineTable(2)">BID Quantity</th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
+            onclick="sortOfflineTable(3)">UPI ID</th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
+            onclick="sortOfflineTable(4)">Date</th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
+            onclick="sortOfflineTable(5)">Time</th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
+            onclick="sortOfflineTable(6)">View</th>
+        </tr>
+      </thead>
+      <tbody id="offlineTableBody">
+        <!-- Dynamic content -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="bg-white p-2 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
+    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 ">
+      <!-- Rows Per Page -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        <select id="offlineRowsPerPage"
+          class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <option value="10">10 rows</option>
+          <option value="15" selected>15 rows</option>
+          <option value="50">50 rows</option>
+          <option value="250">250 rows</option>
+        </select>
+        <button onclick="setOfflineRowsPerPage()"
+          class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+          Go
+        </button>
+      </div>
+      <!-- Pagination -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        <button onclick="prevOfflinePage()"
+          class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+          Prev
+        </button>
+        <span id="offlinePageInfo" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
+        <button onclick="nextOfflinePage()"
+          class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const offlineInputs = ['offlineSearchPage', 'offlineSymbolSearch', 'offlineClientId'];
+    offlineInputs.forEach(id => {
+      const input = document.getElementById(id);
+      if (input) {
+        input.addEventListener('input', () => {
+          input.value = input.value.toUpperCase();
+        });
+      }
+    });
+  </script>
 </div>
-
-
-<!-- Initialize DataTable -->
-<script>
-  $(document).ready(function () {
-    $('#clientTable').DataTable();
-  });
-</script>
