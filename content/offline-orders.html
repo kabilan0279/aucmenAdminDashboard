@@ -1,13 +1,13 @@
 <div class="sticky top-0 z-30 bg-white border-b border-gray-200">
   <!-- Title -->
-  <div class="max-w-md h-auto">
-    <h3 class="text-lg text-gray-800 font-semibold mt-1">Offline Orders</h3>
+  <div class="max-w-md h-auto pt-3">
+    <h3 class="text-lg text-gray-800 font-semibold pt-3">Offline Orders</h3>
   </div>
 
   <div class="w-full bg-white rounded-md shadow-xs flex flex-wrap gap-4 justify-center items-end">
 
     <div class="  relative flex-1 min-w-full sm:min-w-[100px]">
-      
+
     </div>
 
     <!-- Client ID -->
@@ -21,7 +21,7 @@
     </div>
 
 
-    
+
 
     <!-- Symbol -->
     <div class="relative flex-1 min-w-full sm:min-w-[100px]">
@@ -85,19 +85,26 @@
       <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
         <tr class="cursor-pointer bg-stone-100 ">
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
-            onclick="sortOfflineTable(0)">Client ID</th>
+            onclick="sortOfflineTable(0)">Client ID <span><i
+                class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
-            onclick="sortOfflineTable(1)">Symbol</th>
+            onclick="sortOfflineTable(1)">Symbol <span><i
+                class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
-            onclick="sortOfflineTable(2)">BID Quantity</th>
+            onclick="sortOfflineTable(2)">BID Quantity <span><i
+                class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
-            onclick="sortOfflineTable(3)">UPI ID</th>
+            onclick="sortOfflineTable(3)">UPI ID <span><i
+                class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
-            onclick="sortOfflineTable(4)">Date</th>
+            onclick="sortOfflineTable(4)">Date <span><i
+                class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
-            onclick="sortOfflineTable(5)">Time</th>
+            onclick="sortOfflineTable(5)">Time <span><i
+                class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-indigo-600"
-            onclick="sortOfflineTable(6)">View</th>
+            onclick="sortOfflineTable(6)">View <span><i
+                class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
         </tr>
       </thead>
       <tbody id="offlineTableBody">
