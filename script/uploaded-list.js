@@ -162,7 +162,7 @@ function renderTable() {
   if (paginatedData.length === 0) {
     tableBody.innerHTML = `
     <tr>
-      <td colspan="9" class="text-center p-4 text-sm text-gray-900">
+      <td colspan="9" class="text-center p-4 font-sm text-center text-gray-700">
         No records found matching your criteria
       </td>
     </tr>`;
@@ -175,23 +175,21 @@ function renderTable() {
               row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
 
       return `
-            <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
-          <td class="py-2 pr-3 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">${row.clientId || ''}</td>
-          <td class="px-2 py-2 text-sm font-medium whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
-          <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.bidQty || ''}</td>
-          <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.upiId || ''}</td>
-          <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.uploadedBy || ''}</td>
-          <td class="px-2 py-2 text-sm whitespace-nowrap ${responseClass}">${row.response || ''}</td>
-          <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.date || ''}</td>
-          <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.time || ''}</td>
-          <td class="px-2 py-2 text-sm whitespace-nowrap text-indigo-900">
-            <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-indigo-600 p-1 rounded-sm">
-            View<span class="sr-only">, ${row.clientId || 'record'}</span>
-          </a>
-
-          </td>
-        </tr>
-        `;
+           <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
+  <td class="py-2 pr-3 pl-4 font-sm text-center text-gray-700 sm:pl-0">${row.clientId || ''}</td>
+  <td class="px-2 py-2 text-sm font-sm text-center whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.bidQty || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.upiId || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.uploadedBy || ''}</td>
+  <td class="px-2 py-2 text-sm text-center whitespace-nowrap ${responseClass}">${row.response || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.date || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.time || ''}</td>
+  <td class="px-2 py-2 text-sm text-center whitespace-nowrap">
+    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-500 hover:bg-blue-600 p-1 rounded-sm">
+      View<span class="sr-only">, ${row.clientId || 'record'}</span>
+    </a>
+  </td>
+</tr>   `;
     }).join('');
   }
 
@@ -302,22 +300,21 @@ function SelectPage() {
             row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
 
     return `
-      <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
-  <td class="py-2 pr-3 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">${row.clientId || ''}</td>
-  <td class="px-2 py-2 text-sm font-medium whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
-  <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.bidQty || ''}</td>
-  <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.upiId || ''}</td>
-  <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.uploadedBy || ''}</td>
-  <td class="px-2 py-2 text-sm whitespace-nowrap ${responseClass}">${row.response || ''}</td>
-  <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.date || ''}</td>
-  <td class="px-2 py-2 text-sm whitespace-nowrap text-gray-900">${row.time || ''}</td>
-  <td class="px-2 py-2 text-sm whitespace-nowrap text-indigo-900">
-    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-indigo-600 p-1 rounded-sm">
-            View<span class="sr-only">, ${row.clientId || 'record'}</span>
-          </a>
+     <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
+  <td class="py-2 pr-3 pl-4 font-sm text-center text-gray-700 sm:pl-0">${row.clientId || ''}</td>
+  <td class="px-2 py-2 text-sm font-sm text-center whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.bidQty || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.upiId || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.uploadedBy || ''}</td>
+  <td class="px-2 py-2 text-sm text-center whitespace-nowrap ${responseClass}">${row.response || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.date || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.time || ''}</td>
+  <td class="px-2 py-2 text-sm text-center whitespace-nowrap">
+    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-500 hover:bg-blue-600 p-1 rounded-sm">
+      View<span class="sr-only">, ${row.clientId || 'record'}</span>
+    </a>
   </td>
-</tr>
-`;
+</tr>  `;
   }).join('');
 
   // Update page info to indicate it's a filtered view
