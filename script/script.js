@@ -113,6 +113,19 @@ function highlightActiveLink(activeLink) {
     }
 }
 
+document.querySelectorAll(".load-page").forEach(link => {
+    link.addEventListener("click", function () {
+        document.getElementById('mobileSidebar').style.display = 'none';
+ 
+    });
+});
+
+
+// document.getElementById('closeSidebar').addEventListener('click', function () {
+//     document.getElementById('mobileSidebar').style.display = 'none';
+// });
+
+
 
 // Add event listeners to menu items after DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
