@@ -1,17 +1,17 @@
 <div class="sticky top-0 z-30 bg-white border-b border-gray-200">
   <!-- Title -->
-  <div class="max-w-md h-auto pt-3">
+  <div class="max-w-md h-auto mt-3">
     <h3 class="text-lg text-gray-800 font-semibold pt-3">Offline Orders</h3>
   </div>
 
   <div class="w-full bg-white rounded-md shadow-xs flex flex-wrap gap-4 justify-center items-end">
 
-    <div class="  relative flex-1 min-w-full sm:min-w-[160px]">
+    <!-- <div class="  relative flex-1 min-w-full sm:min-w-[160px]">
 
-    </div>
+    </div> -->
 
     <!-- Client ID -->
-    <div class="relative flex-1 min-w-full sm:min-w-[160px]">
+    <div class="relative flex-1 min-w-full sm:min-w-[250px]">
       <input type="text" id="offlineClientId" placeholder="Client ID"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       <span onclick="document.getElementById('offlineClientId').value=''"
@@ -22,7 +22,7 @@
 
 
     <!-- Symbol -->
-    <div class="relative flex-1 min-w-full sm:min-w-[160px]">
+    <div class="relative flex-1 min-w-full sm:min-w-[250px]">
       <input type="text" id="offlineSymbolSearch" placeholder="Symbol"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       <span onclick="document.getElementById('offlineSymbolSearch').value=''"
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Start Date -->
-    <div class="relative flex flex-col min-w-full sm:min-w-[160px]">
+    <div class="relative flex flex-col min-w-full sm:min-w-[250px]">
       <label for="offlineStartDate" class="mb-1 text-sm text-gray-600">Start Date</label>
       <input type="date" id="offlineStartDate"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -43,7 +43,7 @@
     </div>
 
     <!-- End Date -->
-    <div class="relative flex flex-col min-w-full sm:min-w-[160px]">
+    <div class="relative flex flex-col min-w-full sm:min-w-[250px]">
       <label for="offlineEndDate" class="mb-1 text-sm text-gray-600">End Date</label>
       <input type="date" id="offlineEndDate"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -62,7 +62,7 @@
 
   <div class="w-full  mb-4"></div>
 
-  <div class="flex justify-end items-center gap-2 w-full">
+  <div class="flex justify-end items-center gap-2 w-full bottom-1">
     <div class="relative flex-1 py-[4px] sm:flex-none sm:w-48">
       <input type="text" id="offlineSearchPage" placeholder="Selected Page Search"
         class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -105,7 +105,7 @@
                 class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span></th>
         </tr>
       </thead>
-      <tbody id="offlineTableBody">
+      <tbody id="offlineTableBody" class=" mb-4">
         <!-- Dynamic content -->
       </tbody>
     </table>
