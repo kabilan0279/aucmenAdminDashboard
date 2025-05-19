@@ -1,14 +1,15 @@
-<div class="max-w-md   bg-white rounded-2xl pt-3">
-    <h3 class="text-lg text-gray-800 font-semibold pt-3"> Client Login Details</h3>
-    <!-- <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" /> -->
+<!-- Sticky Header -->
+<div class="sticky top-0 z-30 bg-white border-b border-gray-200">
+    <h3 class="text-lg text-gray-800 font-semibold pt-3">Client Login Details</h3>
 
-    <label for="search-client" class="text-sm text-gray-600 font-semibold pt-3">
+    <label for="client-select" class="text-sm text-gray-600 font-semibold pt-3 block">
         Select Transaction List
     </label>
-    <div class="flex flex-col sm:flex-col md:flex-row items-center gap-4">
-        <div class="max-w-sm p-4">
+
+    <div class="flex flex-col sm:flex-col md:flex-row items-center gap-2 p-1">
+        <div class="max-w-sm">
             <select id="client-select"
-                class="block px-6 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                class="block w-full px-6 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <option value="" disabled selected>Select a Symbol</option>
                 <option value="client1">AADHAAR HDFC</option>
                 <option value="client2">Client 2</option>
@@ -17,50 +18,161 @@
             </select>
         </div>
 
-        <button class="px-[60px] py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+        <button class="px-12 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-200">
             EXPORT
         </button>
     </div>
 
+
+    <!-- Search Filters -->
+    <div
+        class="w-full bg-white rounded-md shadow-xs flex flex-wrap gap-4 justify-center items-end p-2">
+        <!-- Client ID -->
+        <div class="relative flex-1 min-w-full sm:min-w-[160px]">
+            <input type="text" id="notAllottedClientId" placeholder="Client ID"
+                class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span onclick="document.getElementById('notAllottedClientId').value=''"
+                class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+        </div>
+
+        <!-- Symbol -->
+        <div class="relative flex-1 min-w-full sm:min-w-[160px]">
+            <input type="text" id="notAllottedSymbolSearch" placeholder="Symbol"
+                class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span onclick="document.getElementById('notAllottedSymbolSearch').value=''"
+                class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+        </div>
+
+        <!-- PAN -->
+        <div class="relative flex-1 min-w-full sm:min-w-[160px]">
+            <input type="text" id="notAllottedPanSearch" placeholder="PAN"
+                class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span onclick="document.getElementById('notAllottedPanSearch').value=''"
+                class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+        </div>
+
+        <!-- Application No -->
+        <div class="relative flex-1 min-w-full sm:min-w-[160px]">
+            <input type="text" id="notAllottedAppNoSearch" placeholder="Application No"
+                class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span onclick="document.getElementById('notAllottedAppNoSearch').value=''"
+                class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+        </div>
+
+        <!-- Search Button -->
+        <button onclick="filternotAllottedSearch()"
+            class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
+            Search
+        </button>
+    </div>
+
+
+
+
+    <!-- Selected Page Search -->
+    <div class="w-full px-4 pt-2">
+        <div class="flex justify-between items-center flex-wrap gap-2">
+            <!-- Heading -->
+            <div class="max-w-md h-auto px-4">
+                <h3 class="text-md text-start text-gray-600 font-semibold mb-2">Transaction List</h3>
+            </div>
+
+            <!-- Search + Button -->
+            <div class="flex items-center gap-2">
+                <div class="relative w-full sm:w-48">
+                    <input type="text" id="NotAllottedSearchPage" placeholder="Selected Page Search"
+                        class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <span onclick="document.getElementById('NotAllottedSearchPage').value=''"
+                        class="absolute right-2 top-1.5 text-xl cursor-pointer text-gray-400 hover:text-red-500">&times;</span>
+                </div>
+                <button id="NotAllottedRowSelect" onclick="selectNotAllottedPage()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+                    Select
+                </button>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
-<!-- Include jQuery and DataTables -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.tailwindcss.min.css">
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
-
-<div class="max-w-md h-auto ">
-    <h3 class="text-md text-gray-600 font-semibold mb-2">Transaction List</h3>
-    <!-- <hr class="mb-4 bg-blue-500 w-4 h-[6px]" /> -->
-</div>
-
-
-<div class="max-w-full  bg-white rounded-2xl overflow-x-auto">
-    <table id="clientTable" class="table-auto w-full text-sm text-left">
-        <thead class="text-gray-700">
-            <tr class="border-b border-gray-300">
-                <th class="px-4 py-2 text-center">Symbol</th>
-                <th class="px-4 py-2 text-center">Applicattion No</th>
-                <th class="px-4 py-2 text-center">Pan</th>
-                <th class="px-4 py-2 text-center">Client ID</th>
-                <th class="px-4 py-2 text-center">Applied Quantity </th>
-
+  <div class="relative bg-white max-h-[70vh] overflow-auto">
+    <table class="min-w-full text-sm text-left">
+      <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
+        <tr class="cursor-pointer bg-stone-100 ">
+                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(0)">Symbol
+                    <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+                </th>
+                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(1)">Application No
+                    <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+                </th>
+                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(2)">PAN
+                    <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+                </th>
+                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(3)">Client ID
+                    <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+                </th>
+                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(4)">Applied Quantity
+                    <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+                </th>
             </tr>
         </thead>
-        <tbody id="notAllote-Body">
-           
-
+        <tbody id="notAllote-Body" class="divide-y divide-gray-100">
+            <!-- Your dynamic rows go here -->
         </tbody>
     </table>
-
 </div>
 
 
-<!-- Initialize DataTable -->
+<!-- Footer Pagination -->
+<div class="bg-white p-2 sm:mt-4 sticky bottom-0 z-30 text-sm font-semibold">
+    <div class="flex items-center justify-between gap-2 px-2">
+        <!-- Rows Per Page -->
+        <div class="flex items-center gap-2">
+            <select id="notAllottedRowsPerPage"
+                class="rounded-md border border-gray-300 px-2 py-1.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="10">10 rows</option>
+                <option value="15" selected>15 rows</option>
+                <option value="50">50 rows</option>
+                <option value="250">250 rows</option>
+            </select>
+            <button onclick="setnotAllottedRowsPerPage()"
+                class="px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
+                Go
+            </button>
+        </div>
+        <!-- Pagination -->
+        <div class="flex items-center gap-2">
+            <button onclick="prevnotAllottedPage()"
+                class="px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
+                Prev
+            </button>
+            <span id="notAllottedPageInfo" class="text-gray-900 text-sm font-medium whitespace-nowrap"></span>
+            <button onclick="nextnotAllottedPage()"
+                class="px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
+                Next
+            </button>
+        </div>
+    </div>
+
+<!-- Uppercase Auto Formatting -->
 <script>
-    $(document).ready(function () {
-        $('#clientTable').DataTable();
+    const notAllottedInputs = [
+        'NotAllottedSearchPage',
+        'notAllottedSymbolSearch',
+        'notAllottedClientId',
+        'notAllottedPanSearch',
+        'notAllottedAppNoSearch'
+    ];
+    notAllottedInputs.forEach(id => {
+        const input = document.getElementById(id);
+        if (input) {
+            input.addEventListener('input', () => {
+                input.value = input.value.toUpperCase();
+            });
+        }
     });
 </script>
+
+</div>

@@ -55,17 +55,17 @@ function filterOfflineData(data, filters) {
   });
 }
 
-function sortOfflineTable(colIndex) {
-  if (sortColumnOffline === colIndex) {
-    sortAscOffline = !sortAscOffline;
+function sortnotallottedTable(colIndex) {
+  if (sortColumnnotallotted === colIndex) {
+    sortAscnotallotted = !sortAscnotallotted;
   } else {
-    sortColumnOffline = colIndex;
-    sortAscOffline = true;
+    sortColumnnotallotted = colIndex;
+    sortAscnotallotted = true;
   }
-  renderOfflineTable();
+  rendernotallottedTable();
 }
 
-function sortOfflineData(data, colIndex, asc) {
+function sortnotallottedData(data, colIndex, asc) {
   const keys = ['clientId', 'symbol', 'bidQty', 'upiId', 'date', 'time'];
   const key = keys[colIndex];
   return data.slice().sort((a, b) => {
