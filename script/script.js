@@ -91,7 +91,7 @@ function highlightActiveLink(activeLink) {
 
     menuLinks.forEach(link => {
         // Reset to default
-        link.classList.remove("bg-slate-600", "text-white");
+        link.classList.remove("bg-slate-500", "text-white");
         link.classList.add("text-slate-800", "hover:bg-slate-400", "hover:text-white");
 
         const icon = link.querySelector("svg");
@@ -103,7 +103,7 @@ function highlightActiveLink(activeLink) {
 
     if (activeLink) {
         // Apply active styles
-        activeLink.classList.add("bg-slate-600", "text-white");
+        activeLink.classList.add("bg-slate-500", "text-white");
         activeLink.classList.remove("text-slate-800", "hover:bg-slate-400", "hover:text-white");
 
         const icon = activeLink.querySelector("svg");
