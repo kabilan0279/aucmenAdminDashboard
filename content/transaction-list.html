@@ -1,108 +1,265 @@
-<div class="max-w-md h-auto pt-3">
-  <h3 class="text-md text-gray-800 font-semibold mb-2 pt-3">Export Transaction List</h3>
-  <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" />
+<!-- Sticky Header -->
+<div class="sticky top-0 z-30 bg-white border-b border-gray-200">
+  <!-- Title -->
+  <div class="max-w-md h-auto">
+    <h3 class="text-lg text-gray-800 font-semibold pt-3">Export TAL List</h3>
+    <!-- <hr class=" bg-blue-500 w-[15px] h-[6px] border-none" /> -->
 
-</div>
+  <label for="client-select" class="text-sm text-gray-600 font-semibold pt-3 block">
+        Select TAL List
+    </label>
 
-<div class="max-w-md   bg-white rounded-2xl ">
+    <div class="flex flex-col sm:flex-col md:flex-row items-center gap-2 p-1">
+        <div class="max-w-sm">
+            <select id="client-select"
+                class="block w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-400 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="" disabled selected>Select a Symbol</option>
+                <option value="client1">AADHAAR HDFC</option>
+                <option value="client2">Client 2</option>
+                <option value="client3">Client 3</option>
+                <option value="client4">Client 4</option>
+            </select>
+        </div>
 
-  <label for="search-client" class="block text-md  text-gray-700 font-medium mb-2">
-    Select Transaction List
-  </label>
-  <div class="flex flex-col sm:flex-col md:flex-row items-center gap-4">
-    <div class="max-w-sm p-4">
-      <select id="client-select"
-        class="block px-6 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-        <option value="" disabled selected>Select a Symbol</option>
-        <option value="client1">Client 1</option>
-        <option value="client2">Client 2</option>
-        <option value="client3">Client 3</option>
-        <option value="client4">Client 4</option>
-      </select>
+        <button class="px-2 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-700 transition duration-200">
+            EXPORT
+        </button>
     </div>
-
-    <button class="px-[60px] py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
-      EXPORT
-    </button>
+     
   </div>
 
-</div>
+  <div class="w-full bg-white rounded-md shadow-xs flex flex-wrap gap-4 items-end">
+
+    <!-- Client ID -->
+    <div class="relative flex-1 min-w-full sm:min-w-[100px]">
+      <input type="text" id="ClientIdTAL" placeholder="Client ID"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <span onclick="document.getElementById('ClientIdTAL').value=''"
+        class="absolute top-1.5 right-2 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
+
+    <!-- Symbol -->
+    <div class="relative flex-1 min-w-full sm:min-w-[100px]">
+      <input type="text" id="symbolSearchTAL" placeholder="Symbol"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <span onclick="document.getElementById('symbolSearchTAL').value=''"
+        class="absolute top-1.5 right-2 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
+
+
+    <!-- Dropdown -->
+    <div class="relative flex-1 min-w-full sm:min-w-[100px]">
+      <div>
+        <button onclick="toggleDropdownTAL()" id="dropdownButton" type="button"
+          class="w-full inline-flex justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm text-gray-400 shadow-xs ring-1 focus:ring-2 focus:ring-blue-500"
+          aria-expanded="false" aria-haspopup="true">
+          RESPONSE
+          <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+          <span onclick="clearDropdownCheckboxesTAL()"
+            class="absolute top-1 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+            &times;
+          </span>
+
+        </button>
+      </div>
+
+      <div id="dropdownMenuTAL"
+        class="hidden absolute right-0 z-40 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+        role="menu" aria-orientation="vertical" tabindex="-1">
+
+        <!-- Group 1 -->
+        <div class="py-1 space-y-1" role="none">
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>Invalid field: UPI</span>
+          </label>
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>Invalid field: Multiple applications with same details (Category, PAN etc) is not allowed</span>
+          </label>
+        </div>
+
+        <!-- Group 2 -->
+        <div class="py-1 space-y-1" role="none">
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>Application Submitted</span>
+          </label>
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>Bid level error</span>
+          </label>
+        </div>
+
+        <!-- Group 3 -->
+        <div class="py-1 space-y-1" role="none">
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>Mismatch field -Either PAN No OR DP Details can be modified</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
 
 
 
 
-<div class="max-w-md h-auto ">
-  <h3 class="text-md text-gray-800 font-semibold mb-2">Transaction List</h3>
-  <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" />
+    <!-- Start Date -->
+    <div class="relative flex flex-col min-w-full sm:min-w-[100px]">
+      <label for="startDateTAL" class="mb-1 text-sm text-gray-600">Start Date</label>
+      <input type="date" id="startDateTAL"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <span onclick="document.getElementById('startDateTAL').value=''"
+        class="absolute top-7.5 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
 
-</div>
+    <!-- End Date -->
+    <div class="relative flex flex-col min-w-full sm:min-w-[100px]">
+      <label for="endDateTAL" class="mb-1 text-sm text-gray-600">End Date</label>
+      <input type="date" id="endDateTAL"
+        class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <span onclick="document.getElementById('endDateTAL').value=''"
+        class="absolute top-7.5 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
+        &times;
+      </span>
+    </div>
 
-<div class="w-full  bg-white rounded-2xl overflow-x-auto">
-  <table id="clientTable" class="table-auto w-full text-sm text-left">
-    <thead class="text-gray-700">
-      <tr class="border-b border-gray-300">
-        <th class="px-4 py-2">Client ID</th>
-        <th class="px-4 py-2">Symbol</th>
-        <th class="px-4 py-2">BID Quantity</th>
-        <th class="px-4 py-2">UPI ID</th>
-        <th class="px-4 py-2">Uploaded By</th>
-        <th class="px-4 py-2">Response</th>
-        <th class="px-4 py-2">Date</th>
-        <th class="px-4 py-2">Time</th>
-        <th class="px-4 py-2">View</th>
-        <th class="px-4 py-2">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="border-b border-gray-200">
-        <td class="px-4 py-2">123456</td>
-        <td class="px-4 py-2">987654</td>
-        <td class="px-4 py-2">10</td>
-        <td class="px-4 py-2 text-blue-600">abc@upi</td>
-        <td class="px-4 py-2">John</td>
-        <td class="px-4 py-2 text-green-600">Verified</td>
-        <td class="px-4 py-2">2025-05-13</td>
-        <td class="px-4 py-2">10:30 AM</td>
-        <td class="px-4 py-2">
-          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-            View
-          </button>
-        </td>
-        <td class="px-4 py-2">
-          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-            Action
-          </button>
-        </td>
-      </tr>
-      <tr class="border-b border-gray-200">
-        <td class="px-4 py-2">654321</td>
-        <td class="px-4 py-2">123456</td>
-        <td class="px-4 py-2">15</td>
-        <td class="px-4 py-2 text-gray-500">xyz@upi</td>
-        <td class="px-4 py-2">Jane</td>
-        <td class="px-4 py-2 text-red-600">Failed</td>
-        <td class="px-4 py-2">2025-05-12</td>
-        <td class="px-4 py-2">09:15 AM</td>
-        <td class="px-4 py-2">
-          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-            View
-          </button>
-        </td>
-        <td class="px-4 py-2">
-          <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-600 transition duration-150">
-            action
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
- 
-</div>
+    <!-- Search Button -->
+    <button onclick="filterSearchFunction()"
+      class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
+      Search
+    </button>
+
+  </div>
 
 
-<!-- Initialize DataTable -->
-<script>
-  $(document).ready(function () {
-    $('#clientTable').DataTable();
-  });
-</script>
+  <div class="w-full  mb-4"></div>
+  <div class="flex justify-end items-center gap-2 w-full">
+    <!-- Search input with clear button -->
+    <div class="relative flex-1 py-[4px] sm:flex-none sm:w-48">
+      <input type="text" id="searchPageTAL" placeholder="Selected Page Search"
+        class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <span onclick="document.getElementById('searchPageTAL').value=''"
+        class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
+        &times;
+      </span>
+    </div>
+
+    <!-- Select button -->
+    <button id="rowSelectTAL" onclick="SelectPageTAL()"
+      class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+      Select
+    </button>
+  </div>
+  <!-- End Controls -->
+
+
+  <!-- Scrollable Table Container -->
+  <div class="relative bg-white  max-h-[70vh] overflow-auto">
+    <table class="min-w-full text-sm text-left">
+      <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
+        <tr class="cursor-pointer bg-stone-100 ">
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(0)">Client ID <span><i
+                class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span> </th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(1)">Symbol <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+          </th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(2)">BID Quantity <span><i
+                class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span> </th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(3)">UPI ID <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+          </th>
+         
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(4)">Response <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+          </th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(5)">Date <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+          </th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(6)">Time <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+          </th>
+          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(7)">View <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+          </th>
+           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortTAL(8)">ACTION <span><i
+                class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span> </th>
+        </tr>
+
+      </thead>
+      <tbody id="tbTAL">
+        <!-- Dynamic rows go here -->
+      </tbody>
+    </table>
+  </div>
+  <!-- Fixed Footer -->
+  <div class="bg-white border-t p-2 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
+    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 ">
+      <!-- Rows Per Page Selector -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        <select id="rowsPerPageTAL"
+          class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="10">10 rows</option>
+          <option value="15" selected>15 rows</option>
+          <option value="50">50 rows</option>
+          <option value="250">250 rows</option>
+        </select>
+        <button onclick="rowSelectTAL()"
+          class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+          Go
+        </button>
+      </div>
+      <!-- Pagination Buttons -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        <button onclick="prevPage()"
+          class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+          Prev
+        </button>
+        <span id="pageInfo" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
+        <button onclick="nextPage()"
+          class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script>
+    const inputsToUppercase = ['searchPageTAL', 'symbolSearchTAL', 'ClientIdTAL'];
+
+    inputsToUppercase.forEach(id => {
+      const input = document.getElementById(id);
+      if (input) {
+        input.addEventListener('input', () => {
+          input.value = input.value.toUpperCase();
+        });
+      }
+    });
+
+
+
+  </script>

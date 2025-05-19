@@ -1,143 +1,79 @@
 let dataNotAllotted = [];
 let currentPageNotAllotted = 1;
 let rowsPerPageNotAllotted = 15;
-let sortColumnNotAllotted = null;
-let sortAscNotAllotted = true;
+let sortDirectionNotAllotted = [true, true, true, true, true]; // Ascending by default for 5 columns
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch('json/not-allotted.json')
         .then(res => res.json())
         .then(json => {
             dataNotAllotted = json;
-            setTimeout(() => {
+            setTimeout(function () {
                 renderNotAllottedTable();
-            }, 300);
+            }, 500);
+
         })
         .catch(err => {
             document.getElementById('notAllote-Body').innerHTML = `
-        <tr><td colspan="5" class="text-center p-4 text-red-500">Error loading data: ${err.message}</td></tr>`;
+                <tr><td colspan="5" class="text-center p-4 text-red-500">Error loading data: ${err.message}</td></tr>`;
         });
 });
 
 function getNotAllottedFilters() {
     return {
-        clientId: document.getElementById('notAllottedClientId')?.value.trim().toUpperCase(),
-        symbol: document.getElementById('notAllottedSymbolSearch')?.value.trim().toLowerCase(),
-        pan: document.getElementById('notAllottedPanSearch')?.value.trim().toUpperCase(),
-        appNo: document.getElementById('notAllottedAppNoSearch')?.value.trim()
+        clientId: document.getElementById('notAllottedClientId')?.value.trim().toUpperCase() || '',
+        symbol: document.getElementById('notAllottedSymbolSearch')?.value.trim().toUpperCase() || '',
+        pan: document.getElementById('notAllottedPanSearch')?.value.trim().toUpperCase() || '',
+        appNo: document.getElementById('notAllottedAppNoSearch')?.value.trim().toUpperCase() || '',
     };
-}
-
-function filterNotAllottedData(data, filters) {
-    return data.filter(item => {
-        return (
-            (!filters.clientId || (item.clientId || '').toUpperCase().includes(filters.clientId)) &&
-            (!filters.symbol || (item.symbol || '').toLowerCase().includes(filters.symbol)) &&
-            (!filters.pan || (item.pan || '').toUpperCase().includes(filters.pan)) &&
-            (!filters.appNo || (item.applicationNo || '').includes(filters.appNo))
-        );
-    });
-}
-
-function renderNotAllottedTable() {
-    const filters = getNotAllottedFilters();
-    let filteredData = filterNotAllottedData(dataNotAllotted, filters);
-
-    if (sortColumnNotAllotted !== null) {
-        const keys = ['symbol', 'applicationNo', 'pan', 'clientId', 'appliedQuantity'];
-        const key = keys[sortColumnNotAllotted];
-
-        filteredData.sort((a, b) => {
-            let valA = a[key] ?? '';
-            let valB = b[key] ?? '';
-
-            if (key === 'appliedQuantity') {
-                valA = Number(valA);
-                valB = Number(valB);
-                return sortAscNotAllotted ? valA - valB : valB - valA;
-            }
-
-            return sortAscNotAllotted
-                ? String(valA).localeCompare(String(valB))
-                : String(valB).localeCompare(String(valA));
-        });
-    }
-
-    const totalPages = Math.max(1, Math.ceil(filteredData.length / rowsPerPageNotAllotted));
-    currentPageNotAllotted = Math.min(currentPageNotAllotted, totalPages);
-    const startIndex = (currentPageNotAllotted - 1) * rowsPerPageNotAllotted;
-    const paginatedData = filteredData.slice(startIndex, startIndex + rowsPerPageNotAllotted);
-
-    const tbody = document.getElementById('notAllote-Body');
-    if (!tbody) return;
-
-    if (paginatedData.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-gray-500">No matching records found.</td></tr>`;
-        document.getElementById('notAllottedPageInfo').textContent = `Page 0 of ${totalPages}`;
-        return;
-    }
-
-    tbody.innerHTML = paginatedData.map(item => `
-        <tr class="border-b border-gray-200 hover:bg-gray-50">
-            <td class="text-center py-2 px-4">${item.symbol || ''}</td>
-            <td class="text-center py-2 px-4">${item.applicationNo || ''}</td>
-            <td class="text-center py-2 px-4">${item.pan || ''}</td>
-            <td class="text-center py-2 px-4">${item.clientId || ''}</td>
-            <td class="text-center py-2 px-4">${item.appliedQuantity || ''}</td>
-        </tr>
-    `).join('');
-
-    document.getElementById('notAllottedPageInfo').textContent = `Page ${currentPageNotAllotted} of ${totalPages}`;
-}
-
-function sortNotAllotted(colIndex) {
-    if (sortColumnNotAllotted === colIndex) {
-        sortAscNotAllotted = !sortAscNotAllotted;
-    } else {
-        sortColumnNotAllotted = colIndex;
-        sortAscNotAllotted = true;
-    }
-    renderNotAllottedTable();
 }
 
 function filternotAllottedSearch() {
     currentPageNotAllotted = 1;
     renderNotAllottedTable();
 }
-
-function selectNotAllottedPage() {
-    const searchText = (document.getElementById('NotAllottedSearchPage')?.value || '').toLowerCase().trim();
-    const filters = getNotAllottedFilters();
-    const filteredData = filterNotAllottedData(dataNotAllotted, filters);
-    const startIndex = (currentPageNotAllotted - 1) * rowsPerPageNotAllotted;
-    const paginatedData = filteredData.slice(startIndex, startIndex + rowsPerPageNotAllotted);
-
-    const matchedData = paginatedData.filter(item =>
-        Object.values(item).some(val => String(val || '').toLowerCase().includes(searchText))
+function renderNotAllottedTable() {
+    const { clientId, symbol, pan, appNo } = getNotAllottedFilters();
+    let filteredData = dataNotAllotted.filter(row =>
+        (!clientId || row.clientId.toUpperCase().includes(clientId)) &&
+        (!symbol || row.symbol.toUpperCase().includes(symbol)) &&
+        (!pan || row.pan.toUpperCase().includes(pan)) &&
+        (!appNo || String(row.applicationNo).toUpperCase().includes(appNo))
     );
 
-    const tbody = document.getElementById('notAllote-Body');
-    if (!tbody) return;
+    const start = (currentPageNotAllotted - 1) * rowsPerPageNotAllotted;
+    const end = start + rowsPerPageNotAllotted;
+    const paginatedData = filteredData.slice(start, end);
 
-    if (matchedData.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-gray-500">No matching record found on this page.</td></tr>`;
+    const tbody = document.getElementById('notAllote-Body');
+    tbody.innerHTML = '';
+
+    if (paginatedData.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-red-500 py-4">No results found</td></tr>`;
+        document.getElementById('notAllottedPageInfo').textContent = '';
         return;
     }
 
-    tbody.innerHTML = matchedData.map(item => `
-        <tr class="border-b border-gray-200 hover:bg-gray-50">
-            <td class="text-center py-2 px-4">${item.symbol || ''}</td>
-            <td class="text-center py-2 px-4">${item.applicationNo || ''}</td>
-            <td class="text-center py-2 px-4">${item.pan || ''}</td>
-            <td class="text-center py-2 px-4">${item.clientId || ''}</td>
-            <td class="text-center py-2 px-4">${item.appliedQuantity || ''}</td>
-        </tr>
-    `).join('');
+    paginatedData.forEach(row => {
+        tbody.innerHTML += `
+            <tr class="hover:bg-gray-50 text-center">
+                <td class="px-2 py-2">${row.symbol}</td>
+                <td class="px-2 py-2">${row.applicationNo}</td>
+                <td class="px-2 py-2">${row.pan}</td>
+                <td class="px-2 py-2">${row.clientId}</td>
+                <td class="px-2 py-2">${row.appliedQuantity}</td>
+            </tr>`;
+    });
 
-    const pageInfo = document.getElementById('notAllottedPageInfo');
-    if (pageInfo) {
-        pageInfo.textContent = `Search result on page ${currentPageNotAllotted}`;
-    }
+    const totalPages = Math.ceil(filteredData.length / rowsPerPageNotAllotted);
+    document.getElementById('notAllottedPageInfo').textContent = `Page ${currentPageNotAllotted} of ${totalPages}`;
+}
+
+
+function setnotAllottedRowsPerPage() {
+    rowsPerPageNotAllotted = parseInt(document.getElementById('notAllottedRowsPerPage').value);
+    currentPageNotAllotted = 1;
+    renderNotAllottedTable();
 }
 
 function prevnotAllottedPage() {
@@ -148,28 +84,65 @@ function prevnotAllottedPage() {
 }
 
 function nextnotAllottedPage() {
-    const totalPages = Math.ceil(filterNotAllottedData(dataNotAllotted, getNotAllottedFilters()).length / rowsPerPageNotAllotted);
+    const { clientId, symbol, pan, appNo } = getNotAllottedFilters();
+    const filteredData = dataNotAllotted.filter(row =>
+        (!clientId || row.clientId.toUpperCase().includes(clientId)) &&
+        (!symbol || row.symbol.toUpperCase().includes(symbol)) &&
+        (!pan || row.pan.toUpperCase().includes(pan)) &&
+        (!appNo || row.appNo.tolowerCase().includes(appNo))
+    );
+    const totalPages = Math.ceil(filteredData.length / rowsPerPageNotAllotted);
+
     if (currentPageNotAllotted < totalPages) {
         currentPageNotAllotted++;
         renderNotAllottedTable();
     }
 }
 
-function setnotAllottedRowsPerPage() {
-    const val = parseInt(document.getElementById('notAllottedRowsPerPage')?.value);
-    if (!isNaN(val)) {
-        rowsPerPageNotAllotted = val;
-        currentPageNotAllotted = 1;
-        renderNotAllottedTable();
+function selectNotAllottedPage() {
+    const query = document.getElementById('NotAllottedSearchPage')?.value.trim().toUpperCase() || '';
+    const start = (currentPageNotAllotted - 1) * rowsPerPageNotAllotted;
+    const end = start + rowsPerPageNotAllotted;
+
+    const filteredData = dataNotAllotted.slice(start, end).filter(row =>
+    (row.symbol || '').toUpperCase().includes(query) ||
+    (row.applicationNo || '').toString().toUpperCase().includes(query) ||
+    (row.pan || '').toUpperCase().includes(query) ||
+    (row.clientId || '').toUpperCase().includes(query)
+);
+
+
+    const tbody = document.getElementById('notAllote-Body');
+    tbody.innerHTML = '';
+
+    if (filteredData.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-red-500 py-4">No matching data on this page</td></tr>`;
+        return;
     }
+
+    filteredData.forEach(row => {
+        tbody.innerHTML += `
+            <tr class="hover:bg-gray-50 text-center">
+                <td class="px-2 py-2">${row.symbol}</td>
+                <td class="px-2 py-2">${row.applicationNo}</td>
+                <td class="px-2 py-2">${row.pan}</td>
+                <td class="px-2 py-2">${row.clientId}</td>
+                <td class="px-2 py-2">${row.appliedQuantity}</td>
+            </tr>`;
+    });
 }
 
-// Auto-uppercase inputs
-['NotAllottedSearchPage', 'notAllottedSymbolSearch', 'notAllottedClientId', 'notAllottedPanSearch', 'notAllottedAppNoSearch'].forEach(id => {
-    const input = document.getElementById(id);
-    if (input) {
-        input.addEventListener('input', () => {
-            input.value = input.value.toUpperCase();
-        });
-    }
-});
+function sortNotAllotted(columnIndex) {
+    const keys = ['symbol', 'appNo', 'pan', 'clientId', 'appliedQty'];
+    const key = keys[columnIndex];
+
+    dataNotAllotted.sort((a, b) => {
+        const dir = sortDirectionNotAllotted[columnIndex] ? 1 : -1;
+        const valA = a[key].toUpperCase ? a[key].toUpperCase() : a[key];
+        const valB = b[key].toUpperCase ? b[key].toUpperCase() : b[key];
+        return valA > valB ? dir : valA < valB ? -dir : 0;
+    });
+
+    sortDirectionNotAllotted[columnIndex] = !sortDirectionNotAllotted[columnIndex];
+    renderNotAllottedTable();
+}
