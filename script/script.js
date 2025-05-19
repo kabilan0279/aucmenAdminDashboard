@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const url = this.getAttribute("href");
-            loadPage(url, true); // true = update URL
+            loadPage(url, true); // true = update URl
         });
     });
 });
@@ -54,6 +54,7 @@ function loadPage(url, updateUrl = false) {
                 // Update the URL query string without reloading the page
                 const newUrl = `${window.location.pathname}?page=${encodeURIComponent(url)}`;
                 history.pushState(null, "", newUrl);
+
             }
         })
         .catch(error => {
@@ -118,7 +119,7 @@ function highlightActiveLink(activeLink) {
 document.querySelectorAll(".load-page").forEach(link => {
     link.addEventListener("click", function () {
         document.getElementById('mobileSidebar').style.display = 'none';
- 
+
     });
 });
 
