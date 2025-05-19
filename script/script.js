@@ -90,28 +90,30 @@ function highlightActiveLink(activeLink) {
     const menuLinks = document.querySelectorAll(".load-page");
 
     menuLinks.forEach(link => {
-        link.classList.remove("bg-zinc-300", "text-white");
-        link.classList.add("text-black", "hover:bg-zinc-200", "hover:text-zinc-900");
+        // Reset to default
+        link.classList.remove("bg-slate-600", "text-white");
+        link.classList.add("text-slate-800", "hover:bg-slate-400", "hover:text-white");
 
         const icon = link.querySelector("svg");
         if (icon) {
-            icon.classList.remove("text-black", "group-hover:text-white", "group-hover:text-zinc-900");
-            icon.classList.add("text-zinc-800", "group-hover:text-zinc-900");
+            icon.classList.remove("text-white");
+            icon.classList.add("text-slate-400", "group-hover:text-white");
         }
     });
 
     if (activeLink) {
-        // Set active link background and text color
-        activeLink.classList.add("bg-zinc-300", "text-white");
-        activeLink.classList.remove("text-black", "hover:bg-zinc-200", "hover:text-zinc-900");
+        // Apply active styles
+        activeLink.classList.add("bg-slate-600", "text-white");
+        activeLink.classList.remove("text-slate-800", "hover:bg-slate-400", "hover:text-white");
 
         const icon = activeLink.querySelector("svg");
         if (icon) {
-            icon.classList.remove("text-zinc-800", "group-hover:text-zinc-900");
-            icon.classList.add("text-black"); 
+            icon.classList.remove("text-slate-400", "group-hover:text-white");
+            icon.classList.add("text-white");
         }
     }
 }
+
 
 document.querySelectorAll(".load-page").forEach(link => {
     link.addEventListener("click", function () {
