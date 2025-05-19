@@ -1,0 +1,2402 @@
+[
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user1@pay",
+        "clientId": "C001",
+        "appliedQuantity": 189,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user2@bank",
+        "clientId": "C002",
+        "appliedQuantity": 577,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 50,
+        "pan": "user3@axis",
+        "clientId": "C003",
+        "appliedQuantity": 745,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user4@axis",
+        "clientId": "C004",
+        "appliedQuantity": 33,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 150,
+        "pan": "user5@bank",
+        "clientId": "C005",
+        "appliedQuantity": 317,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 250,
+        "pan": "user6@pay",
+        "clientId": "C006",
+        "appliedQuantity": 732,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user7@axis",
+        "clientId": "C007",
+        "appliedQuantity": 864,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user8@icici",
+        "clientId": "C008",
+        "appliedQuantity": 473,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user9@pay",
+        "clientId": "C009",
+        "appliedQuantity": 883,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 250,
+        "pan": "user10@upi",
+        "clientId": "C010",
+        "appliedQuantity": 271,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 150,
+        "pan": "user11@icici",
+        "clientId": "C011",
+        "appliedQuantity": 60,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 250,
+        "pan": "user12@upi",
+        "clientId": "C012",
+        "appliedQuantity": 615,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user13@bank",
+        "clientId": "C013",
+        "appliedQuantity": 774,
+        "allottedQuantity":15 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user14@icici",
+        "clientId": "C014",
+        "appliedQuantity": 454,
+        "allottedQuantity": 2525
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 50,
+        "pan": "user15@icici",
+        "clientId": "C015",
+        "appliedQuantity": 853,
+        "allottedQuantity": 2525
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 400,
+        "pan": "user16@bank",
+        "clientId": "C016",
+        "appliedQuantity": 932,
+        "allottedQuantity": 2525
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user17@bank",
+        "clientId": "C017",
+        "appliedQuantity": 357,
+        "allottedQuantity": 2525
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 50,
+        "pan": "user18@icici",
+        "clientId": "C018",
+        "appliedQuantity": 684,
+        "allottedQuantity": 2525
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user19@axis",
+        "clientId": "C019",
+        "appliedQuantity": 360,
+        "allottedQuantity": 2525
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user20@bank",
+        "clientId": "C020",
+        "appliedQuantity": 760,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user21@icici",
+        "clientId": "C021",
+        "appliedQuantity": 385,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user22@axis",
+        "clientId": "C022",
+        "appliedQuantity": 874,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user23@bank",
+        "clientId": "C023",
+        "appliedQuantity": 283,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user24@upi",
+        "clientId": "C024",
+        "appliedQuantity": 334,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 400,
+        "pan": "user25@bank",
+        "clientId": "C025",
+        "appliedQuantity": 668,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 400,
+        "pan": "user26@upi",
+        "clientId": "C026",
+        "appliedQuantity": 757,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user27@pay",
+        "clientId": "C027",
+        "appliedQuantity": 133,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user28@upi",
+        "clientId": "C028",
+        "appliedQuantity": 638,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 300,
+        "pan": "user29@bank",
+        "clientId": "C029",
+        "appliedQuantity": 372,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user30@icici",
+        "clientId": "C030",
+        "appliedQuantity": 514,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 150,
+        "pan": "user31@upi",
+        "clientId": "C031",
+        "appliedQuantity": 316,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user32@axis",
+        "clientId": "C032",
+        "appliedQuantity": 710,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user33@icici",
+        "clientId": "C033",
+        "appliedQuantity": 173,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 150,
+        "pan": "user34@pay",
+        "clientId": "C034",
+        "appliedQuantity": 857,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user35@icici",
+        "clientId": "C035",
+        "appliedQuantity": 766,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user36@bank",
+        "clientId": "C036",
+        "appliedQuantity": 671,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 350,
+        "pan": "user37@icici",
+        "clientId": "C037",
+        "appliedQuantity": 770,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user38@upi",
+        "clientId": "C038",
+        "appliedQuantity": 77,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user39@upi",
+        "clientId": "C039",
+        "appliedQuantity": 417,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user40@axis",
+        "clientId": "C040",
+        "appliedQuantity": 659,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user41@pay",
+        "clientId": "C041",
+        "appliedQuantity": 105,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 250,
+        "pan": "user42@axis",
+        "clientId": "C042",
+        "appliedQuantity": 189,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user43@upi",
+        "clientId": "C043",
+        "appliedQuantity": 148,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user44@upi",
+        "clientId": "C044",
+        "appliedQuantity": 845,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user45@icici",
+        "clientId": "C045",
+        "appliedQuantity": 65,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 400,
+        "pan": "user46@pay",
+        "clientId": "C046",
+        "appliedQuantity": 381,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user47@bank",
+        "clientId": "C047",
+        "appliedQuantity": 48,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user48@upi",
+        "clientId": "C048",
+        "appliedQuantity": 919,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 150,
+        "pan": "user49@icici",
+        "clientId": "C049",
+        "appliedQuantity": 84,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 300,
+        "pan": "user50@axis",
+        "clientId": "C050",
+        "appliedQuantity": 765,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user51@axis",
+        "clientId": "C051",
+        "appliedQuantity": 50,
+        "allottedQuantity":30 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 350,
+        "pan": "user52@axis",
+        "clientId": "C052",
+        "appliedQuantity": 549,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 50,
+        "pan": "user53@upi",
+        "clientId": "C053",
+        "appliedQuantity": 119,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user54@pay",
+        "clientId": "C054",
+        "appliedQuantity": 426,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user55@axis",
+        "clientId": "C055",
+        "appliedQuantity": 156,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 150,
+        "pan": "user56@icici",
+        "clientId": "C056",
+        "appliedQuantity": 777,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 150,
+        "pan": "user57@pay",
+        "clientId": "C057",
+        "appliedQuantity": 549,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 50,
+        "pan": "user58@icici",
+        "clientId": "C058",
+        "appliedQuantity": 59,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user59@upi",
+        "clientId": "C059",
+        "appliedQuantity": 364,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user60@pay",
+        "clientId": "C060",
+        "appliedQuantity": 599,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user61@pay",
+        "clientId": "C061",
+        "appliedQuantity": 844,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user62@upi",
+        "clientId": "C062",
+        "appliedQuantity": 225,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user63@upi",
+        "clientId": "C063",
+        "appliedQuantity": 297,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 400,
+        "pan": "user64@pay",
+        "clientId": "C064",
+        "appliedQuantity": 484,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user65@upi",
+        "clientId": "C065",
+        "appliedQuantity": 647,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 100,
+        "pan": "user66@upi",
+        "clientId": "C066",
+        "appliedQuantity": 876,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user67@bank",
+        "clientId": "C067",
+        "appliedQuantity": 13,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 50,
+        "pan": "user68@axis",
+        "clientId": "C068",
+        "appliedQuantity": 95,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 250,
+        "pan": "user69@bank",
+        "clientId": "C069",
+        "appliedQuantity": 227,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user70@bank",
+        "clientId": "C070",
+        "appliedQuantity": 182,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user71@bank",
+        "clientId": "C071",
+        "appliedQuantity": 623,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user72@bank",
+        "clientId": "C072",
+        "appliedQuantity": 635,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user73@bank",
+        "clientId": "C073",
+        "appliedQuantity": 261,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user74@icici",
+        "clientId": "C074",
+        "appliedQuantity": 893,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user75@pay",
+        "clientId": "C075",
+        "appliedQuantity": 894,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 100,
+        "pan": "user76@pay",
+        "clientId": "C076",
+        "appliedQuantity": 959,
+        "allottedQuantity":35 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user77@bank",
+        "clientId": "C077",
+        "appliedQuantity": 752,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user78@axis",
+        "clientId": "C078",
+        "appliedQuantity": 911,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user79@icici",
+        "clientId": "C079",
+        "appliedQuantity": 798,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 100,
+        "pan": "user80@upi",
+        "clientId": "C080",
+        "appliedQuantity": 464,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 200,
+        "pan": "user81@icici",
+        "clientId": "C081",
+        "appliedQuantity": 295,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user82@upi",
+        "clientId": "C082",
+        "appliedQuantity": 108,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user83@pay",
+        "clientId": "C083",
+        "appliedQuantity": 754,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user84@axis",
+        "clientId": "C084",
+        "appliedQuantity": 24,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user85@pay",
+        "clientId": "C085",
+        "appliedQuantity": 845,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user86@icici",
+        "clientId": "C086",
+        "appliedQuantity": 80,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 400,
+        "pan": "user87@bank",
+        "clientId": "C087",
+        "appliedQuantity": 186,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user88@pay",
+        "clientId": "C088",
+        "appliedQuantity": 355,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user89@axis",
+        "clientId": "C089",
+        "appliedQuantity": 744,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user90@icici",
+        "clientId": "C090",
+        "appliedQuantity": 299,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user91@upi",
+        "clientId": "C091",
+        "appliedQuantity": 230,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user92@icici",
+        "clientId": "C092",
+        "appliedQuantity": 263,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user93@upi",
+        "clientId": "C093",
+        "appliedQuantity": 99,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 400,
+        "pan": "user94@axis",
+        "clientId": "C094",
+        "appliedQuantity": 395,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 150,
+        "pan": "user95@axis",
+        "clientId": "C095",
+        "appliedQuantity": 202,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user96@axis",
+        "clientId": "C096",
+        "appliedQuantity": 191,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 100,
+        "pan": "user97@upi",
+        "clientId": "C097",
+        "appliedQuantity": 464,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user98@icici",
+        "clientId": "C098",
+        "appliedQuantity": 388,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user99@icici",
+        "clientId": "C099",
+        "appliedQuantity": 908,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user100@axis",
+        "clientId": "C100",
+        "appliedQuantity": 566,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 50,
+        "pan": "user101@pay",
+        "clientId": "C101",
+        "appliedQuantity": 204,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 250,
+        "pan": "user102@bank",
+        "clientId": "C102",
+        "appliedQuantity": 450,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user103@axis",
+        "clientId": "C103",
+        "appliedQuantity": 272,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 100,
+        "pan": "user104@icici",
+        "clientId": "C104",
+        "appliedQuantity": 122,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user105@icici",
+        "clientId": "C105",
+        "appliedQuantity": 292,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user106@upi",
+        "clientId": "C106",
+        "appliedQuantity": 584,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 50,
+        "pan": "user107@icici",
+        "clientId": "C107",
+        "appliedQuantity": 693,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 150,
+        "pan": "user108@icici",
+        "clientId": "C108",
+        "appliedQuantity": 642,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 150,
+        "pan": "user109@axis",
+        "clientId": "C109",
+        "appliedQuantity": 553,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 50,
+        "pan": "user110@pay",
+        "clientId": "C110",
+        "appliedQuantity": 64,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 100,
+        "pan": "user111@axis",
+        "clientId": "C111",
+        "appliedQuantity": 370,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user112@axis",
+        "clientId": "C112",
+        "appliedQuantity": 193,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 100,
+        "pan": "user113@icici",
+        "clientId": "C113",
+        "appliedQuantity": 411,
+        "allottedQuantity": 40
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 400,
+        "pan": "user114@pay",
+        "clientId": "C114",
+        "appliedQuantity": 140,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user115@icici",
+        "clientId": "C115",
+        "appliedQuantity": 748,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user116@pay",
+        "clientId": "C116",
+        "appliedQuantity": 926,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user117@pay",
+        "clientId": "C117",
+        "appliedQuantity": 21,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 300,
+        "pan": "user118@icici",
+        "clientId": "C118",
+        "appliedQuantity": 855,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 400,
+        "pan": "user119@bank",
+        "clientId": "C119",
+        "appliedQuantity": 20,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user120@pay",
+        "clientId": "C120",
+        "appliedQuantity": 928,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 250,
+        "pan": "user121@bank",
+        "clientId": "C121",
+        "appliedQuantity": 537,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 200,
+        "pan": "user122@bank",
+        "clientId": "C122",
+        "appliedQuantity": 257,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 250,
+        "pan": "user123@axis",
+        "clientId": "C123",
+        "appliedQuantity": 252,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 400,
+        "pan": "user124@upi",
+        "clientId": "C124",
+        "appliedQuantity": 156,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user125@axis",
+        "clientId": "C125",
+        "appliedQuantity": 556,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user126@upi",
+        "clientId": "C126",
+        "appliedQuantity": 237,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 350,
+        "pan": "user127@pay",
+        "clientId": "C127",
+        "appliedQuantity": 485,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 250,
+        "pan": "user128@icici",
+        "clientId": "C128",
+        "appliedQuantity": 411,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 400,
+        "pan": "user129@axis",
+        "clientId": "C129",
+        "appliedQuantity": 367,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 400,
+        "pan": "user130@upi",
+        "clientId": "C130",
+        "appliedQuantity": 129,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user131@bank",
+        "clientId": "C131",
+        "appliedQuantity": 440,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user132@bank",
+        "clientId": "C132",
+        "appliedQuantity": 901,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 200,
+        "pan": "user133@pay",
+        "clientId": "C133",
+        "appliedQuantity": 589,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user134@pay",
+        "clientId": "C134",
+        "appliedQuantity": 667,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 50,
+        "pan": "user135@axis",
+        "clientId": "C135",
+        "appliedQuantity": 806,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user136@axis",
+        "clientId": "C136",
+        "appliedQuantity": 586,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 50,
+        "pan": "user137@bank",
+        "clientId": "C137",
+        "appliedQuantity": 202,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 300,
+        "pan": "user138@bank",
+        "clientId": "C138",
+        "appliedQuantity": 375,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user139@upi",
+        "clientId": "C139",
+        "appliedQuantity": 897,
+        "allottedQuantity":45 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user140@axis",
+        "clientId": "C140",
+        "appliedQuantity": 786,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 400,
+        "pan": "user141@pay",
+        "clientId": "C141",
+        "appliedQuantity": 712,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 300,
+        "pan": "user142@axis",
+        "clientId": "C142",
+        "appliedQuantity": 972,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user143@upi",
+        "clientId": "C143",
+        "appliedQuantity": 344,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user144@bank",
+        "clientId": "C144",
+        "appliedQuantity": 909,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user145@pay",
+        "clientId": "C145",
+        "appliedQuantity": 197,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user146@bank",
+        "clientId": "C146",
+        "appliedQuantity": 991,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user147@axis",
+        "clientId": "C147",
+        "appliedQuantity": 535,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 250,
+        "pan": "user148@bank",
+        "clientId": "C148",
+        "appliedQuantity": 287,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user149@icici",
+        "clientId": "C149",
+        "appliedQuantity": 844,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 250,
+        "pan": "user150@bank",
+        "clientId": "C150",
+        "appliedQuantity": 965,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user151@axis",
+        "clientId": "C151",
+        "appliedQuantity": 481,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 250,
+        "pan": "user152@pay",
+        "clientId": "C152",
+        "appliedQuantity": 35,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 400,
+        "pan": "user153@upi",
+        "clientId": "C153",
+        "appliedQuantity": 962,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 400,
+        "pan": "user154@bank",
+        "clientId": "C154",
+        "appliedQuantity": 834,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 400,
+        "pan": "user155@icici",
+        "clientId": "C155",
+        "appliedQuantity": 692,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user156@pay",
+        "clientId": "C156",
+        "appliedQuantity": 53,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user157@bank",
+        "clientId": "C157",
+        "appliedQuantity": 959,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user158@bank",
+        "clientId": "C158",
+        "appliedQuantity": 799,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user159@pay",
+        "clientId": "C159",
+        "appliedQuantity": 61,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 200,
+        "pan": "user160@icici",
+        "clientId": "C160",
+        "appliedQuantity": 545,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user161@bank",
+        "clientId": "C161",
+        "appliedQuantity": 356,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user162@icici",
+        "clientId": "C162",
+        "appliedQuantity": 917,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user163@upi",
+        "clientId": "C163",
+        "appliedQuantity": 597,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user164@axis",
+        "clientId": "C164",
+        "appliedQuantity": 529,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 150,
+        "pan": "user165@pay",
+        "clientId": "C165",
+        "appliedQuantity": 148,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 250,
+        "pan": "user166@icici",
+        "clientId": "C166",
+        "appliedQuantity": 453,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user167@pay",
+        "clientId": "C167",
+        "appliedQuantity": 725,
+        "allottedQuantity":28 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 50,
+        "pan": "user168@icici",
+        "clientId": "C168",
+        "appliedQuantity": 553,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user169@pay",
+        "clientId": "C169",
+        "appliedQuantity": 620,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user170@pay",
+        "clientId": "C170",
+        "appliedQuantity": 242,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 400,
+        "pan": "user171@bank",
+        "clientId": "C171",
+        "appliedQuantity": 214,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user172@axis",
+        "clientId": "C172",
+        "appliedQuantity": 393,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user173@axis",
+        "clientId": "C173",
+        "appliedQuantity": 63,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user174@axis",
+        "clientId": "C174",
+        "appliedQuantity": 965,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 400,
+        "pan": "user175@upi",
+        "clientId": "C175",
+        "appliedQuantity": 171,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 150,
+        "pan": "user176@icici",
+        "clientId": "C176",
+        "appliedQuantity": 337,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user177@axis",
+        "clientId": "C177",
+        "appliedQuantity": 398,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user178@pay",
+        "clientId": "C178",
+        "appliedQuantity": 694,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user179@icici",
+        "clientId": "C179",
+        "appliedQuantity": 679,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user180@pay",
+        "clientId": "C180",
+        "appliedQuantity": 647,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user181@icici",
+        "clientId": "C181",
+        "appliedQuantity": 701,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 400,
+        "pan": "user182@icici",
+        "clientId": "C182",
+        "appliedQuantity": 41,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 150,
+        "pan": "user183@bank",
+        "clientId": "C183",
+        "appliedQuantity": 979,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 250,
+        "pan": "user184@axis",
+        "clientId": "C184",
+        "appliedQuantity": 113,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 50,
+        "pan": "user185@icici",
+        "clientId": "C185",
+        "appliedQuantity": 46,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 200,
+        "pan": "user186@axis",
+        "clientId": "C186",
+        "appliedQuantity": 929,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 100,
+        "pan": "user187@upi",
+        "clientId": "C187",
+        "appliedQuantity": 873,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user188@axis",
+        "clientId": "C188",
+        "appliedQuantity": 988,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 250,
+        "pan": "user189@icici",
+        "clientId": "C189",
+        "appliedQuantity": 744,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user190@upi",
+        "clientId": "C190",
+        "appliedQuantity": 754,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 400,
+        "pan": "user191@axis",
+        "clientId": "C191",
+        "appliedQuantity": 202,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 300,
+        "pan": "user192@bank",
+        "clientId": "C192",
+        "appliedQuantity": 92,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user193@axis",
+        "clientId": "C193",
+        "appliedQuantity": 445,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 100,
+        "pan": "user194@icici",
+        "clientId": "C194",
+        "appliedQuantity": 57,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user195@bank",
+        "clientId": "C195",
+        "appliedQuantity": 66,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user196@axis",
+        "clientId": "C196",
+        "appliedQuantity": 739,
+        "allottedQuantity": 16
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 100,
+        "pan": "user197@upi",
+        "clientId": "C197",
+        "appliedQuantity": 206,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 50,
+        "pan": "user198@pay",
+        "clientId": "C198",
+        "appliedQuantity": 147,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user199@pay",
+        "clientId": "C199",
+        "appliedQuantity": 602,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 50,
+        "pan": "user200@upi",
+        "clientId": "C200",
+        "appliedQuantity": 252,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user201@bank",
+        "clientId": "C201",
+        "appliedQuantity": 285,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user202@icici",
+        "clientId": "C202",
+        "appliedQuantity": 782,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user203@upi",
+        "clientId": "C203",
+        "appliedQuantity": 983,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user204@axis",
+        "clientId": "C204",
+        "appliedQuantity": 19,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user205@bank",
+        "clientId": "C205",
+        "appliedQuantity": 636,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 250,
+        "pan": "user206@bank",
+        "clientId": "C206",
+        "appliedQuantity": 500,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 150,
+        "pan": "user207@pay",
+        "clientId": "C207",
+        "appliedQuantity": 758,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 350,
+        "pan": "user208@axis",
+        "clientId": "C208",
+        "appliedQuantity": 863,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 50,
+        "pan": "user209@upi",
+        "clientId": "C209",
+        "appliedQuantity": 436,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user210@bank",
+        "clientId": "C210",
+        "appliedQuantity": 184,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user211@upi",
+        "clientId": "C211",
+        "appliedQuantity": 10,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user212@bank",
+        "clientId": "C212",
+        "appliedQuantity": 491,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user213@axis",
+        "clientId": "C213",
+        "appliedQuantity": 962,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user214@icici",
+        "clientId": "C214",
+        "appliedQuantity": 124,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 100,
+        "pan": "user215@pay",
+        "clientId": "C215",
+        "appliedQuantity": 189,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user216@bank",
+        "clientId": "C216",
+        "appliedQuantity": 873,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 250,
+        "pan": "user217@icici",
+        "clientId": "C217",
+        "appliedQuantity": 15,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user218@upi",
+        "clientId": "C218",
+        "appliedQuantity": 766,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user219@bank",
+        "clientId": "C219",
+        "appliedQuantity": 532,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user220@icici",
+        "clientId": "C220",
+        "appliedQuantity": 53,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 250,
+        "pan": "user221@axis",
+        "clientId": "C221",
+        "appliedQuantity": 445,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 250,
+        "pan": "user222@icici",
+        "clientId": "C222",
+        "appliedQuantity": 906,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user223@icici",
+        "clientId": "C223",
+        "appliedQuantity": 509,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 300,
+        "pan": "user224@upi",
+        "clientId": "C224",
+        "appliedQuantity": 33,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user225@pay",
+        "clientId": "C225",
+        "appliedQuantity": 626,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user226@icici",
+        "clientId": "C226",
+        "appliedQuantity": 421,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user227@pay",
+        "clientId": "C227",
+        "appliedQuantity": 57,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 150,
+        "pan": "user228@upi",
+        "clientId": "C228",
+        "appliedQuantity": 226,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 100,
+        "pan": "user229@pay",
+        "clientId": "C229",
+        "appliedQuantity": 854,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 150,
+        "pan": "user230@pay",
+        "clientId": "C230",
+        "appliedQuantity": 251,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user231@icici",
+        "clientId": "C231",
+        "appliedQuantity": 207,
+        "allottedQuantity":78 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 100,
+        "pan": "user232@upi",
+        "clientId": "C232",
+        "appliedQuantity": 415,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user233@upi",
+        "clientId": "C233",
+        "appliedQuantity": 301,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 250,
+        "pan": "user234@upi",
+        "clientId": "C234",
+        "appliedQuantity": 173,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 300,
+        "pan": "user235@pay",
+        "clientId": "C235",
+        "appliedQuantity": 193,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 250,
+        "pan": "user236@axis",
+        "clientId": "C236",
+        "appliedQuantity": 64,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user237@bank",
+        "clientId": "C237",
+        "appliedQuantity": 367,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 300,
+        "pan": "user238@icici",
+        "clientId": "C238",
+        "appliedQuantity": 534,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 250,
+        "pan": "user239@pay",
+        "clientId": "C239",
+        "appliedQuantity": 266,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 350,
+        "pan": "user240@pay",
+        "clientId": "C240",
+        "appliedQuantity": 703,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 350,
+        "pan": "user241@pay",
+        "clientId": "C241",
+        "appliedQuantity": 524,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 50,
+        "pan": "user242@bank",
+        "clientId": "C242",
+        "appliedQuantity": 750,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 50,
+        "pan": "user243@upi",
+        "clientId": "C243",
+        "appliedQuantity": 443,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 250,
+        "pan": "user244@icici",
+        "clientId": "C244",
+        "appliedQuantity": 745,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 300,
+        "pan": "user245@axis",
+        "clientId": "C245",
+        "appliedQuantity": 238,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user246@upi",
+        "clientId": "C246",
+        "appliedQuantity": 185,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 400,
+        "pan": "user247@icici",
+        "clientId": "C247",
+        "appliedQuantity": 933,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user248@bank",
+        "clientId": "C248",
+        "appliedQuantity": 754,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 350,
+        "pan": "user249@bank",
+        "clientId": "C249",
+        "appliedQuantity": 836,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 150,
+        "pan": "user250@upi",
+        "clientId": "C250",
+        "appliedQuantity": 839,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 250,
+        "pan": "user251@bank",
+        "clientId": "C251",
+        "appliedQuantity": 50,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user252@pay",
+        "clientId": "C252",
+        "appliedQuantity": 896,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user253@bank",
+        "clientId": "C253",
+        "appliedQuantity": 529,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 50,
+        "pan": "user254@icici",
+        "clientId": "C254",
+        "appliedQuantity": 629,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 150,
+        "pan": "user255@upi",
+        "clientId": "C255",
+        "appliedQuantity": 421,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 50,
+        "pan": "user256@upi",
+        "clientId": "C256",
+        "appliedQuantity": 307,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user257@axis",
+        "clientId": "C257",
+        "appliedQuantity": 83,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 100,
+        "pan": "user258@bank",
+        "clientId": "C258",
+        "appliedQuantity": 193,
+        "allottedQuantity": 26
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 250,
+        "pan": "user259@pay",
+        "clientId": "C259",
+        "appliedQuantity": 591,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user260@axis",
+        "clientId": "C260",
+        "appliedQuantity": 750,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user261@upi",
+        "clientId": "C261",
+        "appliedQuantity": 236,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 250,
+        "pan": "user262@axis",
+        "clientId": "C262",
+        "appliedQuantity": 327,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 350,
+        "pan": "user263@axis",
+        "clientId": "C263",
+        "appliedQuantity": 107,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 50,
+        "pan": "user264@upi",
+        "clientId": "C264",
+        "appliedQuantity": 647,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 350,
+        "pan": "user265@axis",
+        "clientId": "C265",
+        "appliedQuantity": 647,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user266@bank",
+        "clientId": "C266",
+        "appliedQuantity": 283,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 300,
+        "pan": "user267@icici",
+        "clientId": "C267",
+        "appliedQuantity": 766,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 400,
+        "pan": "user268@bank",
+        "clientId": "C268",
+        "appliedQuantity": 111,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user269@axis",
+        "clientId": "C269",
+        "appliedQuantity": 968,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user270@icici",
+        "clientId": "C270",
+        "appliedQuantity": 696,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 100,
+        "pan": "user271@axis",
+        "clientId": "C271",
+        "appliedQuantity": 311,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user272@axis",
+        "clientId": "C272",
+        "appliedQuantity": 305,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 200,
+        "pan": "user273@pay",
+        "clientId": "C273",
+        "appliedQuantity": 240,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user274@icici",
+        "clientId": "C274",
+        "appliedQuantity": 310,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 400,
+        "pan": "user275@icici",
+        "clientId": "C275",
+        "appliedQuantity": 554,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 150,
+        "pan": "user276@bank",
+        "clientId": "C276",
+        "appliedQuantity": 819,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 50,
+        "pan": "user277@bank",
+        "clientId": "C277",
+        "appliedQuantity": 279,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 200,
+        "pan": "user278@icici",
+        "clientId": "C278",
+        "appliedQuantity": 442,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 250,
+        "pan": "user279@icici",
+        "clientId": "C279",
+        "appliedQuantity": 317,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user280@upi",
+        "clientId": "C280",
+        "appliedQuantity": 647,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 300,
+        "pan": "user281@icici",
+        "clientId": "C281",
+        "appliedQuantity": 451,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 150,
+        "pan": "user282@pay",
+        "clientId": "C282",
+        "appliedQuantity": 294,
+        "allottedQuantity":17 
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 250,
+        "pan": "user283@upi",
+        "clientId": "C283",
+        "appliedQuantity": 152,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 400,
+        "pan": "user284@pay",
+        "clientId": "C284",
+        "appliedQuantity": 651,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 100,
+        "pan": "user285@axis",
+        "clientId": "C285",
+        "appliedQuantity": 337,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 200,
+        "pan": "user286@upi",
+        "clientId": "C286",
+        "appliedQuantity": 379,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 400,
+        "pan": "user287@axis",
+        "clientId": "C287",
+        "appliedQuantity": 284,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 200,
+        "pan": "user288@pay",
+        "clientId": "C288",
+        "appliedQuantity": 897,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 50,
+        "pan": "user289@pay",
+        "clientId": "C289",
+        "appliedQuantity": 12,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 350,
+        "pan": "user290@bank",
+        "clientId": "C290",
+        "appliedQuantity": 711,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "HCL",
+        "applicationNo": 300,
+        "pan": "user291@axis",
+        "clientId": "C291",
+        "appliedQuantity": 601,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 350,
+        "pan": "user292@axis",
+        "clientId": "C292",
+        "appliedQuantity": 81,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 300,
+        "pan": "user293@upi",
+        "clientId": "C293",
+        "appliedQuantity": 347,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "TCS",
+        "applicationNo": 100,
+        "pan": "user294@icici",
+        "clientId": "C294",
+        "appliedQuantity": 988,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 150,
+        "pan": "user295@icici",
+        "clientId": "C295",
+        "appliedQuantity": 199,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 250,
+        "pan": "user296@bank",
+        "clientId": "C296",
+        "appliedQuantity": 979,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "WIPRO",
+        "applicationNo": 400,
+        "pan": "user297@bank",
+        "clientId": "C297",
+        "appliedQuantity": 555,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 300,
+        "pan": "user298@icici",
+        "clientId": "C298",
+        "appliedQuantity": 937,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "INFY",
+        "applicationNo": 150,
+        "pan": "user299@axis",
+        "clientId": "C299",
+        "appliedQuantity": 422,
+        "allottedQuantity": 25
+    },
+    {
+        "symbol": "RELIANCE",
+        "applicationNo": 400,
+        "pan": "user300@upi",
+        "clientId": "C300",
+        "appliedQuantity": 142,
+        "allottedQuantity": 25
+    }
+]

@@ -309,7 +309,7 @@ function SelectPageTAL() {
     <td class="px-2 py-2 text-sm font-sm text-center whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
     <td class="px-2 py-2 font-sm text-center text-gray-700">${row.bidQty || ''}</td>
     <td class="px-2 py-2 font-sm text-center text-gray-700">${row.upiId || ''}</td>
-    <td class="px-2 py-2 text-sm text-center whitespace-nowrap ${responseClass}">${row.response || ''}</td>
+    <td class="px-2 py-2  text-sm text-center whitespace-nowrap ${responseClass}">${row.response || ''}</td>
     <td class="px-2 py-2 font-sm text-center text-gray-700">${row.date || ''}</td>
     <td class="px-2 py-2 font-sm text-center text-gray-700">${row.time || ''}</td>
     <td class="px-2 py-2 text-sm text-center whitespace-nowrap">

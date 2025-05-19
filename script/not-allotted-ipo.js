@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dataNotAllotted = json;
             setTimeout(function () {
                 renderNotAllottedTable();
-            }, 500);
+            }, 300);
 
         })
         .catch(err => {

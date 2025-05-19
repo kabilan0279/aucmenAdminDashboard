@@ -69,15 +69,6 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
 </div>
 
 
@@ -115,31 +106,39 @@
     <table class="min-w-full text-sm text-left">
         <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
             <tr class="cursor-pointer bg-stone-100 ">
-                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(0)">Symbol
+                <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600" onclick="
+                    sortNotAllotted(0)">Symbol
                     <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
                 </th>
-                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(1)">Application No
+                <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600" onclick="
+                    sortNotAllotted(1)">Application No
                     <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
                 </th>
-                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(2)">PAN
+                <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600" onclick="
+                    sortNotAllotted(2)">PAN
                     <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
                 </th>
-                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(3)">Client ID
+                <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600" onclick="
+                    sortNotAllotted(3)">Client ID
                     <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
                 </th>
-                <th class="px-4 py-2 text-center text-normal" onclick="sortNotAllotted(4)">Applied Quantity
+                <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600" onclick="
+                    sortNotAllotted(4)">Applied Quantity
                     <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
                 </th>
             </tr>
         </thead>
         <tbody id="notAllote-Body" class="divide-y divide-gray-100 mb-4">
-            <!-- Your dynamic rows go here -->
+
         </tbody>
     </table>
+
+</div>
+
 </div>
 <!-- Fixed Footer -->
 <div class="bg-white border-t p-2 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
-    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 pb-2  ">
+    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 pb-1 ">
         <!-- Rows Per Page Selector -->
         <div class="flex items-center gap-2">
             <select id="notAllottedRowsPerPage"
