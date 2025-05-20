@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
         .catch(err => {
-            document.getElementById('notAllote-Body').innerHTML = `
+            document.getElementById('notAlloteBody').innerHTML = `
                 <tr><td colspan="5" class="text-center p-4 text-red-500">Error loading data: ${err.message}</td></tr>`;
         });
 });
@@ -34,6 +34,7 @@ function filternotAllottedSearch() {
 }
 function renderNotAllottedTable() {
     const { clientId, symbol, pan, appNo } = getNotAllottedFilters();
+
     let filteredData = dataNotAllotted.filter(row =>
         (!clientId || row.clientId.toUpperCase().includes(clientId)) &&
         (!symbol || row.symbol.toUpperCase().includes(symbol)) &&
@@ -45,15 +46,23 @@ function renderNotAllottedTable() {
     const end = start + rowsPerPageNotAllotted;
     const paginatedData = filteredData.slice(start, end);
 
-    const tbody = document.getElementById('notAllote-Body');
+    const tbody = document.getElementById('notAlloteBody');
+    if (!tbody) {
+        console.error("Element with id 'notAlloteBody' not found!");
+        return;
+    }
+
+    // Clear previous rows
     tbody.innerHTML = '';
 
     if (paginatedData.length === 0) {
         tbody.innerHTML = `<tr><td colspan="5" class="text-center text-red-500 py-4">No results found</td></tr>`;
-        document.getElementById('notAllottedPageInfo').textContent = '';
+        const pageInfo = document.getElementById('notAllottedPageInfo');
+        if (pageInfo) pageInfo.textContent = '';
         return;
     }
 
+    // Append rows
     paginatedData.forEach(row => {
         tbody.innerHTML += `
             <tr class="hover:bg-gray-50 text-center">
@@ -66,8 +75,10 @@ function renderNotAllottedTable() {
     });
 
     const totalPages = Math.ceil(filteredData.length / rowsPerPageNotAllotted);
-    document.getElementById('notAllottedPageInfo').textContent = `Page ${currentPageNotAllotted} of ${totalPages}`;
+    const pageInfo = document.getElementById('notAllottedPageInfo');
+    if (pageInfo) pageInfo.textContent = `Page ${currentPageNotAllotted} of ${totalPages}`;
 }
+
 
 
 function setnotAllottedRowsPerPage() {
@@ -112,7 +123,7 @@ function selectNotAllottedPage() {
 );
 
 
-    const tbody = document.getElementById('notAllote-Body');
+    const tbody = document.getElementById('notAlloteBody');
     tbody.innerHTML = '';
 
     if (filteredData.length === 0) {
