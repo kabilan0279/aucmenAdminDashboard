@@ -116,11 +116,11 @@ function selectNotAllottedPage() {
     const end = start + rowsPerPageNotAllotted;
 
     const filteredData = dataNotAllotted.slice(start, end).filter(row =>
-    (row.symbol || '').toUpperCase().includes(query) ||
-    (row.applicationNo || '').toString().toUpperCase().includes(query) ||
-    (row.pan || '').toUpperCase().includes(query) ||
-    (row.clientId || '').toUpperCase().includes(query)
-);
+        (row.symbol || '').toUpperCase().includes(query) ||
+        (row.applicationNo || '').toString().toUpperCase().includes(query) ||
+        (row.pan || '').toUpperCase().includes(query) ||
+        (row.clientId || '').toUpperCase().includes(query)
+    );
 
 
     const tbody = document.getElementById('notAlloteBody');
@@ -141,6 +141,13 @@ function selectNotAllottedPage() {
                 <td class="px-2 py-2">${row.appliedQuantity}</td>
             </tr>`;
     });
+
+    const pageInfo = document.getElementById('notAllottedPageInfo');
+    if (pageInfo) {
+        pageInfo.textContent = `Page ${currentPageNotAllotted} of ${totalPages}`;
+    }
+
+   
 }
 
 function sortNotAllotted(columnIndex) {
