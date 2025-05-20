@@ -1,6 +1,6 @@
 let dataAllotted = [];
 let currentPageAllotted = 1;
-let rowsPerPageAllotted = 15;
+let rowsPerPageAllotted = 25;
 let sortDirectionAllotted = [true, true, true, true, true, true]; // for 6 columns
 
 document.addEventListener('DOMContentLoaded', () => {

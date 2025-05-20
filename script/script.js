@@ -29,13 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const page = params.get("page") || "content/client-details.html";
     loadPage(page);
-
-
     document.querySelectorAll(".load-page").forEach(function (link) {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const url = this.getAttribute("href");
             loadPage(url, true, this); 
+            
         });
     });
 
@@ -45,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
         loadPage(page); 
     });
 });
+
+
 
 function loadPage(url, updateUrl = false, clickedLink = null) {
     fetch(url)
@@ -76,6 +77,7 @@ function highlightActiveLink(clickedLink) {
     document.querySelectorAll(".load-page").forEach(link => link.classList.remove("active"));
     if (clickedLink) {
         clickedLink.classList.add("active");
+
     }
 }
 
@@ -110,11 +112,9 @@ function highlightActiveLink(activeLink) {
 document.querySelectorAll(".load-page").forEach(link => {
     link.addEventListener("click", function () {
         document.getElementById('mobileSidebar').style.display = 'none';
-
+        
     });
 });
-
-
 
 
 // Add event listeners to menu items after DOM is ready

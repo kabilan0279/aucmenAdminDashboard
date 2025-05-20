@@ -229,7 +229,7 @@ function sortTable(colIndex) {
   renderTable();
 }
 
-function filterSearchFunction() {
+function uploadsSearchFilter() {
   const symbol = (document.getElementById('symbolSearch')?.value || '').toLowerCase().trim();
   const clientId = (document.getElementById('ClientId')?.value || '').toUpperCase().trim();
   const uploadedBy = (document.getElementById('uploadedBy')?.value || '').toLowerCase().trim();
@@ -328,9 +328,6 @@ function SelectPage() {
 }
 
 
-
-
-
  function toggleDropdown() {
     const dropdownMenu = document.getElementById("dropdownMenu");
     dropdownMenu.classList.toggle("hidden");
@@ -349,13 +346,3 @@ function SelectPage() {
   }
 
 
-  
-//  // Close when clicking outside
-//   document.addEventListener("click", function (event) {
-//     const dropdownMenu = document.getElementById("dropdownMenu");
-//     const dropdownButton = document.getElementById("dropdownButton");
-
-//     if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-//       dropdownMenu.classList.add("hidden");
-//     }
-//   });

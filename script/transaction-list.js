@@ -233,7 +233,7 @@ function sortTAL(colIndex) {
   renderTableTAL();
 }
 
-function filterSearchFunction() {
+function filterTransaction() {
   const symbol = (document.getElementById('symbolSearch')?.value || '').toLowerCase().trim();
   const clientId = (document.getElementById('ClientId')?.value || '').toUpperCase().trim();
   const uploadedBy = (document.getElementById('uploadedBy')?.value || '').toLowerCase().trim();

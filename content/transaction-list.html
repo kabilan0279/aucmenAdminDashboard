@@ -54,7 +54,7 @@
     <!-- Dropdown -->
     <div class="relative flex-1 min-w-full sm:min-w-[100px]">
       <div>
-        <button onclick="toggleDropdownTAL()" id="dropdownButton" type="button"
+        <button onclick="toggleDropdownTAL()" id="dropdownButtonTAL" type="button"
           class="w-full inline-flex justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm text-gray-400 shadow-xs ring-1 focus:ring-2 focus:ring-blue-500"
           aria-expanded="false" aria-haspopup="true">
           RESPONSE
@@ -141,7 +141,7 @@
     </div>
 
     <!-- Search Button -->
-    <button onclick="filterSearchFunction()"
+    <button onclick="filterTransaction()"
       class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
       Search
     </button>
@@ -212,7 +212,7 @@
     </table>
   </div>
   <!-- Fixed Footer -->
-  <div class="bg-white  p-2 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
+  <div class="bg-white  py-1 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
     <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 p-3 ">
       <!-- Rows Per Page Selector -->
       <div class="flex items-center gap-1 sm:gap-2">

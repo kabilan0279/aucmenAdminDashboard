@@ -28,18 +28,25 @@
 
 
 
-  <div class="max-w-md h-auto ">
-    <h3 class="text-md text-gray-800 font-semibold mb-2"> Client Login Details : <span class="text-indigo-600">Open
-        IPO</span></h3>
-    <!-- <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" /> -->
+  
+
+  <!-- Container with right alignment and side-by-side layout -->
+<div class="w-full flex flex-wrap items-center justify-between gap-3 mb-4">
+
+  <!-- Left side: Title -->
+  <div class="flex-shrink-0">
+    <h3 class="text-md text-gray-800 font-semibold">
+      Client Login Details: <span class="text-indigo-600">Open IPO</span>
+    </h3>
   </div>
 
-  <!-- Container with right alignment -->
-  <div class="w-full flex sm:justify-end items-center gap-3 mb-4 relative">
+  <!-- Right side: Search + Select -->
+  <div class="flex items-center gap-3">
 
     <!-- Search input with clear button -->
     <div class="relative">
-      <input type="text" id="openSearchPage" placeholder="Search" oninput="this.value = this.value.toUpperCase()"
+      <input type="text" id="openSearchPage" placeholder="Search"
+        oninput="this.value = this.value.toUpperCase()"
         class="w-64 pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       <span onclick="document.getElementById('openSearchPage').value=''; renderOpenTable();"
         class="absolute right-2 top-1/2 transform -translate-y-1/2 text-xl cursor-pointer text-gray-400 hover:text-red-500">
@@ -54,10 +61,12 @@
     </button>
 
   </div>
+</div>
+
 
 </div>
 <!-- Scrollable Table Container -->
-<div class="relative bg-white  max-h-[70vh] overflow-auto">
+<div class="relative bg-white  max-h-[73vh] overflow-auto">
   <table class="min-w-full text-sm text-left">
     <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
       <tr class="cursor-pointer bg-stone-100 ">
