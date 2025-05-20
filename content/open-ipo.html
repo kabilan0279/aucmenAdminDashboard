@@ -39,7 +39,7 @@
 
     <!-- Search input with clear button -->
     <div class="relative">
-      <input type="text" id="openSearchPage" placeholder="Search"
+      <input type="text" id="openSearchPage" placeholder="Search" oninput="this.value = this.value.toUpperCase()"
         class="w-64 pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       <span onclick="document.getElementById('openSearchPage').value=''; renderOpenTable();"
         class="absolute right-2 top-1/2 transform -translate-y-1/2 text-xl cursor-pointer text-gray-400 hover:text-red-500">
@@ -127,3 +127,16 @@
     </div>
   </div>
 </div>
+
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('openSearchPage');
+    if (input) {
+      input.addEventListener('input', function () {
+        this.value = this.value.toUpperCase();
+      });
+    }
+  });
+</script>

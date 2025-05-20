@@ -23,28 +23,29 @@ document.addEventListener('click', (event) => {
         dropdown.classList.add('hidden');
     }
 });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const page = params.get("page") || "content/client-details.html";
     loadPage(page);
 
+
     document.querySelectorAll(".load-page").forEach(function (link) {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const url = this.getAttribute("href");
-            loadPage(url, true, this); // pass clicked link
+            loadPage(url, true, this); 
         });
     });
 
-    // Handle back/forward button navigation
     window.addEventListener("popstate", function () {
         const params = new URLSearchParams(window.location.search);
         const page = params.get("page") || "content/client-details.html";
-        loadPage(page); // load content when URL changes
+        loadPage(page); 
     });
 });
 
-// Single clean loadPage function
 function loadPage(url, updateUrl = false, clickedLink = null) {
     fetch(url)
         .then(response => {
@@ -54,14 +55,16 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
         .then(data => {
             document.querySelector(".page-Content").innerHTML = data;
             window.url = url;
+            highlightActiveLink(clickedLink);
+
 
             if (updateUrl) {
-                const newUrl = `${window.location.pathname}?page=${encodeURIComponent(url)}`;
-                window.location.reload()
+                const newUrl = `${window.location.pathname}?page=${url}`;
                 history.pushState(null, "", newUrl);
             }
 
             highlightActiveLink(clickedLink);
+            
         })
         .catch(error => {
             console.error("Fetch error:", error);
@@ -69,7 +72,6 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
         });
 }
 
-// Optional: visually mark the active link
 function highlightActiveLink(clickedLink) {
     document.querySelectorAll(".load-page").forEach(link => link.classList.remove("active"));
     if (clickedLink) {
@@ -81,7 +83,6 @@ function highlightActiveLink(activeLink) {
     const menuLinks = document.querySelectorAll(".load-page");
 
     menuLinks.forEach(link => {
-        // Reset to default
         link.classList.remove("bg-slate-500", "text-white");
         link.classList.add("text-slate-800", "hover:bg-slate-400", "hover:text-white");
 
@@ -114,10 +115,6 @@ document.querySelectorAll(".load-page").forEach(link => {
 });
 
 
-// document.getElementById('closeSidebar').addEventListener('click', function () {
-//     document.getElementById('mobileSidebar').style.display = 'none';
-// });
-
 
 
 // Add event listeners to menu items after DOM is ready
@@ -128,9 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const url = this.getAttribute("href");
             loadPage(url, true, this);
         });
+
     });
 
-    // Load default or bookmarked page on initial load
     const params = new URLSearchParams(window.location.search);
     const page = params.get("page");
     if (page) {
@@ -143,5 +140,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// uploaded files
 
