@@ -1,6 +1,4 @@
-
-<div class="sticky top-0 z-30 bg-white border-b border-gray-200 p-2">
-  <!-- Title -->
+<div class="sticky top-0 z-30 bg-white border-b border-gray-200"> <!-- Title -->
   <div class="max-w-md h-auto mb-2">
     <h3 class="text-md text-gray-800 font-semibold">IPO DETAILS</h3>
   </div>
@@ -27,36 +25,105 @@
 
     </ul>
   </div>
+
+
+
+  <div class="max-w-md h-auto ">
+    <h3 class="text-md text-gray-800 font-semibold mb-2"> Client Login Details : <span class="text-indigo-600">Open
+        IPO</span></h3>
+    <!-- <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" /> -->
+  </div>
+
+  <!-- Container with right alignment -->
+  <div class="w-full flex sm:justify-end items-center gap-3 mb-4 relative">
+
+    <!-- Search input with clear button -->
+    <div class="relative">
+      <input type="text" id="openSearchPage" placeholder="Search"
+        class="w-64 pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <span onclick="document.getElementById('openSearchPage').value=''; renderOpenTable();"
+        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-xl cursor-pointer text-gray-400 hover:text-red-500">
+        &times;
+      </span>
+    </div>
+
+    <!-- Select button -->
+    <button id="rowSelectopen" onclick="SelectPageopen()"
+      class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+      Select
+    </button>
+
+  </div>
+
 </div>
+<!-- Scrollable Table Container -->
+<div class="relative bg-white  max-h-[70vh] overflow-auto">
+  <table class="min-w-full text-sm text-left">
+    <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
+      <tr class="cursor-pointer bg-stone-100 ">
+        <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+          onclick="sortOpen(0)">Equity/ IPO NAME
+          <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+        </th>
+        <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+          onclick="sortOpen(1)">Issuse Price
+          <span><i class="f1a-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+        </th>
+        <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+          onclick="sortOpen(2)">Issuse Size(IN CRORES)
+          <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+        </th>
+        <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+          onclick="sortOpen(3)">LOT SIZE
+          <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+        </th>
+        <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+          onclick="sortOpen(4)">Open Date
+          <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+        </th>
+        <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+          onclick="sortOpen(5)">Close Date
 
-
-<div class="max-w-md h-auto ">
-  <h3 class="text-md text-gray-800 font-semibold mb-2"> Client Login Details : <span class="text-indigo-600">Open
-      IPO</span></h3>
-  <!-- <hr class="mb-4 bg-blue-500 w-[15px] h-[6px] border-none" /> -->
-</div>
-
-<div class="w-full  bg-white rounded-2xl overflow-x-auto">
-  <table id="filter-table" class="table-auto w-full text-sm text-left">
-    <thead class="text-gray-700">
-      <tr class="border-b border-gray-300">
-        <th class="px-4 py-2">Equity/ IPO NAME</th>
-        <th class="px-4 py-2">Issuse Price</th>
-        <th class="px-4 py-2">Issuse Size(IN CRORES)</th>
-        <th class="px-4 py-2">LOT SIZE</th>
-        <th class="px-4 py-2">Open Date</th>
-        <th class="px-4 py-2">Close Date</th>
+          <span><i class="fa-solid fa-sort text-gray-400 pl-[2px] text-sm"></i></span>
+        </th>
       </tr>
     </thead>
-    <tbody>
-     
+    <tbody id="openTBody" class="divide-y divide-gray-100 mb-4">
+
+    </tbody>
   </table>
 
 </div>
 
-<!-- Initialize DataTable -->
-<script>
-  $(document).ready(function () {
-    $('#clientTable').DataTable();
-  });
-</script>
+
+<!-- Fixed Footer -->
+<div class="bg-white  px-2 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
+  <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 px-3 ">
+    <!-- Rows Per Page Selector -->
+    <div class="flex items-center gap-1 sm:gap-2">
+      <select id="openRowsPerPage"
+        class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="10">10 rows</option>
+        <option value="15" selected>25 rows</option>
+        <option value="50">50 rows</option>
+        <option value="250">250 rows</option>
+      </select>
+      <button onclick="setopenRowsPerPage()"
+        class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+        Go
+      </button>
+    </div>
+    <!-- Pagination Buttons -->
+    <div class="flex items-center gap-1 sm:gap-2">
+      <button onclick="prevopenPage()"
+        class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+        Prev
+      </button>
+      <span id="pageInfoopen" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
+      <button onclick="nextopenPage()"
+        class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
+        Next
+      </button>
+    </div>
+  </div>
+</div>

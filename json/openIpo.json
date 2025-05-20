@@ -1,0 +1,2402 @@
+[
+    {
+        "name": "IPO001",
+        "issuePrice": 662,
+        "issueSizeCrores": 261.7,
+        "lotSize": 95,
+        "openDate": "2025-05-21",
+        "closeDate": "2025-05-24"
+    },
+    {
+        "name": "IPO002",
+        "issuePrice": 801,
+        "issueSizeCrores": 315.8,
+        "lotSize": 81,
+        "openDate": "2025-05-22",
+        "closeDate": "2025-05-25"
+    },
+    {
+        "name": "IPO003",
+        "issuePrice": 241,
+        "issueSizeCrores": 965.3,
+        "lotSize": 269,
+        "openDate": "2025-05-23",
+        "closeDate": "2025-05-26"
+    },
+    {
+        "name": "IPO004",
+        "issuePrice": 205,
+        "issueSizeCrores": 46.1,
+        "lotSize": 431,
+        "openDate": "2025-05-24",
+        "closeDate": "2025-05-27"
+    },
+    {
+        "name": "IPO005",
+        "issuePrice": 922,
+        "issueSizeCrores": 825.4,
+        "lotSize": 136,
+        "openDate": "2025-05-25",
+        "closeDate": "2025-05-28"
+    },
+    {
+        "name": "IPO006",
+        "issuePrice": 285,
+        "issueSizeCrores": 457.9,
+        "lotSize": 373,
+        "openDate": "2025-05-26",
+        "closeDate": "2025-05-29"
+    },
+    {
+        "name": "IPO007",
+        "issuePrice": 618,
+        "issueSizeCrores": 114.2,
+        "lotSize": 354,
+        "openDate": "2025-05-27",
+        "closeDate": "2025-05-30"
+    },
+    {
+        "name": "IPO008",
+        "issuePrice": 243,
+        "issueSizeCrores": 475.4,
+        "lotSize": 471,
+        "openDate": "2025-05-28",
+        "closeDate": "2025-05-31"
+    },
+    {
+        "name": "IPO009",
+        "issuePrice": 440,
+        "issueSizeCrores": 811.3,
+        "lotSize": 95,
+        "openDate": "2025-05-29",
+        "closeDate": "2025-06-01"
+    },
+    {
+        "name": "IPO010",
+        "issuePrice": 139,
+        "issueSizeCrores": 680.6,
+        "lotSize": 270,
+        "openDate": "2025-05-30",
+        "closeDate": "2025-06-02"
+    },
+    {
+        "name": "IPO011",
+        "issuePrice": 771,
+        "issueSizeCrores": 965.1,
+        "lotSize": 298,
+        "openDate": "2025-05-31",
+        "closeDate": "2025-06-03"
+    },
+    {
+        "name": "IPO012",
+        "issuePrice": 606,
+        "issueSizeCrores": 853.5,
+        "lotSize": 414,
+        "openDate": "2025-06-01",
+        "closeDate": "2025-06-04"
+    },
+    {
+        "name": "IPO013",
+        "issuePrice": 195,
+        "issueSizeCrores": 765.9,
+        "lotSize": 241,
+        "openDate": "2025-06-02",
+        "closeDate": "2025-06-05"
+    },
+    {
+        "name": "IPO014",
+        "issuePrice": 453,
+        "issueSizeCrores": 422.8,
+        "lotSize": 256,
+        "openDate": "2025-06-03",
+        "closeDate": "2025-06-06"
+    },
+    {
+        "name": "IPO015",
+        "issuePrice": 413,
+        "issueSizeCrores": 389.1,
+        "lotSize": 171,
+        "openDate": "2025-06-04",
+        "closeDate": "2025-06-07"
+    },
+    {
+        "name": "IPO016",
+        "issuePrice": 319,
+        "issueSizeCrores": 111.5,
+        "lotSize": 435,
+        "openDate": "2025-06-05",
+        "closeDate": "2025-06-08"
+    },
+    {
+        "name": "IPO017",
+        "issuePrice": 253,
+        "issueSizeCrores": 264.1,
+        "lotSize": 220,
+        "openDate": "2025-06-06",
+        "closeDate": "2025-06-09"
+    },
+    {
+        "name": "IPO018",
+        "issuePrice": 242,
+        "issueSizeCrores": 872.1,
+        "lotSize": 203,
+        "openDate": "2025-06-07",
+        "closeDate": "2025-06-10"
+    },
+    {
+        "name": "IPO019",
+        "issuePrice": 463,
+        "issueSizeCrores": 149.2,
+        "lotSize": 27,
+        "openDate": "2025-06-08",
+        "closeDate": "2025-06-11"
+    },
+    {
+        "name": "IPO020",
+        "issuePrice": 209,
+        "issueSizeCrores": 60.7,
+        "lotSize": 296,
+        "openDate": "2025-06-09",
+        "closeDate": "2025-06-12"
+    },
+    {
+        "name": "IPO021",
+        "issuePrice": 501,
+        "issueSizeCrores": 94.7,
+        "lotSize": 193,
+        "openDate": "2025-06-10",
+        "closeDate": "2025-06-13"
+    },
+    {
+        "name": "IPO022",
+        "issuePrice": 770,
+        "issueSizeCrores": 942.4,
+        "lotSize": 379,
+        "openDate": "2025-06-11",
+        "closeDate": "2025-06-14"
+    },
+    {
+        "name": "IPO023",
+        "issuePrice": 911,
+        "issueSizeCrores": 175.6,
+        "lotSize": 276,
+        "openDate": "2025-06-12",
+        "closeDate": "2025-06-15"
+    },
+    {
+        "name": "IPO024",
+        "issuePrice": 373,
+        "issueSizeCrores": 128.9,
+        "lotSize": 53,
+        "openDate": "2025-06-13",
+        "closeDate": "2025-06-16"
+    },
+    {
+        "name": "IPO025",
+        "issuePrice": 843,
+        "issueSizeCrores": 543.9,
+        "lotSize": 245,
+        "openDate": "2025-06-14",
+        "closeDate": "2025-06-17"
+    },
+    {
+        "name": "IPO026",
+        "issuePrice": 331,
+        "issueSizeCrores": 597.2,
+        "lotSize": 321,
+        "openDate": "2025-06-15",
+        "closeDate": "2025-06-18"
+    },
+    {
+        "name": "IPO027",
+        "issuePrice": 840,
+        "issueSizeCrores": 855.1,
+        "lotSize": 357,
+        "openDate": "2025-06-16",
+        "closeDate": "2025-06-19"
+    },
+    {
+        "name": "IPO028",
+        "issuePrice": 457,
+        "issueSizeCrores": 157.8,
+        "lotSize": 255,
+        "openDate": "2025-06-17",
+        "closeDate": "2025-06-20"
+    },
+    {
+        "name": "IPO029",
+        "issuePrice": 545,
+        "issueSizeCrores": 913.8,
+        "lotSize": 224,
+        "openDate": "2025-06-18",
+        "closeDate": "2025-06-21"
+    },
+    {
+        "name": "IPO030",
+        "issuePrice": 579,
+        "issueSizeCrores": 597.8,
+        "lotSize": 339,
+        "openDate": "2025-06-19",
+        "closeDate": "2025-06-22"
+    },
+    {
+        "name": "IPO031",
+        "issuePrice": 604,
+        "issueSizeCrores": 516.9,
+        "lotSize": 208,
+        "openDate": "2025-06-20",
+        "closeDate": "2025-06-23"
+    },
+    {
+        "name": "IPO032",
+        "issuePrice": 765,
+        "issueSizeCrores": 261.6,
+        "lotSize": 176,
+        "openDate": "2025-06-21",
+        "closeDate": "2025-06-24"
+    },
+    {
+        "name": "IPO033",
+        "issuePrice": 575,
+        "issueSizeCrores": 792.9,
+        "lotSize": 38,
+        "openDate": "2025-06-22",
+        "closeDate": "2025-06-25"
+    },
+    {
+        "name": "IPO034",
+        "issuePrice": 963,
+        "issueSizeCrores": 577.2,
+        "lotSize": 495,
+        "openDate": "2025-06-23",
+        "closeDate": "2025-06-26"
+    },
+    {
+        "name": "IPO035",
+        "issuePrice": 235,
+        "issueSizeCrores": 894.8,
+        "lotSize": 53,
+        "openDate": "2025-06-24",
+        "closeDate": "2025-06-27"
+    },
+    {
+        "name": "IPO036",
+        "issuePrice": 130,
+        "issueSizeCrores": 848.9,
+        "lotSize": 446,
+        "openDate": "2025-06-25",
+        "closeDate": "2025-06-28"
+    },
+    {
+        "name": "IPO037",
+        "issuePrice": 495,
+        "issueSizeCrores": 848.2,
+        "lotSize": 358,
+        "openDate": "2025-06-26",
+        "closeDate": "2025-06-29"
+    },
+    {
+        "name": "IPO038",
+        "issuePrice": 609,
+        "issueSizeCrores": 872.1,
+        "lotSize": 15,
+        "openDate": "2025-06-27",
+        "closeDate": "2025-06-30"
+    },
+    {
+        "name": "IPO039",
+        "issuePrice": 660,
+        "issueSizeCrores": 86.8,
+        "lotSize": 298,
+        "openDate": "2025-06-28",
+        "closeDate": "2025-07-01"
+    },
+    {
+        "name": "IPO040",
+        "issuePrice": 814,
+        "issueSizeCrores": 38.8,
+        "lotSize": 417,
+        "openDate": "2025-06-29",
+        "closeDate": "2025-07-02"
+    },
+    {
+        "name": "IPO041",
+        "issuePrice": 386,
+        "issueSizeCrores": 39,
+        "lotSize": 201,
+        "openDate": "2025-06-30",
+        "closeDate": "2025-07-03"
+    },
+    {
+        "name": "IPO042",
+        "issuePrice": 416,
+        "issueSizeCrores": 313.9,
+        "lotSize": 181,
+        "openDate": "2025-07-01",
+        "closeDate": "2025-07-04"
+    },
+    {
+        "name": "IPO043",
+        "issuePrice": 983,
+        "issueSizeCrores": 542.3,
+        "lotSize": 60,
+        "openDate": "2025-07-02",
+        "closeDate": "2025-07-05"
+    },
+    {
+        "name": "IPO044",
+        "issuePrice": 976,
+        "issueSizeCrores": 584.7,
+        "lotSize": 123,
+        "openDate": "2025-07-03",
+        "closeDate": "2025-07-06"
+    },
+    {
+        "name": "IPO045",
+        "issuePrice": 983,
+        "issueSizeCrores": 681.5,
+        "lotSize": 425,
+        "openDate": "2025-07-04",
+        "closeDate": "2025-07-07"
+    },
+    {
+        "name": "IPO046",
+        "issuePrice": 984,
+        "issueSizeCrores": 923.5,
+        "lotSize": 144,
+        "openDate": "2025-07-05",
+        "closeDate": "2025-07-08"
+    },
+    {
+        "name": "IPO047",
+        "issuePrice": 131,
+        "issueSizeCrores": 975.6,
+        "lotSize": 347,
+        "openDate": "2025-07-06",
+        "closeDate": "2025-07-09"
+    },
+    {
+        "name": "IPO048",
+        "issuePrice": 671,
+        "issueSizeCrores": 700.1,
+        "lotSize": 488,
+        "openDate": "2025-07-07",
+        "closeDate": "2025-07-10"
+    },
+    {
+        "name": "IPO049",
+        "issuePrice": 594,
+        "issueSizeCrores": 990.5,
+        "lotSize": 420,
+        "openDate": "2025-07-08",
+        "closeDate": "2025-07-11"
+    },
+    {
+        "name": "IPO050",
+        "issuePrice": 933,
+        "issueSizeCrores": 296,
+        "lotSize": 452,
+        "openDate": "2025-07-09",
+        "closeDate": "2025-07-12"
+    },
+    {
+        "name": "IPO051",
+        "issuePrice": 466,
+        "issueSizeCrores": 470.4,
+        "lotSize": 355,
+        "openDate": "2025-07-10",
+        "closeDate": "2025-07-13"
+    },
+    {
+        "name": "IPO052",
+        "issuePrice": 646,
+        "issueSizeCrores": 9.7,
+        "lotSize": 405,
+        "openDate": "2025-07-11",
+        "closeDate": "2025-07-14"
+    },
+    {
+        "name": "IPO053",
+        "issuePrice": 139,
+        "issueSizeCrores": 605.6,
+        "lotSize": 291,
+        "openDate": "2025-07-12",
+        "closeDate": "2025-07-15"
+    },
+    {
+        "name": "IPO054",
+        "issuePrice": 793,
+        "issueSizeCrores": 202.6,
+        "lotSize": 169,
+        "openDate": "2025-07-13",
+        "closeDate": "2025-07-16"
+    },
+    {
+        "name": "IPO055",
+        "issuePrice": 905,
+        "issueSizeCrores": 344.3,
+        "lotSize": 465,
+        "openDate": "2025-07-14",
+        "closeDate": "2025-07-17"
+    },
+    {
+        "name": "IPO056",
+        "issuePrice": 342,
+        "issueSizeCrores": 83,
+        "lotSize": 408,
+        "openDate": "2025-07-15",
+        "closeDate": "2025-07-18"
+    },
+    {
+        "name": "IPO057",
+        "issuePrice": 412,
+        "issueSizeCrores": 851.8,
+        "lotSize": 325,
+        "openDate": "2025-07-16",
+        "closeDate": "2025-07-19"
+    },
+    {
+        "name": "IPO058",
+        "issuePrice": 492,
+        "issueSizeCrores": 253.2,
+        "lotSize": 305,
+        "openDate": "2025-07-17",
+        "closeDate": "2025-07-20"
+    },
+    {
+        "name": "IPO059",
+        "issuePrice": 831,
+        "issueSizeCrores": 695.3,
+        "lotSize": 55,
+        "openDate": "2025-07-18",
+        "closeDate": "2025-07-21"
+    },
+    {
+        "name": "IPO060",
+        "issuePrice": 324,
+        "issueSizeCrores": 677.4,
+        "lotSize": 318,
+        "openDate": "2025-07-19",
+        "closeDate": "2025-07-22"
+    },
+    {
+        "name": "IPO061",
+        "issuePrice": 459,
+        "issueSizeCrores": 815.4,
+        "lotSize": 55,
+        "openDate": "2025-07-20",
+        "closeDate": "2025-07-23"
+    },
+    {
+        "name": "IPO062",
+        "issuePrice": 926,
+        "issueSizeCrores": 42.3,
+        "lotSize": 86,
+        "openDate": "2025-07-21",
+        "closeDate": "2025-07-24"
+    },
+    {
+        "name": "IPO063",
+        "issuePrice": 101,
+        "issueSizeCrores": 664.9,
+        "lotSize": 313,
+        "openDate": "2025-07-22",
+        "closeDate": "2025-07-25"
+    },
+    {
+        "name": "IPO064",
+        "issuePrice": 531,
+        "issueSizeCrores": 137.1,
+        "lotSize": 30,
+        "openDate": "2025-07-23",
+        "closeDate": "2025-07-26"
+    },
+    {
+        "name": "IPO065",
+        "issuePrice": 763,
+        "issueSizeCrores": 364.6,
+        "lotSize": 328,
+        "openDate": "2025-07-24",
+        "closeDate": "2025-07-27"
+    },
+    {
+        "name": "IPO066",
+        "issuePrice": 416,
+        "issueSizeCrores": 352,
+        "lotSize": 60,
+        "openDate": "2025-07-25",
+        "closeDate": "2025-07-28"
+    },
+    {
+        "name": "IPO067",
+        "issuePrice": 434,
+        "issueSizeCrores": 18.1,
+        "lotSize": 451,
+        "openDate": "2025-07-26",
+        "closeDate": "2025-07-29"
+    },
+    {
+        "name": "IPO068",
+        "issuePrice": 886,
+        "issueSizeCrores": 665.8,
+        "lotSize": 470,
+        "openDate": "2025-07-27",
+        "closeDate": "2025-07-30"
+    },
+    {
+        "name": "IPO069",
+        "issuePrice": 425,
+        "issueSizeCrores": 925.8,
+        "lotSize": 287,
+        "openDate": "2025-07-28",
+        "closeDate": "2025-07-31"
+    },
+    {
+        "name": "IPO070",
+        "issuePrice": 193,
+        "issueSizeCrores": 504.2,
+        "lotSize": 272,
+        "openDate": "2025-07-29",
+        "closeDate": "2025-08-01"
+    },
+    {
+        "name": "IPO071",
+        "issuePrice": 271,
+        "issueSizeCrores": 373.2,
+        "lotSize": 373,
+        "openDate": "2025-07-30",
+        "closeDate": "2025-08-02"
+    },
+    {
+        "name": "IPO072",
+        "issuePrice": 186,
+        "issueSizeCrores": 986.8,
+        "lotSize": 226,
+        "openDate": "2025-07-31",
+        "closeDate": "2025-08-03"
+    },
+    {
+        "name": "IPO073",
+        "issuePrice": 536,
+        "issueSizeCrores": 779.3,
+        "lotSize": 267,
+        "openDate": "2025-08-01",
+        "closeDate": "2025-08-04"
+    },
+    {
+        "name": "IPO074",
+        "issuePrice": 739,
+        "issueSizeCrores": 240.7,
+        "lotSize": 257,
+        "openDate": "2025-08-02",
+        "closeDate": "2025-08-05"
+    },
+    {
+        "name": "IPO075",
+        "issuePrice": 300,
+        "issueSizeCrores": 269.9,
+        "lotSize": 224,
+        "openDate": "2025-08-03",
+        "closeDate": "2025-08-06"
+    },
+    {
+        "name": "IPO076",
+        "issuePrice": 665,
+        "issueSizeCrores": 895.5,
+        "lotSize": 211,
+        "openDate": "2025-08-04",
+        "closeDate": "2025-08-07"
+    },
+    {
+        "name": "IPO077",
+        "issuePrice": 347,
+        "issueSizeCrores": 571.8,
+        "lotSize": 246,
+        "openDate": "2025-08-05",
+        "closeDate": "2025-08-08"
+    },
+    {
+        "name": "IPO078",
+        "issuePrice": 705,
+        "issueSizeCrores": 143,
+        "lotSize": 16,
+        "openDate": "2025-08-06",
+        "closeDate": "2025-08-09"
+    },
+    {
+        "name": "IPO079",
+        "issuePrice": 103,
+        "issueSizeCrores": 824.1,
+        "lotSize": 419,
+        "openDate": "2025-08-07",
+        "closeDate": "2025-08-10"
+    },
+    {
+        "name": "IPO080",
+        "issuePrice": 672,
+        "issueSizeCrores": 823.4,
+        "lotSize": 283,
+        "openDate": "2025-08-08",
+        "closeDate": "2025-08-11"
+    },
+    {
+        "name": "IPO081",
+        "issuePrice": 810,
+        "issueSizeCrores": 542.4,
+        "lotSize": 416,
+        "openDate": "2025-08-09",
+        "closeDate": "2025-08-12"
+    },
+    {
+        "name": "IPO082",
+        "issuePrice": 908,
+        "issueSizeCrores": 878.2,
+        "lotSize": 144,
+        "openDate": "2025-08-10",
+        "closeDate": "2025-08-13"
+    },
+    {
+        "name": "IPO083",
+        "issuePrice": 207,
+        "issueSizeCrores": 217,
+        "lotSize": 289,
+        "openDate": "2025-08-11",
+        "closeDate": "2025-08-14"
+    },
+    {
+        "name": "IPO084",
+        "issuePrice": 839,
+        "issueSizeCrores": 548.3,
+        "lotSize": 155,
+        "openDate": "2025-08-12",
+        "closeDate": "2025-08-15"
+    },
+    {
+        "name": "IPO085",
+        "issuePrice": 190,
+        "issueSizeCrores": 87.5,
+        "lotSize": 256,
+        "openDate": "2025-08-13",
+        "closeDate": "2025-08-16"
+    },
+    {
+        "name": "IPO086",
+        "issuePrice": 190,
+        "issueSizeCrores": 531.2,
+        "lotSize": 480,
+        "openDate": "2025-08-14",
+        "closeDate": "2025-08-17"
+    },
+    {
+        "name": "IPO087",
+        "issuePrice": 513,
+        "issueSizeCrores": 961.4,
+        "lotSize": 417,
+        "openDate": "2025-08-15",
+        "closeDate": "2025-08-18"
+    },
+    {
+        "name": "IPO088",
+        "issuePrice": 268,
+        "issueSizeCrores": 716.2,
+        "lotSize": 367,
+        "openDate": "2025-08-16",
+        "closeDate": "2025-08-19"
+    },
+    {
+        "name": "IPO089",
+        "issuePrice": 726,
+        "issueSizeCrores": 901.5,
+        "lotSize": 210,
+        "openDate": "2025-08-17",
+        "closeDate": "2025-08-20"
+    },
+    {
+        "name": "IPO090",
+        "issuePrice": 163,
+        "issueSizeCrores": 616.4,
+        "lotSize": 32,
+        "openDate": "2025-08-18",
+        "closeDate": "2025-08-21"
+    },
+    {
+        "name": "IPO091",
+        "issuePrice": 234,
+        "issueSizeCrores": 536.5,
+        "lotSize": 29,
+        "openDate": "2025-08-19",
+        "closeDate": "2025-08-22"
+    },
+    {
+        "name": "IPO092",
+        "issuePrice": 217,
+        "issueSizeCrores": 388.6,
+        "lotSize": 121,
+        "openDate": "2025-08-20",
+        "closeDate": "2025-08-23"
+    },
+    {
+        "name": "IPO093",
+        "issuePrice": 909,
+        "issueSizeCrores": 680.4,
+        "lotSize": 377,
+        "openDate": "2025-08-21",
+        "closeDate": "2025-08-24"
+    },
+    {
+        "name": "IPO094",
+        "issuePrice": 172,
+        "issueSizeCrores": 785.9,
+        "lotSize": 21,
+        "openDate": "2025-08-22",
+        "closeDate": "2025-08-25"
+    },
+    {
+        "name": "IPO095",
+        "issuePrice": 945,
+        "issueSizeCrores": 116.7,
+        "lotSize": 172,
+        "openDate": "2025-08-23",
+        "closeDate": "2025-08-26"
+    },
+    {
+        "name": "IPO096",
+        "issuePrice": 782,
+        "issueSizeCrores": 903.8,
+        "lotSize": 165,
+        "openDate": "2025-08-24",
+        "closeDate": "2025-08-27"
+    },
+    {
+        "name": "IPO097",
+        "issuePrice": 337,
+        "issueSizeCrores": 340.1,
+        "lotSize": 165,
+        "openDate": "2025-08-25",
+        "closeDate": "2025-08-28"
+    },
+    {
+        "name": "IPO098",
+        "issuePrice": 229,
+        "issueSizeCrores": 940.7,
+        "lotSize": 237,
+        "openDate": "2025-08-26",
+        "closeDate": "2025-08-29"
+    },
+    {
+        "name": "IPO099",
+        "issuePrice": 308,
+        "issueSizeCrores": 922.1,
+        "lotSize": 426,
+        "openDate": "2025-08-27",
+        "closeDate": "2025-08-30"
+    },
+    {
+        "name": "IPO100",
+        "issuePrice": 986,
+        "issueSizeCrores": 192,
+        "lotSize": 400,
+        "openDate": "2025-08-28",
+        "closeDate": "2025-08-31"
+    },
+    {
+        "name": "IPO101",
+        "issuePrice": 243,
+        "issueSizeCrores": 28.1,
+        "lotSize": 78,
+        "openDate": "2025-08-29",
+        "closeDate": "2025-09-01"
+    },
+    {
+        "name": "IPO102",
+        "issuePrice": 661,
+        "issueSizeCrores": 998,
+        "lotSize": 207,
+        "openDate": "2025-08-30",
+        "closeDate": "2025-09-02"
+    },
+    {
+        "name": "IPO103",
+        "issuePrice": 270,
+        "issueSizeCrores": 582.4,
+        "lotSize": 228,
+        "openDate": "2025-08-31",
+        "closeDate": "2025-09-03"
+    },
+    {
+        "name": "IPO104",
+        "issuePrice": 247,
+        "issueSizeCrores": 504.6,
+        "lotSize": 190,
+        "openDate": "2025-09-01",
+        "closeDate": "2025-09-04"
+    },
+    {
+        "name": "IPO105",
+        "issuePrice": 463,
+        "issueSizeCrores": 598.2,
+        "lotSize": 143,
+        "openDate": "2025-09-02",
+        "closeDate": "2025-09-05"
+    },
+    {
+        "name": "IPO106",
+        "issuePrice": 650,
+        "issueSizeCrores": 492.5,
+        "lotSize": 14,
+        "openDate": "2025-09-03",
+        "closeDate": "2025-09-06"
+    },
+    {
+        "name": "IPO107",
+        "issuePrice": 639,
+        "issueSizeCrores": 371,
+        "lotSize": 348,
+        "openDate": "2025-09-04",
+        "closeDate": "2025-09-07"
+    },
+    {
+        "name": "IPO108",
+        "issuePrice": 499,
+        "issueSizeCrores": 264.3,
+        "lotSize": 92,
+        "openDate": "2025-09-05",
+        "closeDate": "2025-09-08"
+    },
+    {
+        "name": "IPO109",
+        "issuePrice": 481,
+        "issueSizeCrores": 910.9,
+        "lotSize": 147,
+        "openDate": "2025-09-06",
+        "closeDate": "2025-09-09"
+    },
+    {
+        "name": "IPO110",
+        "issuePrice": 500,
+        "issueSizeCrores": 162.3,
+        "lotSize": 189,
+        "openDate": "2025-09-07",
+        "closeDate": "2025-09-10"
+    },
+    {
+        "name": "IPO111",
+        "issuePrice": 906,
+        "issueSizeCrores": 980.9,
+        "lotSize": 15,
+        "openDate": "2025-09-08",
+        "closeDate": "2025-09-11"
+    },
+    {
+        "name": "IPO112",
+        "issuePrice": 518,
+        "issueSizeCrores": 277.2,
+        "lotSize": 49,
+        "openDate": "2025-09-09",
+        "closeDate": "2025-09-12"
+    },
+    {
+        "name": "IPO113",
+        "issuePrice": 273,
+        "issueSizeCrores": 950.6,
+        "lotSize": 443,
+        "openDate": "2025-09-10",
+        "closeDate": "2025-09-13"
+    },
+    {
+        "name": "IPO114",
+        "issuePrice": 765,
+        "issueSizeCrores": 777,
+        "lotSize": 143,
+        "openDate": "2025-09-11",
+        "closeDate": "2025-09-14"
+    },
+    {
+        "name": "IPO115",
+        "issuePrice": 443,
+        "issueSizeCrores": 871.8,
+        "lotSize": 63,
+        "openDate": "2025-09-12",
+        "closeDate": "2025-09-15"
+    },
+    {
+        "name": "IPO116",
+        "issuePrice": 269,
+        "issueSizeCrores": 575.6,
+        "lotSize": 191,
+        "openDate": "2025-09-13",
+        "closeDate": "2025-09-16"
+    },
+    {
+        "name": "IPO117",
+        "issuePrice": 179,
+        "issueSizeCrores": 238.8,
+        "lotSize": 70,
+        "openDate": "2025-09-14",
+        "closeDate": "2025-09-17"
+    },
+    {
+        "name": "IPO118",
+        "issuePrice": 276,
+        "issueSizeCrores": 699.5,
+        "lotSize": 349,
+        "openDate": "2025-09-15",
+        "closeDate": "2025-09-18"
+    },
+    {
+        "name": "IPO119",
+        "issuePrice": 737,
+        "issueSizeCrores": 772.3,
+        "lotSize": 171,
+        "openDate": "2025-09-16",
+        "closeDate": "2025-09-19"
+    },
+    {
+        "name": "IPO120",
+        "issuePrice": 262,
+        "issueSizeCrores": 910,
+        "lotSize": 489,
+        "openDate": "2025-09-17",
+        "closeDate": "2025-09-20"
+    },
+    {
+        "name": "IPO121",
+        "issuePrice": 257,
+        "issueSizeCrores": 113.4,
+        "lotSize": 50,
+        "openDate": "2025-09-18",
+        "closeDate": "2025-09-21"
+    },
+    {
+        "name": "IPO122",
+        "issuePrice": 197,
+        "issueSizeCrores": 204.9,
+        "lotSize": 191,
+        "openDate": "2025-09-19",
+        "closeDate": "2025-09-22"
+    },
+    {
+        "name": "IPO123",
+        "issuePrice": 451,
+        "issueSizeCrores": 835.2,
+        "lotSize": 349,
+        "openDate": "2025-09-20",
+        "closeDate": "2025-09-23"
+    },
+    {
+        "name": "IPO124",
+        "issuePrice": 949,
+        "issueSizeCrores": 812.1,
+        "lotSize": 413,
+        "openDate": "2025-09-21",
+        "closeDate": "2025-09-24"
+    },
+    {
+        "name": "IPO125",
+        "issuePrice": 759,
+        "issueSizeCrores": 283,
+        "lotSize": 330,
+        "openDate": "2025-09-22",
+        "closeDate": "2025-09-25"
+    },
+    {
+        "name": "IPO126",
+        "issuePrice": 700,
+        "issueSizeCrores": 393.5,
+        "lotSize": 484,
+        "openDate": "2025-09-23",
+        "closeDate": "2025-09-26"
+    },
+    {
+        "name": "IPO127",
+        "issuePrice": 170,
+        "issueSizeCrores": 624.7,
+        "lotSize": 416,
+        "openDate": "2025-09-24",
+        "closeDate": "2025-09-27"
+    },
+    {
+        "name": "IPO128",
+        "issuePrice": 508,
+        "issueSizeCrores": 137.5,
+        "lotSize": 143,
+        "openDate": "2025-09-25",
+        "closeDate": "2025-09-28"
+    },
+    {
+        "name": "IPO129",
+        "issuePrice": 323,
+        "issueSizeCrores": 786.7,
+        "lotSize": 302,
+        "openDate": "2025-09-26",
+        "closeDate": "2025-09-29"
+    },
+    {
+        "name": "IPO130",
+        "issuePrice": 562,
+        "issueSizeCrores": 147.2,
+        "lotSize": 180,
+        "openDate": "2025-09-27",
+        "closeDate": "2025-09-30"
+    },
+    {
+        "name": "IPO131",
+        "issuePrice": 275,
+        "issueSizeCrores": 474.6,
+        "lotSize": 385,
+        "openDate": "2025-09-28",
+        "closeDate": "2025-10-01"
+    },
+    {
+        "name": "IPO132",
+        "issuePrice": 655,
+        "issueSizeCrores": 755.3,
+        "lotSize": 52,
+        "openDate": "2025-09-29",
+        "closeDate": "2025-10-02"
+    },
+    {
+        "name": "IPO133",
+        "issuePrice": 409,
+        "issueSizeCrores": 806.3,
+        "lotSize": 139,
+        "openDate": "2025-09-30",
+        "closeDate": "2025-10-03"
+    },
+    {
+        "name": "IPO134",
+        "issuePrice": 979,
+        "issueSizeCrores": 143.3,
+        "lotSize": 302,
+        "openDate": "2025-10-01",
+        "closeDate": "2025-10-04"
+    },
+    {
+        "name": "IPO135",
+        "issuePrice": 875,
+        "issueSizeCrores": 680.8,
+        "lotSize": 12,
+        "openDate": "2025-10-02",
+        "closeDate": "2025-10-05"
+    },
+    {
+        "name": "IPO136",
+        "issuePrice": 458,
+        "issueSizeCrores": 230.6,
+        "lotSize": 161,
+        "openDate": "2025-10-03",
+        "closeDate": "2025-10-06"
+    },
+    {
+        "name": "IPO137",
+        "issuePrice": 133,
+        "issueSizeCrores": 919.9,
+        "lotSize": 232,
+        "openDate": "2025-10-04",
+        "closeDate": "2025-10-07"
+    },
+    {
+        "name": "IPO138",
+        "issuePrice": 452,
+        "issueSizeCrores": 272.1,
+        "lotSize": 484,
+        "openDate": "2025-10-05",
+        "closeDate": "2025-10-08"
+    },
+    {
+        "name": "IPO139",
+        "issuePrice": 525,
+        "issueSizeCrores": 317.8,
+        "lotSize": 316,
+        "openDate": "2025-10-06",
+        "closeDate": "2025-10-09"
+    },
+    {
+        "name": "IPO140",
+        "issuePrice": 573,
+        "issueSizeCrores": 590.8,
+        "lotSize": 215,
+        "openDate": "2025-10-07",
+        "closeDate": "2025-10-10"
+    },
+    {
+        "name": "IPO141",
+        "issuePrice": 809,
+        "issueSizeCrores": 967.2,
+        "lotSize": 397,
+        "openDate": "2025-10-08",
+        "closeDate": "2025-10-11"
+    },
+    {
+        "name": "IPO142",
+        "issuePrice": 214,
+        "issueSizeCrores": 579.6,
+        "lotSize": 414,
+        "openDate": "2025-10-09",
+        "closeDate": "2025-10-12"
+    },
+    {
+        "name": "IPO143",
+        "issuePrice": 455,
+        "issueSizeCrores": 312.9,
+        "lotSize": 238,
+        "openDate": "2025-10-10",
+        "closeDate": "2025-10-13"
+    },
+    {
+        "name": "IPO144",
+        "issuePrice": 286,
+        "issueSizeCrores": 722.5,
+        "lotSize": 137,
+        "openDate": "2025-10-11",
+        "closeDate": "2025-10-14"
+    },
+    {
+        "name": "IPO145",
+        "issuePrice": 378,
+        "issueSizeCrores": 806.3,
+        "lotSize": 389,
+        "openDate": "2025-10-12",
+        "closeDate": "2025-10-15"
+    },
+    {
+        "name": "IPO146",
+        "issuePrice": 333,
+        "issueSizeCrores": 272.9,
+        "lotSize": 118,
+        "openDate": "2025-10-13",
+        "closeDate": "2025-10-16"
+    },
+    {
+        "name": "IPO147",
+        "issuePrice": 418,
+        "issueSizeCrores": 5.2,
+        "lotSize": 393,
+        "openDate": "2025-10-14",
+        "closeDate": "2025-10-17"
+    },
+    {
+        "name": "IPO148",
+        "issuePrice": 222,
+        "issueSizeCrores": 677.1,
+        "lotSize": 21,
+        "openDate": "2025-10-15",
+        "closeDate": "2025-10-18"
+    },
+    {
+        "name": "IPO149",
+        "issuePrice": 768,
+        "issueSizeCrores": 979.5,
+        "lotSize": 87,
+        "openDate": "2025-10-16",
+        "closeDate": "2025-10-19"
+    },
+    {
+        "name": "IPO150",
+        "issuePrice": 436,
+        "issueSizeCrores": 380.2,
+        "lotSize": 29,
+        "openDate": "2025-10-17",
+        "closeDate": "2025-10-20"
+    },
+    {
+        "name": "IPO151",
+        "issuePrice": 371,
+        "issueSizeCrores": 51.8,
+        "lotSize": 403,
+        "openDate": "2025-10-18",
+        "closeDate": "2025-10-21"
+    },
+    {
+        "name": "IPO152",
+        "issuePrice": 627,
+        "issueSizeCrores": 109.3,
+        "lotSize": 52,
+        "openDate": "2025-10-19",
+        "closeDate": "2025-10-22"
+    },
+    {
+        "name": "IPO153",
+        "issuePrice": 982,
+        "issueSizeCrores": 943.3,
+        "lotSize": 272,
+        "openDate": "2025-10-20",
+        "closeDate": "2025-10-23"
+    },
+    {
+        "name": "IPO154",
+        "issuePrice": 860,
+        "issueSizeCrores": 307.8,
+        "lotSize": 115,
+        "openDate": "2025-10-21",
+        "closeDate": "2025-10-24"
+    },
+    {
+        "name": "IPO155",
+        "issuePrice": 217,
+        "issueSizeCrores": 64.2,
+        "lotSize": 104,
+        "openDate": "2025-10-22",
+        "closeDate": "2025-10-25"
+    },
+    {
+        "name": "IPO156",
+        "issuePrice": 402,
+        "issueSizeCrores": 617.1,
+        "lotSize": 169,
+        "openDate": "2025-10-23",
+        "closeDate": "2025-10-26"
+    },
+    {
+        "name": "IPO157",
+        "issuePrice": 138,
+        "issueSizeCrores": 251,
+        "lotSize": 428,
+        "openDate": "2025-10-24",
+        "closeDate": "2025-10-26"
+    },
+    {
+        "name": "IPO158",
+        "issuePrice": 676,
+        "issueSizeCrores": 664.9,
+        "lotSize": 345,
+        "openDate": "2025-10-25",
+        "closeDate": "2025-10-27"
+    },
+    {
+        "name": "IPO159",
+        "issuePrice": 119,
+        "issueSizeCrores": 596.5,
+        "lotSize": 482,
+        "openDate": "2025-10-26",
+        "closeDate": "2025-10-28"
+    },
+    {
+        "name": "IPO160",
+        "issuePrice": 141,
+        "issueSizeCrores": 717.6,
+        "lotSize": 148,
+        "openDate": "2025-10-26",
+        "closeDate": "2025-10-28"
+    },
+    {
+        "name": "IPO161",
+        "issuePrice": 252,
+        "issueSizeCrores": 210.2,
+        "lotSize": 26,
+        "openDate": "2025-10-27",
+        "closeDate": "2025-10-30"
+    },
+    {
+        "name": "IPO162",
+        "issuePrice": 357,
+        "issueSizeCrores": 613.5,
+        "lotSize": 18,
+        "openDate": "2025-10-28",
+        "closeDate": "2025-10-31"
+    },
+    {
+        "name": "IPO163",
+        "issuePrice": 432,
+        "issueSizeCrores": 861.6,
+        "lotSize": 381,
+        "openDate": "2025-10-29",
+        "closeDate": "2025-11-01"
+    },
+    {
+        "name": "IPO164",
+        "issuePrice": 950,
+        "issueSizeCrores": 161.5,
+        "lotSize": 18,
+        "openDate": "2025-10-30",
+        "closeDate": "2025-11-02"
+    },
+    {
+        "name": "IPO165",
+        "issuePrice": 134,
+        "issueSizeCrores": 525.4,
+        "lotSize": 408,
+        "openDate": "2025-10-31",
+        "closeDate": "2025-11-03"
+    },
+    {
+        "name": "IPO166",
+        "issuePrice": 899,
+        "issueSizeCrores": 671.9,
+        "lotSize": 200,
+        "openDate": "2025-11-01",
+        "closeDate": "2025-11-04"
+    },
+    {
+        "name": "IPO167",
+        "issuePrice": 687,
+        "issueSizeCrores": 24.1,
+        "lotSize": 80,
+        "openDate": "2025-11-02",
+        "closeDate": "2025-11-05"
+    },
+    {
+        "name": "IPO168",
+        "issuePrice": 401,
+        "issueSizeCrores": 861.1,
+        "lotSize": 420,
+        "openDate": "2025-11-03",
+        "closeDate": "2025-11-06"
+    },
+    {
+        "name": "IPO169",
+        "issuePrice": 814,
+        "issueSizeCrores": 247.5,
+        "lotSize": 173,
+        "openDate": "2025-11-04",
+        "closeDate": "2025-11-07"
+    },
+    {
+        "name": "IPO170",
+        "issuePrice": 775,
+        "issueSizeCrores": 227.8,
+        "lotSize": 187,
+        "openDate": "2025-11-05",
+        "closeDate": "2025-11-08"
+    },
+    {
+        "name": "IPO171",
+        "issuePrice": 524,
+        "issueSizeCrores": 184.6,
+        "lotSize": 461,
+        "openDate": "2025-11-06",
+        "closeDate": "2025-11-09"
+    },
+    {
+        "name": "IPO172",
+        "issuePrice": 773,
+        "issueSizeCrores": 94.3,
+        "lotSize": 179,
+        "openDate": "2025-11-07",
+        "closeDate": "2025-11-10"
+    },
+    {
+        "name": "IPO173",
+        "issuePrice": 966,
+        "issueSizeCrores": 758.4,
+        "lotSize": 168,
+        "openDate": "2025-11-08",
+        "closeDate": "2025-11-11"
+    },
+    {
+        "name": "IPO174",
+        "issuePrice": 303,
+        "issueSizeCrores": 340.2,
+        "lotSize": 77,
+        "openDate": "2025-11-09",
+        "closeDate": "2025-11-12"
+    },
+    {
+        "name": "IPO175",
+        "issuePrice": 873,
+        "issueSizeCrores": 352.3,
+        "lotSize": 405,
+        "openDate": "2025-11-10",
+        "closeDate": "2025-11-13"
+    },
+    {
+        "name": "IPO176",
+        "issuePrice": 919,
+        "issueSizeCrores": 874.5,
+        "lotSize": 221,
+        "openDate": "2025-11-11",
+        "closeDate": "2025-11-14"
+    },
+    {
+        "name": "IPO177",
+        "issuePrice": 992,
+        "issueSizeCrores": 945.2,
+        "lotSize": 446,
+        "openDate": "2025-11-12",
+        "closeDate": "2025-11-15"
+    },
+    {
+        "name": "IPO178",
+        "issuePrice": 492,
+        "issueSizeCrores": 988.5,
+        "lotSize": 377,
+        "openDate": "2025-11-13",
+        "closeDate": "2025-11-16"
+    },
+    {
+        "name": "IPO179",
+        "issuePrice": 627,
+        "issueSizeCrores": 69.6,
+        "lotSize": 165,
+        "openDate": "2025-11-14",
+        "closeDate": "2025-11-17"
+    },
+    {
+        "name": "IPO180",
+        "issuePrice": 646,
+        "issueSizeCrores": 527.8,
+        "lotSize": 158,
+        "openDate": "2025-11-15",
+        "closeDate": "2025-11-18"
+    },
+    {
+        "name": "IPO181",
+        "issuePrice": 617,
+        "issueSizeCrores": 224.5,
+        "lotSize": 74,
+        "openDate": "2025-11-16",
+        "closeDate": "2025-11-19"
+    },
+    {
+        "name": "IPO182",
+        "issuePrice": 647,
+        "issueSizeCrores": 137.4,
+        "lotSize": 316,
+        "openDate": "2025-11-17",
+        "closeDate": "2025-11-20"
+    },
+    {
+        "name": "IPO183",
+        "issuePrice": 633,
+        "issueSizeCrores": 614.8,
+        "lotSize": 459,
+        "openDate": "2025-11-18",
+        "closeDate": "2025-11-21"
+    },
+    {
+        "name": "IPO184",
+        "issuePrice": 509,
+        "issueSizeCrores": 285.8,
+        "lotSize": 114,
+        "openDate": "2025-11-19",
+        "closeDate": "2025-11-22"
+    },
+    {
+        "name": "IPO185",
+        "issuePrice": 267,
+        "issueSizeCrores": 754.3,
+        "lotSize": 314,
+        "openDate": "2025-11-20",
+        "closeDate": "2025-11-23"
+    },
+    {
+        "name": "IPO186",
+        "issuePrice": 674,
+        "issueSizeCrores": 302.2,
+        "lotSize": 335,
+        "openDate": "2025-11-21",
+        "closeDate": "2025-11-24"
+    },
+    {
+        "name": "IPO187",
+        "issuePrice": 235,
+        "issueSizeCrores": 879.1,
+        "lotSize": 318,
+        "openDate": "2025-11-22",
+        "closeDate": "2025-11-25"
+    },
+    {
+        "name": "IPO188",
+        "issuePrice": 442,
+        "issueSizeCrores": 169.4,
+        "lotSize": 260,
+        "openDate": "2025-11-23",
+        "closeDate": "2025-11-26"
+    },
+    {
+        "name": "IPO189",
+        "issuePrice": 135,
+        "issueSizeCrores": 159.8,
+        "lotSize": 345,
+        "openDate": "2025-11-24",
+        "closeDate": "2025-11-27"
+    },
+    {
+        "name": "IPO190",
+        "issuePrice": 394,
+        "issueSizeCrores": 842,
+        "lotSize": 340,
+        "openDate": "2025-11-25",
+        "closeDate": "2025-11-28"
+    },
+    {
+        "name": "IPO191",
+        "issuePrice": 424,
+        "issueSizeCrores": 995.1,
+        "lotSize": 481,
+        "openDate": "2025-11-26",
+        "closeDate": "2025-11-29"
+    },
+    {
+        "name": "IPO192",
+        "issuePrice": 780,
+        "issueSizeCrores": 533.2,
+        "lotSize": 123,
+        "openDate": "2025-11-27",
+        "closeDate": "2025-11-30"
+    },
+    {
+        "name": "IPO193",
+        "issuePrice": 365,
+        "issueSizeCrores": 372,
+        "lotSize": 307,
+        "openDate": "2025-11-28",
+        "closeDate": "2025-12-01"
+    },
+    {
+        "name": "IPO194",
+        "issuePrice": 208,
+        "issueSizeCrores": 244.4,
+        "lotSize": 61,
+        "openDate": "2025-11-29",
+        "closeDate": "2025-12-02"
+    },
+    {
+        "name": "IPO195",
+        "issuePrice": 780,
+        "issueSizeCrores": 205.3,
+        "lotSize": 256,
+        "openDate": "2025-11-30",
+        "closeDate": "2025-12-03"
+    },
+    {
+        "name": "IPO196",
+        "issuePrice": 375,
+        "issueSizeCrores": 130.3,
+        "lotSize": 267,
+        "openDate": "2025-12-01",
+        "closeDate": "2025-12-04"
+    },
+    {
+        "name": "IPO197",
+        "issuePrice": 145,
+        "issueSizeCrores": 261.2,
+        "lotSize": 359,
+        "openDate": "2025-12-02",
+        "closeDate": "2025-12-05"
+    },
+    {
+        "name": "IPO198",
+        "issuePrice": 806,
+        "issueSizeCrores": 859.7,
+        "lotSize": 98,
+        "openDate": "2025-12-03",
+        "closeDate": "2025-12-06"
+    },
+    {
+        "name": "IPO199",
+        "issuePrice": 125,
+        "issueSizeCrores": 390,
+        "lotSize": 411,
+        "openDate": "2025-12-04",
+        "closeDate": "2025-12-07"
+    },
+    {
+        "name": "IPO200",
+        "issuePrice": 313,
+        "issueSizeCrores": 467.9,
+        "lotSize": 152,
+        "openDate": "2025-12-05",
+        "closeDate": "2025-12-08"
+    },
+    {
+        "name": "IPO201",
+        "issuePrice": 786,
+        "issueSizeCrores": 913.5,
+        "lotSize": 380,
+        "openDate": "2025-12-06",
+        "closeDate": "2025-12-09"
+    },
+    {
+        "name": "IPO202",
+        "issuePrice": 688,
+        "issueSizeCrores": 778,
+        "lotSize": 257,
+        "openDate": "2025-12-07",
+        "closeDate": "2025-12-10"
+    },
+    {
+        "name": "IPO203",
+        "issuePrice": 978,
+        "issueSizeCrores": 412.9,
+        "lotSize": 68,
+        "openDate": "2025-12-08",
+        "closeDate": "2025-12-11"
+    },
+    {
+        "name": "IPO204",
+        "issuePrice": 564,
+        "issueSizeCrores": 976.4,
+        "lotSize": 496,
+        "openDate": "2025-12-09",
+        "closeDate": "2025-12-12"
+    },
+    {
+        "name": "IPO205",
+        "issuePrice": 455,
+        "issueSizeCrores": 946.6,
+        "lotSize": 469,
+        "openDate": "2025-12-10",
+        "closeDate": "2025-12-13"
+    },
+    {
+        "name": "IPO206",
+        "issuePrice": 680,
+        "issueSizeCrores": 765,
+        "lotSize": 200,
+        "openDate": "2025-12-11",
+        "closeDate": "2025-12-14"
+    },
+    {
+        "name": "IPO207",
+        "issuePrice": 529,
+        "issueSizeCrores": 685.3,
+        "lotSize": 177,
+        "openDate": "2025-12-12",
+        "closeDate": "2025-12-15"
+    },
+    {
+        "name": "IPO208",
+        "issuePrice": 124,
+        "issueSizeCrores": 271.2,
+        "lotSize": 397,
+        "openDate": "2025-12-13",
+        "closeDate": "2025-12-16"
+    },
+    {
+        "name": "IPO209",
+        "issuePrice": 211,
+        "issueSizeCrores": 848.7,
+        "lotSize": 100,
+        "openDate": "2025-12-14",
+        "closeDate": "2025-12-17"
+    },
+    {
+        "name": "IPO210",
+        "issuePrice": 283,
+        "issueSizeCrores": 65.2,
+        "lotSize": 318,
+        "openDate": "2025-12-15",
+        "closeDate": "2025-12-18"
+    },
+    {
+        "name": "IPO211",
+        "issuePrice": 104,
+        "issueSizeCrores": 16.5,
+        "lotSize": 197,
+        "openDate": "2025-12-16",
+        "closeDate": "2025-12-19"
+    },
+    {
+        "name": "IPO212",
+        "issuePrice": 646,
+        "issueSizeCrores": 209,
+        "lotSize": 39,
+        "openDate": "2025-12-17",
+        "closeDate": "2025-12-20"
+    },
+    {
+        "name": "IPO213",
+        "issuePrice": 244,
+        "issueSizeCrores": 680.9,
+        "lotSize": 323,
+        "openDate": "2025-12-18",
+        "closeDate": "2025-12-21"
+    },
+    {
+        "name": "IPO214",
+        "issuePrice": 770,
+        "issueSizeCrores": 874.5,
+        "lotSize": 104,
+        "openDate": "2025-12-19",
+        "closeDate": "2025-12-22"
+    },
+    {
+        "name": "IPO215",
+        "issuePrice": 507,
+        "issueSizeCrores": 706.5,
+        "lotSize": 206,
+        "openDate": "2025-12-20",
+        "closeDate": "2025-12-23"
+    },
+    {
+        "name": "IPO216",
+        "issuePrice": 115,
+        "issueSizeCrores": 245.2,
+        "lotSize": 49,
+        "openDate": "2025-12-21",
+        "closeDate": "2025-12-24"
+    },
+    {
+        "name": "IPO217",
+        "issuePrice": 222,
+        "issueSizeCrores": 260.3,
+        "lotSize": 89,
+        "openDate": "2025-12-22",
+        "closeDate": "2025-12-25"
+    },
+    {
+        "name": "IPO218",
+        "issuePrice": 545,
+        "issueSizeCrores": 10.1,
+        "lotSize": 454,
+        "openDate": "2025-12-23",
+        "closeDate": "2025-12-26"
+    },
+    {
+        "name": "IPO219",
+        "issuePrice": 356,
+        "issueSizeCrores": 664.6,
+        "lotSize": 488,
+        "openDate": "2025-12-24",
+        "closeDate": "2025-12-27"
+    },
+    {
+        "name": "IPO220",
+        "issuePrice": 897,
+        "issueSizeCrores": 653.1,
+        "lotSize": 384,
+        "openDate": "2025-12-25",
+        "closeDate": "2025-12-28"
+    },
+    {
+        "name": "IPO221",
+        "issuePrice": 460,
+        "issueSizeCrores": 812.2,
+        "lotSize": 19,
+        "openDate": "2025-12-26",
+        "closeDate": "2025-12-29"
+    },
+    {
+        "name": "IPO222",
+        "issuePrice": 810,
+        "issueSizeCrores": 545.6,
+        "lotSize": 16,
+        "openDate": "2025-12-27",
+        "closeDate": "2025-12-30"
+    },
+    {
+        "name": "IPO223",
+        "issuePrice": 405,
+        "issueSizeCrores": 227,
+        "lotSize": 239,
+        "openDate": "2025-12-28",
+        "closeDate": "2025-12-31"
+    },
+    {
+        "name": "IPO224",
+        "issuePrice": 563,
+        "issueSizeCrores": 930.9,
+        "lotSize": 417,
+        "openDate": "2025-12-29",
+        "closeDate": "2026-01-01"
+    },
+    {
+        "name": "IPO225",
+        "issuePrice": 751,
+        "issueSizeCrores": 709.9,
+        "lotSize": 461,
+        "openDate": "2025-12-30",
+        "closeDate": "2026-01-02"
+    },
+    {
+        "name": "IPO226",
+        "issuePrice": 564,
+        "issueSizeCrores": 88.7,
+        "lotSize": 383,
+        "openDate": "2025-12-31",
+        "closeDate": "2026-01-03"
+    },
+    {
+        "name": "IPO227",
+        "issuePrice": 221,
+        "issueSizeCrores": 720,
+        "lotSize": 58,
+        "openDate": "2026-01-01",
+        "closeDate": "2026-01-04"
+    },
+    {
+        "name": "IPO228",
+        "issuePrice": 464,
+        "issueSizeCrores": 535.3,
+        "lotSize": 112,
+        "openDate": "2026-01-02",
+        "closeDate": "2026-01-05"
+    },
+    {
+        "name": "IPO229",
+        "issuePrice": 866,
+        "issueSizeCrores": 762.8,
+        "lotSize": 290,
+        "openDate": "2026-01-03",
+        "closeDate": "2026-01-06"
+    },
+    {
+        "name": "IPO230",
+        "issuePrice": 120,
+        "issueSizeCrores": 830.2,
+        "lotSize": 117,
+        "openDate": "2026-01-04",
+        "closeDate": "2026-01-07"
+    },
+    {
+        "name": "IPO231",
+        "issuePrice": 836,
+        "issueSizeCrores": 822.2,
+        "lotSize": 452,
+        "openDate": "2026-01-05",
+        "closeDate": "2026-01-08"
+    },
+    {
+        "name": "IPO232",
+        "issuePrice": 682,
+        "issueSizeCrores": 749.5,
+        "lotSize": 242,
+        "openDate": "2026-01-06",
+        "closeDate": "2026-01-09"
+    },
+    {
+        "name": "IPO233",
+        "issuePrice": 309,
+        "issueSizeCrores": 940.3,
+        "lotSize": 205,
+        "openDate": "2026-01-07",
+        "closeDate": "2026-01-10"
+    },
+    {
+        "name": "IPO234",
+        "issuePrice": 862,
+        "issueSizeCrores": 275.1,
+        "lotSize": 340,
+        "openDate": "2026-01-08",
+        "closeDate": "2026-01-11"
+    },
+    {
+        "name": "IPO235",
+        "issuePrice": 158,
+        "issueSizeCrores": 996.1,
+        "lotSize": 380,
+        "openDate": "2026-01-09",
+        "closeDate": "2026-01-12"
+    },
+    {
+        "name": "IPO236",
+        "issuePrice": 224,
+        "issueSizeCrores": 523,
+        "lotSize": 101,
+        "openDate": "2026-01-10",
+        "closeDate": "2026-01-13"
+    },
+    {
+        "name": "IPO237",
+        "issuePrice": 992,
+        "issueSizeCrores": 92.6,
+        "lotSize": 267,
+        "openDate": "2026-01-11",
+        "closeDate": "2026-01-14"
+    },
+    {
+        "name": "IPO238",
+        "issuePrice": 253,
+        "issueSizeCrores": 978,
+        "lotSize": 263,
+        "openDate": "2026-01-12",
+        "closeDate": "2026-01-15"
+    },
+    {
+        "name": "IPO239",
+        "issuePrice": 379,
+        "issueSizeCrores": 835.6,
+        "lotSize": 98,
+        "openDate": "2026-01-13",
+        "closeDate": "2026-01-16"
+    },
+    {
+        "name": "IPO240",
+        "issuePrice": 472,
+        "issueSizeCrores": 765.3,
+        "lotSize": 21,
+        "openDate": "2026-01-14",
+        "closeDate": "2026-01-17"
+    },
+    {
+        "name": "IPO241",
+        "issuePrice": 497,
+        "issueSizeCrores": 995.3,
+        "lotSize": 103,
+        "openDate": "2026-01-15",
+        "closeDate": "2026-01-18"
+    },
+    {
+        "name": "IPO242",
+        "issuePrice": 548,
+        "issueSizeCrores": 868.3,
+        "lotSize": 64,
+        "openDate": "2026-01-16",
+        "closeDate": "2026-01-19"
+    },
+    {
+        "name": "IPO243",
+        "issuePrice": 848,
+        "issueSizeCrores": 712.5,
+        "lotSize": 293,
+        "openDate": "2026-01-17",
+        "closeDate": "2026-01-20"
+    },
+    {
+        "name": "IPO244",
+        "issuePrice": 571,
+        "issueSizeCrores": 90.1,
+        "lotSize": 333,
+        "openDate": "2026-01-18",
+        "closeDate": "2026-01-21"
+    },
+    {
+        "name": "IPO245",
+        "issuePrice": 764,
+        "issueSizeCrores": 377.8,
+        "lotSize": 53,
+        "openDate": "2026-01-19",
+        "closeDate": "2026-01-22"
+    },
+    {
+        "name": "IPO246",
+        "issuePrice": 458,
+        "issueSizeCrores": 529.6,
+        "lotSize": 31,
+        "openDate": "2026-01-20",
+        "closeDate": "2026-01-23"
+    },
+    {
+        "name": "IPO247",
+        "issuePrice": 263,
+        "issueSizeCrores": 72,
+        "lotSize": 455,
+        "openDate": "2026-01-21",
+        "closeDate": "2026-01-24"
+    },
+    {
+        "name": "IPO248",
+        "issuePrice": 186,
+        "issueSizeCrores": 489.1,
+        "lotSize": 323,
+        "openDate": "2026-01-22",
+        "closeDate": "2026-01-25"
+    },
+    {
+        "name": "IPO249",
+        "issuePrice": 756,
+        "issueSizeCrores": 173.2,
+        "lotSize": 412,
+        "openDate": "2026-01-23",
+        "closeDate": "2026-01-26"
+    },
+    {
+        "name": "IPO250",
+        "issuePrice": 220,
+        "issueSizeCrores": 814.3,
+        "lotSize": 44,
+        "openDate": "2026-01-24",
+        "closeDate": "2026-01-27"
+    },
+    {
+        "name": "IPO251",
+        "issuePrice": 411,
+        "issueSizeCrores": 862.9,
+        "lotSize": 288,
+        "openDate": "2026-01-25",
+        "closeDate": "2026-01-28"
+    },
+    {
+        "name": "IPO252",
+        "issuePrice": 689,
+        "issueSizeCrores": 744.9,
+        "lotSize": 93,
+        "openDate": "2026-01-26",
+        "closeDate": "2026-01-29"
+    },
+    {
+        "name": "IPO253",
+        "issuePrice": 497,
+        "issueSizeCrores": 903.5,
+        "lotSize": 89,
+        "openDate": "2026-01-27",
+        "closeDate": "2026-01-30"
+    },
+    {
+        "name": "IPO254",
+        "issuePrice": 915,
+        "issueSizeCrores": 916.1,
+        "lotSize": 469,
+        "openDate": "2026-01-28",
+        "closeDate": "2026-01-31"
+    },
+    {
+        "name": "IPO255",
+        "issuePrice": 330,
+        "issueSizeCrores": 445.1,
+        "lotSize": 246,
+        "openDate": "2026-01-29",
+        "closeDate": "2026-02-01"
+    },
+    {
+        "name": "IPO256",
+        "issuePrice": 404,
+        "issueSizeCrores": 379.6,
+        "lotSize": 342,
+        "openDate": "2026-01-30",
+        "closeDate": "2026-02-02"
+    },
+    {
+        "name": "IPO257",
+        "issuePrice": 949,
+        "issueSizeCrores": 750.4,
+        "lotSize": 478,
+        "openDate": "2026-01-31",
+        "closeDate": "2026-02-03"
+    },
+    {
+        "name": "IPO258",
+        "issuePrice": 981,
+        "issueSizeCrores": 703.2,
+        "lotSize": 24,
+        "openDate": "2026-02-01",
+        "closeDate": "2026-02-04"
+    },
+    {
+        "name": "IPO259",
+        "issuePrice": 960,
+        "issueSizeCrores": 605.7,
+        "lotSize": 134,
+        "openDate": "2026-02-02",
+        "closeDate": "2026-02-05"
+    },
+    {
+        "name": "IPO260",
+        "issuePrice": 939,
+        "issueSizeCrores": 349.6,
+        "lotSize": 172,
+        "openDate": "2026-02-03",
+        "closeDate": "2026-02-06"
+    },
+    {
+        "name": "IPO261",
+        "issuePrice": 269,
+        "issueSizeCrores": 673.6,
+        "lotSize": 337,
+        "openDate": "2026-02-04",
+        "closeDate": "2026-02-07"
+    },
+    {
+        "name": "IPO262",
+        "issuePrice": 295,
+        "issueSizeCrores": 67.2,
+        "lotSize": 313,
+        "openDate": "2026-02-05",
+        "closeDate": "2026-02-08"
+    },
+    {
+        "name": "IPO263",
+        "issuePrice": 330,
+        "issueSizeCrores": 8.2,
+        "lotSize": 398,
+        "openDate": "2026-02-06",
+        "closeDate": "2026-02-09"
+    },
+    {
+        "name": "IPO264",
+        "issuePrice": 269,
+        "issueSizeCrores": 213.1,
+        "lotSize": 278,
+        "openDate": "2026-02-07",
+        "closeDate": "2026-02-10"
+    },
+    {
+        "name": "IPO265",
+        "issuePrice": 996,
+        "issueSizeCrores": 827.7,
+        "lotSize": 278,
+        "openDate": "2026-02-08",
+        "closeDate": "2026-02-11"
+    },
+    {
+        "name": "IPO266",
+        "issuePrice": 712,
+        "issueSizeCrores": 197.4,
+        "lotSize": 168,
+        "openDate": "2026-02-09",
+        "closeDate": "2026-02-12"
+    },
+    {
+        "name": "IPO267",
+        "issuePrice": 715,
+        "issueSizeCrores": 750.5,
+        "lotSize": 467,
+        "openDate": "2026-02-10",
+        "closeDate": "2026-02-13"
+    },
+    {
+        "name": "IPO268",
+        "issuePrice": 637,
+        "issueSizeCrores": 24.2,
+        "lotSize": 120,
+        "openDate": "2026-02-11",
+        "closeDate": "2026-02-14"
+    },
+    {
+        "name": "IPO269",
+        "issuePrice": 176,
+        "issueSizeCrores": 574.1,
+        "lotSize": 75,
+        "openDate": "2026-02-12",
+        "closeDate": "2026-02-15"
+    },
+    {
+        "name": "IPO270",
+        "issuePrice": 562,
+        "issueSizeCrores": 156.9,
+        "lotSize": 180,
+        "openDate": "2026-02-13",
+        "closeDate": "2026-02-16"
+    },
+    {
+        "name": "IPO271",
+        "issuePrice": 746,
+        "issueSizeCrores": 190.7,
+        "lotSize": 334,
+        "openDate": "2026-02-14",
+        "closeDate": "2026-02-17"
+    },
+    {
+        "name": "IPO272",
+        "issuePrice": 890,
+        "issueSizeCrores": 477.7,
+        "lotSize": 221,
+        "openDate": "2026-02-15",
+        "closeDate": "2026-02-18"
+    },
+    {
+        "name": "IPO273",
+        "issuePrice": 884,
+        "issueSizeCrores": 918.4,
+        "lotSize": 125,
+        "openDate": "2026-02-16",
+        "closeDate": "2026-02-19"
+    },
+    {
+        "name": "IPO274",
+        "issuePrice": 532,
+        "issueSizeCrores": 133.4,
+        "lotSize": 81,
+        "openDate": "2026-02-17",
+        "closeDate": "2026-02-20"
+    },
+    {
+        "name": "IPO275",
+        "issuePrice": 693,
+        "issueSizeCrores": 572.4,
+        "lotSize": 490,
+        "openDate": "2026-02-18",
+        "closeDate": "2026-02-21"
+    },
+    {
+        "name": "IPO276",
+        "issuePrice": 863,
+        "issueSizeCrores": 766,
+        "lotSize": 439,
+        "openDate": "2026-02-19",
+        "closeDate": "2026-02-22"
+    },
+    {
+        "name": "IPO277",
+        "issuePrice": 654,
+        "issueSizeCrores": 409.3,
+        "lotSize": 346,
+        "openDate": "2026-02-20",
+        "closeDate": "2026-02-23"
+    },
+    {
+        "name": "IPO278",
+        "issuePrice": 777,
+        "issueSizeCrores": 774.9,
+        "lotSize": 286,
+        "openDate": "2026-02-21",
+        "closeDate": "2026-02-24"
+    },
+    {
+        "name": "IPO279",
+        "issuePrice": 368,
+        "issueSizeCrores": 886.7,
+        "lotSize": 339,
+        "openDate": "2026-02-22",
+        "closeDate": "2026-02-25"
+    },
+    {
+        "name": "IPO280",
+        "issuePrice": 275,
+        "issueSizeCrores": 665,
+        "lotSize": 73,
+        "openDate": "2026-02-23",
+        "closeDate": "2026-02-26"
+    },
+    {
+        "name": "IPO281",
+        "issuePrice": 609,
+        "issueSizeCrores": 732,
+        "lotSize": 125,
+        "openDate": "2026-02-24",
+        "closeDate": "2026-02-27"
+    },
+    {
+        "name": "IPO282",
+        "issuePrice": 942,
+        "issueSizeCrores": 815.1,
+        "lotSize": 268,
+        "openDate": "2026-02-25",
+        "closeDate": "2026-02-28"
+    },
+    {
+        "name": "IPO283",
+        "issuePrice": 294,
+        "issueSizeCrores": 251.1,
+        "lotSize": 12,
+        "openDate": "2026-02-26",
+        "closeDate": "2026-03-01"
+    },
+    {
+        "name": "IPO284",
+        "issuePrice": 109,
+        "issueSizeCrores": 46.8,
+        "lotSize": 83,
+        "openDate": "2026-02-27",
+        "closeDate": "2026-03-02"
+    },
+    {
+        "name": "IPO285",
+        "issuePrice": 461,
+        "issueSizeCrores": 282.4,
+        "lotSize": 406,
+        "openDate": "2026-02-28",
+        "closeDate": "2026-03-03"
+    },
+    {
+        "name": "IPO286",
+        "issuePrice": 949,
+        "issueSizeCrores": 924.8,
+        "lotSize": 332,
+        "openDate": "2026-03-01",
+        "closeDate": "2026-03-04"
+    },
+    {
+        "name": "IPO287",
+        "issuePrice": 445,
+        "issueSizeCrores": 320.4,
+        "lotSize": 231,
+        "openDate": "2026-03-02",
+        "closeDate": "2026-03-05"
+    },
+    {
+        "name": "IPO288",
+        "issuePrice": 521,
+        "issueSizeCrores": 415.9,
+        "lotSize": 482,
+        "openDate": "2026-03-03",
+        "closeDate": "2026-03-06"
+    },
+    {
+        "name": "IPO289",
+        "issuePrice": 835,
+        "issueSizeCrores": 435.9,
+        "lotSize": 221,
+        "openDate": "2026-03-04",
+        "closeDate": "2026-03-07"
+    },
+    {
+        "name": "IPO290",
+        "issuePrice": 453,
+        "issueSizeCrores": 625.7,
+        "lotSize": 344,
+        "openDate": "2026-03-05",
+        "closeDate": "2026-03-08"
+    },
+    {
+        "name": "IPO291",
+        "issuePrice": 239,
+        "issueSizeCrores": 287.8,
+        "lotSize": 222,
+        "openDate": "2026-03-06",
+        "closeDate": "2026-03-09"
+    },
+    {
+        "name": "IPO292",
+        "issuePrice": 296,
+        "issueSizeCrores": 255.4,
+        "lotSize": 181,
+        "openDate": "2026-03-07",
+        "closeDate": "2026-03-10"
+    },
+    {
+        "name": "IPO293",
+        "issuePrice": 459,
+        "issueSizeCrores": 470.4,
+        "lotSize": 405,
+        "openDate": "2026-03-08",
+        "closeDate": "2026-03-11"
+    },
+    {
+        "name": "IPO294",
+        "issuePrice": 471,
+        "issueSizeCrores": 115.2,
+        "lotSize": 441,
+        "openDate": "2026-03-09",
+        "closeDate": "2026-03-12"
+    },
+    {
+        "name": "IPO295",
+        "issuePrice": 264,
+        "issueSizeCrores": 962.1,
+        "lotSize": 125,
+        "openDate": "2026-03-10",
+        "closeDate": "2026-03-13"
+    },
+    {
+        "name": "IPO296",
+        "issuePrice": 867,
+        "issueSizeCrores": 557.4,
+        "lotSize": 334,
+        "openDate": "2026-03-11",
+        "closeDate": "2026-03-14"
+    },
+    {
+        "name": "IPO297",
+        "issuePrice": 228,
+        "issueSizeCrores": 556.9,
+        "lotSize": 491,
+        "openDate": "2026-03-12",
+        "closeDate": "2026-03-15"
+    },
+    {
+        "name": "IPO298",
+        "issuePrice": 843,
+        "issueSizeCrores": 488.7,
+        "lotSize": 357,
+        "openDate": "2026-03-13",
+        "closeDate": "2026-03-16"
+    },
+    {
+        "name": "IPO299",
+        "issuePrice": 158,
+        "issueSizeCrores": 144.2,
+        "lotSize": 473,
+        "openDate": "2026-03-14",
+        "closeDate": "2026-03-17"
+    },
+    {
+        "name": "IPO300",
+        "issuePrice": 424,
+        "issueSizeCrores": 341.9,
+        "lotSize": 357,
+        "openDate": "2026-03-15",
+        "closeDate": "2026-03-18"
+    }
+]

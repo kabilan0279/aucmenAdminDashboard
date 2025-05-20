@@ -57,6 +57,7 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
 
             if (updateUrl) {
                 const newUrl = `${window.location.pathname}?page=${encodeURIComponent(url)}`;
+                window.location.reload()
                 history.pushState(null, "", newUrl);
             }
 
