@@ -24,46 +24,27 @@ document.addEventListener('click', (event) => {
     }
 });
 document.addEventListener("DOMContentLoaded", function () {
-    // Get page from URL query string or default to client-details.html
     const params = new URLSearchParams(window.location.search);
     const page = params.get("page") || "content/client-details.html";
-
     loadPage(page);
 
-    // Attach event listener to all .load-page links
     document.querySelectorAll(".load-page").forEach(function (link) {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const url = this.getAttribute("href");
-            loadPage(url, true); // true = update URl
+            loadPage(url, true, this); // pass clicked link
         });
+    });
+
+    // Handle back/forward button navigation
+    window.addEventListener("popstate", function () {
+        const params = new URLSearchParams(window.location.search);
+        const page = params.get("page") || "content/client-details.html";
+        loadPage(page); // load content when URL changes
     });
 });
 
-// Function to fetch and load page content
-function loadPage(url, updateUrl = false) {
-    fetch(url)
-        .then(response => {
-            if (!response.ok) throw new Error("Network response was not ok");
-            return response.text();
-        })
-        .then(data => {
-            document.querySelector(".page-Content").innerHTML = data;
-            window.url = url; // Set global variable
-            if (updateUrl) {
-                // Update the URL query string without reloading the page
-                const newUrl = `${window.location.pathname}?page=${encodeURIComponent(url)}`;
-                history.pushState(null, "", newUrl);
-
-            }
-        })
-        .catch(error => {
-            console.error("Fetch error:", error);
-            document.querySelector(".page-Content").innerHTML = "<p>Error loading content.</p>";
-        });
-}
-
-// Function to fetch and load page content
+// Single clean loadPage function
 function loadPage(url, updateUrl = false, clickedLink = null) {
     fetch(url)
         .then(response => {
@@ -85,6 +66,14 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
             console.error("Fetch error:", error);
             document.querySelector(".page-Content").innerHTML = "<p>Error loading content.</p>";
         });
+}
+
+// Optional: visually mark the active link
+function highlightActiveLink(clickedLink) {
+    document.querySelectorAll(".load-page").forEach(link => link.classList.remove("active"));
+    if (clickedLink) {
+        clickedLink.classList.add("active");
+    }
 }
 
 function highlightActiveLink(activeLink) {

@@ -31,9 +31,15 @@ function rowSelectClog() {
 
 
 function renderClogTable() {
-    const clientId = document.getElementById("ClientIdClog").value.trim().toUpperCase() ?? '';
-    const startDate = document.getElementById("startDateClog").value;
-    const endDate = document.getElementById("endDateClog").value;
+    const clientIdElement = document.getElementById("ClientIdClog");
+    const clientId = clientIdElement ? clientIdElement.value.trim().toUpperCase() : '';
+
+    const startDateElement = document.getElementById("startDateClog");
+    const startDate = startDateElement ? startDateElement.value.trim() : '';
+
+    const endDateElement = document.getElementById("endDateClog");
+    const endDate = endDateElement ? endDateElement.value.trim() : '';
+
 
     // Collect checked response filters
     const checkedResponses = Array.from(document.querySelectorAll('#dropdownMenuClog input[type="checkbox"]:checked'))
@@ -44,7 +50,7 @@ function renderClogTable() {
         const matchesResponse = checkedResponses.length === 0 || checkedResponses.includes(row.loginStatus);
         const rowDate = new Date(row.date);
         const matchesDate = (!startDate || new Date(startDate) <= rowDate) &&
-                            (!endDate || rowDate <= new Date(endDate));
+            (!endDate || rowDate <= new Date(endDate));
         return matchesClientId && matchesResponse && matchesDate;
     });
 
@@ -100,9 +106,15 @@ function prevPageClog() {
 }
 
 function nextPageClog() {
-    const clientId = document.getElementById("ClientIdClog").value.trim().toUpperCase() ?? '';
-    const startDate = document.getElementById("startDateClog").value;
-    const endDate = document.getElementById("endDateClog").value;
+    const clientIdElement = document.getElementById("ClientIdClog");
+    const clientId = clientIdElement ? clientIdElement.value.trim().toUpperCase() : '';
+
+    const startDateElement = document.getElementById("startDateClog");
+    const startDate = startDateElement ? startDateElement.value.trim() : '';
+
+    const endDateElement = document.getElementById("endDateClog");
+    const endDate = endDateElement ? endDateElement.value.trim() : '';
+
     const checkedResponses = Array.from(document.querySelectorAll('#dropdownMenuClog input[type="checkbox"]:checked'))
         .map(checkbox => checkbox.nextElementSibling.textContent.trim());
 
@@ -111,7 +123,7 @@ function nextPageClog() {
         const matchesResponse = checkedResponses.length === 0 || checkedResponses.includes(row.loginStatus);
         const rowDate = new Date(row.date);
         const matchesDate = (!startDate || new Date(startDate) <= rowDate) &&
-                            (!endDate || rowDate <= new Date(endDate));
+            (!endDate || rowDate <= new Date(endDate));
         return matchesClientId && matchesResponse && matchesDate;
     });
 
