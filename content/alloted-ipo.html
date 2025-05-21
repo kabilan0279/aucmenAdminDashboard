@@ -7,24 +7,27 @@
         <div class="flex flex-col md:flex-row justify-between gap-3 pt-2">
             <!-- Box 1: Left-aligned -->
             <div class="w-full md:max-w-[49%] bg-white py-1">
-                <h3 class="text-md text-gray-800 font-semibold mb-1">Upload Allotted IPO LIST</h3>
-                
+                <h3 class="text-md text-gray-800 font-semibold text-sm mb-1">Upload Allotted IPO LIST</h3>
+
                 <div class="flex flex-col sm:flex-row items-center gap-4">
-                    <input type="file" class="border border-gray-300 rounded-lg p-2 w-full sm:w-64" />
+                    <input type="file"
+                        class="block sm:w-64 pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 file:text-gray-500 file:border-0 file:mr-2 file:bg-gray-100 file:px-2 file:py-1 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
                     <button
                         class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
                         Upload
                     </button>
                 </div>
+
             </div>
 
             <!-- Box 2: Right-aligned -->
-            <div class="w-full md:max-w-[49%]  bg-white ">
-                <h3 class="text-md text-gray-800 font-semibold mb-1">Export Allotted IPO</h3>
-                
+            <div class="w-full md:max-w-[49%]  bg-white sm:ml-[11%]">
+                <h3 class="text-md text-gray-800 font-semibold text-sm mb-1 ">Export Allotted IPO</h3>
+
                 <div class="flex flex-col sm:flex-row items-center gap-4">
                     <select id="client-select"
-                        class="block w-full sm:w-64 px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        class="block  pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-400 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="" disabled selected>Select a Symbol</option>
                         <option value="client1">Client 1</option>
                         <option value="client2">Client 2</option>
@@ -47,7 +50,7 @@
             <div class="relative flex-1 min-w-full sm:min-w-[160px]">
                 <input type="text" id="AllottedClientId" placeholder="Client ID"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <span onclick="document.getElementById('AllottedClientId').value=''"
+                <span onclick="document.getElementById('AllottedClientId').value=''  ; renderAllottedTable()"
                     class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
             </div>
 
@@ -55,7 +58,7 @@
             <div class="relative flex-1 min-w-full sm:min-w-[160px]">
                 <input type="text" id="AllottedSymbolSearch" placeholder="Symbol"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <span onclick="document.getElementById('AllottedSymbolSearch').value=''"
+                <span onclick="document.getElementById('AllottedSymbolSearch').value=''  ; renderAllottedTable()"
                     class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
             </div>
 
@@ -63,7 +66,7 @@
             <div class="relative flex-1 min-w-full sm:min-w-[160px]">
                 <input type="text" id="AllottedPanSearch" placeholder="PAN"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <span onclick="document.getElementById('AllottedPanSearch').value=''"
+                <span onclick="document.getElementById('AllottedPanSearch').value=''  ; renderAllottedTable()"
                     class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
             </div>
 
@@ -71,7 +74,7 @@
             <div class="relative flex-1 min-w-full sm:min-w-[160px]">
                 <input type="text" id="AllottedAppNoSearch" placeholder="Application No"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <span onclick="document.getElementById('AllottedAppNoSearch').value=''"
+                <span onclick="document.getElementById('AllottedAppNoSearch').value=''  ; renderAllottedTable()"
                     class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
             </div>
 
@@ -93,7 +96,7 @@
         <div class="relative flex-1 py-[4px] sm:flex-none sm:w-48">
             <input type="text" id="AllottedSearchPage" placeholder="Selected Page Search"
                 class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            <span onclick="document.getElementById('AllottedSearchPage').value=''"
+            <span onclick="document.getElementById('AllottedSearchPage').value=''  ; renderAllottedTable()"
                 class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
                 &times;
             </span>
@@ -155,8 +158,8 @@
 </div>
 <!-- Fixed Footer -->
 <div class="bg-white  px-2 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
-  <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 px-3 ">
-    <!-- Rows Per Page Selector -->
+    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 px-3 ">
+        <!-- Rows Per Page Selector -->
         <div class="flex items-center gap-1 sm:gap-2">
             <select id="AllottedRowsPerPage"
                 class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">

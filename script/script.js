@@ -1,53 +1,46 @@
-document.getElementById('closeSidebar').addEventListener('click', function () {
-    document.getElementById('mobileSidebar').style.display = 'none';
-});
-
-document.getElementById('mobile-menu-button').addEventListener('click', function () {
-    var sidebar = document.getElementById('mobileSidebar');
-    if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-        sidebar.style.display = 'block';
-    } else {
-        sidebar.style.display = 'none';
-    }
-}
-);
-
-const menuButton = document.getElementById('user-menu-button');
-const dropdown = document.getElementById('userDropdown');
-menuButton.addEventListener('click', () => {
-    dropdown.classList.toggle('hidden');
-});
-
-document.addEventListener('click', (event) => {
-    if (!menuButton.contains(event.target) && !dropdown.contains(event.target)) {
-        dropdown.classList.add('hidden');
-    }
-});
-
-
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('closeSidebar').addEventListener('click', function () {
+        document.getElementById('mobileSidebar').style.display = 'none';
+    });
+
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const sidebar = document.getElementById('mobileSidebar');
+        sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
+    });
+
+    const menuButton = document.getElementById('user-menu-button');
+    const dropdown = document.getElementById('userDropdown');
+    menuButton.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menuButton.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+
     const params = new URLSearchParams(window.location.search);
-    const page = params.get("page") || "content/client-details.html";
-    loadPage(page);
-    document.querySelectorAll(".load-page").forEach(function (link) {
+    const initialPage = params.get("page") || "content/client-details.html";
+    loadPage(initialPage, false);
+
+    document.querySelectorAll(".load-page").forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const url = this.getAttribute("href");
-            loadPage(url, true, this); 
-            
+            loadPage(url, true);
+            document.getElementById('mobileSidebar').style.display = 'none';
         });
     });
 
     window.addEventListener("popstate", function () {
         const params = new URLSearchParams(window.location.search);
         const page = params.get("page") || "content/client-details.html";
-        loadPage(page); 
+        loadPage(page, false);
     });
 });
 
-
-
-function loadPage(url, updateUrl = false, clickedLink = null) {
+function loadPage(url, updateUrl = false) {
     fetch(url)
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok");
@@ -55,17 +48,12 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
         })
         .then(data => {
             document.querySelector(".page-Content").innerHTML = data;
-            window.url = url;
-            highlightActiveLink(clickedLink);
-
-
             if (updateUrl) {
                 const newUrl = `${window.location.pathname}?page=${url}`;
                 history.pushState(null, "", newUrl);
+                window.location.reload()
             }
-
-            highlightActiveLink(clickedLink);
-            
+            highlightActiveLink(url);
         })
         .catch(error => {
             console.error("Fetch error:", error);
@@ -73,71 +61,24 @@ function loadPage(url, updateUrl = false, clickedLink = null) {
         });
 }
 
-function highlightActiveLink(clickedLink) {
-    document.querySelectorAll(".load-page").forEach(link => link.classList.remove("active"));
-    if (clickedLink) {
-        clickedLink.classList.add("active");
-
-    }
-}
-
-function highlightActiveLink(activeLink) {
+function highlightActiveLink(currentPage) {
     const menuLinks = document.querySelectorAll(".load-page");
 
     menuLinks.forEach(link => {
-        link.classList.remove("bg-slate-500", "text-white");
-        link.classList.add("text-slate-800", "hover:bg-slate-400", "hover:text-white");
+        const href = link.getAttribute("href");
+        const isActive = href === currentPage;
+
+        link.classList.toggle("bg-slate-500", isActive);
+        link.classList.toggle("text-white", isActive);
+        link.classList.toggle("text-slate-800", !isActive);
+        link.classList.toggle("hover:bg-slate-400", !isActive);
+        link.classList.toggle("hover:text-white", !isActive);
 
         const icon = link.querySelector("svg");
         if (icon) {
-            icon.classList.remove("text-white");
-            icon.classList.add("text-slate-400", "group-hover:text-white");
+            icon.classList.toggle("text-white", isActive);
+            icon.classList.toggle("text-slate-400", !isActive);
+            icon.classList.toggle("group-hover:text-white", !isActive);
         }
     });
-
-    if (activeLink) {
-        // Apply active styles
-        activeLink.classList.add("bg-slate-500", "text-white");
-        activeLink.classList.remove("text-slate-800", "hover:bg-slate-400", "hover:text-white");
-
-        const icon = activeLink.querySelector("svg");
-        if (icon) {
-            icon.classList.remove("text-slate-400", "group-hover:text-white");
-            icon.classList.add("text-white");
-        }
-    }
 }
-
-
-document.querySelectorAll(".load-page").forEach(link => {
-    link.addEventListener("click", function () {
-        document.getElementById('mobileSidebar').style.display = 'none';
-        
-    });
-});
-
-
-// Add event listeners to menu items after DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".load-page").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const url = this.getAttribute("href");
-            loadPage(url, true, this);
-        });
-
-    });
-
-    const params = new URLSearchParams(window.location.search);
-    const page = params.get("page");
-    if (page) {
-        // Try to find a matching link to highlight
-        const activeLink = Array.from(document.querySelectorAll(".load-page"))
-            .find(link => link.getAttribute("href") === page);
-        loadPage(page, false, activeLink);
-    }
-});
-
-
-
-

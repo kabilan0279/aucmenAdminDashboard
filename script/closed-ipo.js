@@ -51,7 +51,7 @@ function nextclosedPage() {
 }
 
 function sortclosed(columnIndex) {
-    const keys = ['name', 'issuePrice', 'issueSizeCrores', 'lotSize', 'closedDate', 'closeDate'];
+    const keys = ['name', 'issuePrice', 'issueSizeCrores', 'lotSize', 'openDate', 'closeDate'];
     const key = keys[columnIndex];
     const direction = sortDirectionclosed[columnIndex] ? 1 : -1;
 
@@ -97,7 +97,7 @@ function renderclosedTable(searchTerm = '') {
                 <td class="px-2 py-2">${row.issuePrice || '-'}</td>
                 <td class="px-2 py-2">${row.issueSizeCrores || '-'}</td>
                 <td class="px-2 py-2">${row.lotSize || '-'}</td>
-                <td class="px-2 py-2">${row.closedDate || '-'}</td>
+                <td class="px-2 py-2">${row.openDate || '-'}</td>
                 <td class="px-2 py-2">${row.closeDate || '-'}</td>
             </tr>`;
     });
