@@ -15,60 +15,65 @@
       SEARCH
     </button>
   </div>
+   <p id="cdtl-error"></p>
 </div>
+
+
+
+
 
 <!-- Client Details Section -->
 <div class="client-details w-full mt-6 p-4 bg-white rounded-lg shadow space-y-4">
   <!-- Row 1 -->
   <div class="flex flex-wrap -mx-2">
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="clientName" class="block text-sm font-medium text-gray-900 mb-1">Client Name</label>
+      <label for="clientName" class="block text-sm font-medium text-gray-800 mb-1">Client Name</label>
       <input type="text" id="clientName" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="mobileNo" class="block text-sm font-medium text-gray-900 mb-1">Mobile</label>
+      <label for="mobileNo" class="block text-sm font-medium text-gray-800 mb-1">Mobile</label>
       <input type="text" id="mobileNo" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="email" class="block text-sm font-medium text-gray-900 mb-1">Email</label>
+      <label for="email" class="block text-sm font-medium text-gray-800 mb-1">Email</label>
       <input type="text" id="email" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="pan" class="block text-sm font-medium text-gray-900 mb-1">PAN</label>
+      <label for="pan" class="block text-sm font-medium text-gray-800 mb-1">PAN</label>
       <input type="text" id="pan" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
   </div>
 
   <!-- Row 2 -->
   <div class="flex flex-wrap -mx-2">
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="depositoryName" class="block text-sm font-medium text-gray-900 mb-1">Depository Name</label>
+      <label for="depositoryName" class="block text-sm font-medium text-gray-800 mb-1">Depository Name</label>
       <input type="text" id="depositoryName" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="dpCode" class="block text-sm font-medium text-gray-900 mb-1">DP Code</label>
+      <label for="dpCode" class="block text-sm font-medium text-gray-800 mb-1">DP Code</label>
       <input type="text" id="dpCode" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="clientId" class="block text-sm font-medium text-gray-900 mb-1">Client ID</label>
+      <label for="clientId" class="block text-sm font-medium text-gray-800 mb-1">Client ID</label>
       <input type="text" id="clientId" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3 flex items-end">
       <button onclick="updateDP()"
-        class="w-full text-white text-sm bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md shadow">
+        class="w-full text-white text-sm bg-blue-600 hover:bg-blue-700 px-2 py-2 rounded-md shadow">
         Update DP
       </button>
     </div>
@@ -77,15 +82,15 @@
   <!-- Row 3 -->
   <div class="flex flex-wrap -mx-2">
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="depositoryName" class="block text-sm font-medium text-gray-900 mb-1">Bank A/C Number</label>
+      <label for="depositoryName" class="block text-sm font-medium text-gray-800 mb-1">Bank A/C Number</label>
       <input type="text" id="depositoryName" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="dpCode" class="block text-sm font-medium text-gray-900 mb-1">Bank IFSC Code</label>
+      <label for="dpCode" class="block text-sm font-medium text-gray-800 mb-1">Bank IFSC Code</label>
       <input type="text" id="dpCode" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
 
@@ -95,21 +100,27 @@
   <div class="flex flex-wrap -mx-2">
 
      <div  class="w-full md:w-1/2 px-2 mb-3">
-      <label for="comment" class="block text-sm/6 font-medium text-gray-900">Residential Address</label>
+      <label for="comment" class="block text-sm/6 font-medium text-gray-800">Residential Address</label>
         <textarea rows="2" name="comment" id="comment" readonly
-          class="block w-full rounded-md  bg-gray-100 px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
+          class="block w-full rounded-md  bg-gray-100 px-3 py-1.5 text-base text-gray-800 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"></textarea>
     </div>
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="depositoryName" class="block text-sm font-medium text-gray-900 mb-1">City</label>
+      <label for="depositoryName" class="block text-sm font-medium text-gray-800 mb-1">City</label>
       <input type="text" id="depositoryName" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
     <div class="w-full md:w-1/4 px-2 mb-3">
-      <label for="dpCode" class="block text-sm font-medium text-gray-900 mb-1">State</label>
+      <label for="dpCode" class="block text-sm font-medium text-gray-800 mb-1">State</label>
       <input type="text" id="dpCode" readonly
-        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-900 outline outline-1 outline-gray-300 cursor-not-allowed">
+        class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-800 outline outline-1 outline-gray-300 cursor-not-allowed">
     </div>
 
   </div>
 </div>
+
+<script>
+  function searchClient(){
+    document.getElementById('')
+  }
+</script>
