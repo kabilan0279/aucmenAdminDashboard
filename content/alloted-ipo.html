@@ -2,7 +2,6 @@
 <div class="sticky top-0 z-30 bg-white border-b border-gray-200">
     <!-- Title -->
     <div class="max-w-5xl  h-auto">
-        <h3 class="text-lg text-gray-800 font-semibold pt-3">Export Transaction List</h3>
 
         <div class="flex flex-col md:flex-row justify-between gap-3 pt-2">
             <!-- Box 1: Left-aligned -->
@@ -51,7 +50,7 @@
                 <input type="text" id="AllottedClientId" placeholder="Client ID"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 <span onclick="document.getElementById('AllottedClientId').value=''  ; renderAllottedTable()"
-                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 hover:text-2xl cursor-pointer">&times;</span>
             </div>
 
             <!-- Symbol -->
@@ -59,7 +58,7 @@
                 <input type="text" id="AllottedSymbolSearch" placeholder="Symbol"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 <span onclick="document.getElementById('AllottedSymbolSearch').value=''  ; renderAllottedTable()"
-                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 hover:text-2xl cursor-pointer">&times;</span>
             </div>
 
             <!-- PAN -->
@@ -67,7 +66,7 @@
                 <input type="text" id="AllottedPanSearch" placeholder="PAN"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 <span onclick="document.getElementById('AllottedPanSearch').value=''  ; renderAllottedTable()"
-                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 hover:text-2xl cursor-pointer">&times;</span>
             </div>
 
             <!-- Application No -->
@@ -75,7 +74,7 @@
                 <input type="text" id="AllottedAppNoSearch" placeholder="Application No"
                     class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 <span onclick="document.getElementById('AllottedAppNoSearch').value=''  ; renderAllottedTable()"
-                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 cursor-pointer">&times;</span>
+                    class="absolute top-2 right-2 text-lg text-gray-400 hover:text-red-500 hover:text-2xl cursor-pointer">&times;</span>
             </div>
 
             <!-- Search Button -->
@@ -89,30 +88,37 @@
 
     </div>
 
+    <div class="w-full my-2">
+        <div class="flex justify-between items-center w-full">
 
-    <div class="w-full  mb-4"></div>
-    <div class="flex justify-end items-center gap-2 w-full">
-        <!-- Search input with clear button -->
-        <div class="relative flex-1 py-[4px] sm:flex-none sm:w-48">
-            <input type="text" id="AllottedSearchPage" placeholder="Selected Page Search"
-                class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            <span onclick="document.getElementById('AllottedSearchPage').value=''  ; renderAllottedTable()"
-                class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
-                &times;
-            </span>
+            <!-- Left Side: Heading -->
+            <h3 class="text-md text-gray-800 font-semibold pt-3">ALLOTTED IPO LIST</h3>
+
+            <!-- Right Side: Search + Select -->
+            <div class="flex items-center gap-2">
+                <!-- Search input with clear button -->
+                <div class="relative w-48">
+                    <input type="text" id="AllottedSearchPage" placeholder="Selected Page Search"
+                        class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <span onclick="document.getElementById('AllottedSearchPage').value=''; renderAllottedTable()"
+                        class="absolute right-2 top-1.2 text-xl cursor-pointer text-gray-400 hover:text-red-500 hover:text-2xl">
+                        &times;
+                    </span>
+                </div>
+
+                <!-- Select button -->
+                <button id="rowSelectAllotted" onclick="SelectPageAllotted()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+                    Select
+                </button>
+            </div>
         </div>
-
-        <!-- Select button -->
-        <button id="rowSelectAllotted" onclick="SelectPageAllotted()"
-            class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
-            Select
-        </button>
     </div>
-    <!-- End Controls -->
+
 
 
     <!-- Scrollable Table Container -->
-    <div class="relative bg-white  max-h-[60vh] overflow-auto">
+    <div class="relative bg-white  max-h-[66vh] overflow-auto">
         <table class="min-w-full text-sm text-left">
             <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
                 <tr class="cursor-pointer bg-stone-100 ">
