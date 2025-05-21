@@ -1,10 +1,10 @@
-let data = [];
-let currentPage = 1;
-var rowsPerPage = 15;
-let sortColumn = null;
-let sortAsc = true;
+let dataupl = [];
+let currentPageupl = 1;
+var rowsPerPageupl = 15;
+let sortColumnupl = null;
+let sortAscupl = true;
 
-console.log("selected Rows:", rowsPerPage);
+console.log("selected Rows:", rowsPerPageupl);
 
 document.addEventListener('DOMContentLoaded', () => {
   fetch('json/uploadedList.json')
@@ -13,87 +13,142 @@ document.addEventListener('DOMContentLoaded', () => {
       return res.json();
     })
     .then(json => {
-      data = json;
-      console.log('Data loaded:', data.length); // ✅ Add this
+      dataupl = json;
+      console.log('Dataupl loaded:', dataupl.length); // ✅ Add this
 
       setTimeout(function () {
-        renderTable();
+        renderTableupl();
       }, 300);
     })
 
     .catch(err => {
       console.error('Failed to load JSON:', err);
-      const tableBody = document.getElementById('tableBody');
-      if (tableBody) {
-        tableBody.innerHTML = `
+      const tbupl = document.getElementById('tbupl');
+      if (tbupl) {
+        tbupl.innerHTML = `
           <tr>
             <td colspan="9" class="text-center p-4 text-red-500">
-              Error loading data: ${err.message}
+              Error loading dataupl: ${err.message}
             </td>
           </tr>`;
       }
     });
 
-  const rowsSelect = document.getElementById('rowsPerPage');
+  const rowsSelect = document.getElementById('rowsPerPageuplupl');
   if (rowsSelect) {
     rowsSelect.addEventListener('change', rowSelect);
   }
   // Inputs for filtering
-  ['symbolSearch', 'ClientId', 'uploadedBy', 'bidQSearch'].forEach(id => {
+  ['symbolSearchupl', 'ClientIdupl',  'bidQSearchupl'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
       let timeout;
       el.addEventListener('input', () => {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-          currentPage = 1;
-          renderTable();
+          currentPageupl = 1;
+          renderTableupl();
         }, 300);
       });
     }
   });
 
-  ['startDate', 'endDate'].forEach(id => {
+  ['startDateupl', 'endDateupl'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
       el.addEventListener('change', () => {
-        currentPage = 1;
-        renderTable();
+        currentPageupl = 1;
+        renderTableupl();
       });
     }
   });
 
   // Add event listener for dropdown checkboxes for RESPONSE filter
-  const dropdownCheckboxes = document.querySelectorAll('#dropdownMenu input[type="checkbox"]');
+  const dropdownCheckboxes = document.querySelectorAll('#dropdownMenuupl input[type="checkbox"]');
   dropdownCheckboxes.forEach(cb => {
     cb.addEventListener('change', () => {
-      currentPage = 1;
-      renderTable();
+      currentPageupl = 1;
+      renderTableupl();
     });
   });
 });
 
 
 
+function renderTableupl() {
+  const filters = getFiltersupl();
+  let filteredDataupl = filterDataupl(dataupl, filters);
 
-function getFilters() {
-  const selectedResponses = Array.from(document.querySelectorAll('#dropdownMenu input[type="checkbox"]:checked'))
+  if (sortColumnupl !== null) {
+    filteredDataupl = sortDataupl(filteredDataupl, sortColumnupl, sortAscupl);
+  }
+
+  const touplPages = Math.max(1, Math.ceil(filteredDataupl.length / rowsPerPageupl));
+  currentPageupl = Math.min(currentPageupl, touplPages);
+  const start = (currentPageupl - 1) * rowsPerPageupl;
+  const paginatedDataupl = filteredDataupl.slice(start, start + rowsPerPageupl);
+
+  const tbupl = document.getElementById('tbupl');
+  if (!tbupl) return;
+  if (paginatedDataupl.length === 0) {
+    tbupl.innerHTML = `
+    <tr>
+      <td colspan="9" class="text-center p-4 font-sm text-center text-gray-700">
+        No records found matching your criteria
+      </td>
+    </tr>`;
+  } else {
+    tbupl.innerHTML = paginatedDataupl.map(row => {
+      const responseClass =
+        row.response?.toLowerCase() === 'verified' ? 'text-green-600' :
+          row.response?.toLowerCase() === 'success' ? 'text-green-600' :
+            row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
+              row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
+
+      return `
+           <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
+  <td class="py-2 pr-3 pl-4 font-sm text-center text-gray-700 sm:pl-0">${row.clientId || ''}</td>
+  <td class="px-2 py-2 text-sm font-sm text-center whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.bidQty || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.upiId || ''}</td>
+  <td class="px-2 py-2 text-sm text-start whitespace-nowrap ${responseClass}">${row.response || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.date || ''}</td>
+  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.time || ''}</td>
+  <td class="px-2 py-2 text-sm text-center whitespace-nowrap">
+    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-500 hover:bg-blue-600 p-1 rounded-sm">
+      View<span class="sr-only">, ${row.clientId || 'record'}</span>
+    </a>
+  </td>
+ 
+</tr>   `;
+    }).join('');
+  }
+
+  const pageInfoupl = document.getElementById('pageInfoupl');
+  if (pageInfoupl) {
+    pageInfoupl.textContent = `Page ${currentPageupl} of ${touplPages}`;
+  }
+}
+
+
+function getFiltersupl() {
+  const selectedResponses = Array.from(document.querySelectorAll('#dropdownMenuupl input[type="checkbox"]:checked'))
     .map(cb => cb.nextElementSibling?.textContent?.trim().toLowerCase() || '');
 
   return {
-    symbol: (document.getElementById('symbolSearch')?.value || '').toLowerCase(),
-    clientId: (document.getElementById('ClientId')?.value || '').toUpperCase().trim(),
-    uploadedBy: (document.getElementById('uploadedBy')?.value || '').toLowerCase(),
-    bidQty: (document.getElementById('bidQSearch')?.value || '').toString().trim(),
-    startDate: document.getElementById('startDate')?.value || '',
-    endDate: document.getElementById('endDate')?.value || '',
-    responses: selectedResponses // ✅ add this line
+    symbol: (document.getElementById('symbolSearchupl')?.value || '').toLowerCase(),
+    clientId: (document.getElementById('ClientIdupl')?.value || '').toUpperCase().trim(),
+    uploadedBy: (document.getElementById('uploadedByupl')?.value || '').toLowerCase(),
+    bidQty: (document.getElementById('bidQSearchupl')?.value || '').toString().trim(),
+    startDate: document.getElementById('startDateupl')?.value || '',
+    endDate: document.getElementById('endDateupl')?.value || '',
+    responses: selectedResponses 
   };
 }
 
 
-function filterData(data, filters) {
-  return data.filter(item => {
+function filterDataupl(dataupl, filters) {
+  return dataupl.filter(item => {
     const itemClientId = (item.clientId || '').toString();
     const itemSymbol = (item.symbol || '').toString().toLowerCase();
     const itemUploadedBy = (item.uploadedBy || '').toString().toLowerCase();
@@ -114,13 +169,13 @@ function filterData(data, filters) {
 }
 
 
-function sortData(data, colIndex, asc) {
+function sortDataupl(dataupl, colIndex, asc) {
   const keys = ["clientId", "symbol", "bidQty", "upiId", "uploadedBy", "response", "date", "time"];
-  if (colIndex < 0 || colIndex >= keys.length) return data;
+  if (colIndex < 0 || colIndex >= keys.length) return dataupl;
 
   const key = keys[colIndex];
 
-  return data.slice().sort((a, b) => {
+  return dataupl.slice().sort((a, b) => {
     let valA = a[key] || '';
     let valB = b[key] || '';
 
@@ -144,146 +199,93 @@ function sortData(data, colIndex, asc) {
   });
 }
 
-function renderTable() {
-  const filters = getFilters();
-  let filteredData = filterData(data, filters);
-
-  if (sortColumn !== null) {
-    filteredData = sortData(filteredData, sortColumn, sortAsc);
-  }
-
-  const totalPages = Math.max(1, Math.ceil(filteredData.length / rowsPerPage));
-  currentPage = Math.min(currentPage, totalPages);
-  const start = (currentPage - 1) * rowsPerPage;
-  const paginatedData = filteredData.slice(start, start + rowsPerPage);
-
-  const tableBody = document.getElementById('tableBody');
-  if (!tableBody) return;
-  if (paginatedData.length === 0) {
-    tableBody.innerHTML = `
-    <tr>
-      <td colspan="9" class="text-center p-4 font-sm text-center text-gray-700">
-        No records found matching your criteria
-      </td>
-    </tr>`;
-  } else {
-    tableBody.innerHTML = paginatedData.map(row => {
-      const responseClass =
-        row.response?.toLowerCase() === 'verified' ? 'text-green-600' :
-          row.response?.toLowerCase() === 'success' ? 'text-green-600' :
-            row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
-              row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
-
-      return `
-           <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
-  <td class="py-2 pr-3 pl-4 font-sm text-center text-gray-700 sm:pl-0">${row.clientId || ''}</td>
-  <td class="px-2 py-2 text-sm font-sm text-center whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.bidQty || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.upiId || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.uploadedBy || ''}</td>
-  <td class="px-2 py-2 text-sm text-center whitespace-nowrap ${responseClass}">${row.response || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.date || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.time || ''}</td>
-  <td class="px-2 py-2 text-sm text-center whitespace-nowrap">
-    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-500 hover:bg-blue-600 p-1 rounded-sm">
-      View<span class="sr-only">, ${row.clientId || 'record'}</span>
-    </a>
-  </td>
-</tr>   `;
-    }).join('');
-  }
-
-  const pageInfo = document.getElementById('pageInfo');
-  if (pageInfo) {
-    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+function prevPageupl() {
+  if (currentPageupl > 1) {
+    currentPageupl--;
+    renderTableupl();
   }
 }
 
-function prevPage() {
-  if (currentPage > 1) {
-    currentPage--;
-    renderTable();
+function nextPageupl() {
+  const filters = getFiltersupl();
+  const filteredLength = filterDataupl(dataupl, filters).length;
+  const touplPages = Math.ceil(filteredLength / rowsPerPageupl);
+
+  if (currentPageupl < touplPages) {
+    currentPageupl++;
+    renderTableupl();
   }
 }
 
-function nextPage() {
-  const filters = getFilters();
-  const filteredLength = filterData(data, filters).length;
-  const totalPages = Math.ceil(filteredLength / rowsPerPage);
-
-  if (currentPage < totalPages) {
-    currentPage++;
-    renderTable();
-  }
-}
-
-function sortTable(colIndex) {
+function sortupl(colIndex) {
   if (colIndex === 8) return; // Ignore "View" column
 
-  if (sortColumn === colIndex) {
-    sortAsc = !sortAsc;
+  if (sortColumnupl === colIndex) {
+    sortAscupl = !sortAscupl;
   } else {
-    sortColumn = colIndex;
-    sortAsc = true;
+    sortColumnupl = colIndex;
+    sortAscupl = true;
   }
-  renderTable();
+  renderTableupl();
 }
-
-function uploadsSearchFilter() {
-  const symbol = (document.getElementById('symbolSearch')?.value || '').toLowerCase().trim();
-  const clientId = (document.getElementById('ClientId')?.value || '').toUpperCase().trim();
-  const uploadedBy = (document.getElementById('uploadedBy')?.value || '').toLowerCase().trim();
-  const bidQty = (document.getElementById('bidQSearch')?.value || '').toString().trim();
-  const startDate = (document.getElementById('startDate')?.value || '').trim();
-  const endDate = (document.getElementById('endDate')?.value || '').trim();
-
-   const checkedResponses = Array.from(document.querySelectorAll('#dropdownMenu input[type="checkbox"]:checked'))
-    .map(cb => cb.nextElementSibling?.textContent?.trim().toLowerCase() || '');
+function filterupl() {
+  const symbol = (document.getElementById('symbolSearchupl')?.value || '').toLowerCase().trim();
+  const clientId = (document.getElementById('ClientIdupl')?.value || '').toUpperCase().trim();
+  const bidQty = (document.getElementById('bidQSearchupl')?.value || '').toString().trim();
+  const startDate = (document.getElementById('startDateupl')?.value || '').trim();
+  const endDate = (document.getElementById('endDateupl')?.value || '').trim();
 
 
-  if (symbol || clientId || uploadedBy || bidQty || startDate || endDate ||  checkedResponses ) {
-    renderTable();
+
+  const checkedResponses = Array.from(document.querySelectorAll('#dropdownMenuupl input[type="checkbox"]:checked'))
+    .map(cb => cb.nextElementSibling?.textContent?.trim().toLowerCase())
+    .filter(text => !!text); // Removes empty strings
+
+  if (symbol || clientId || bidQty || startDate || endDate || checkedResponses.length > 0) {
+    renderTableupl({ symbol, clientId, bidQty, startDate, endDate, checkedResponses });
+    console.log(clientId)
   } else {
-    alert("Please select At least one.");
+    alert("Please select at least one search or filter criteria.");
   }
 }
 
 
-function rowSelect() {
-  const selectedValue = parseInt(document.getElementById('rowsPerPage').value);
-  rowsPerPage = selectedValue;
-  currentPage = 1;
-  renderTable();
+
+function rowSelectupl() {
+  const selectedValue = parseInt(document.getElementById('rowsPerPageupl').value);
+  rowsPerPageupl = selectedValue;
+  currentPageupl = 1;
+  renderTableupl();
 }
 
-function SelectPage() {
-  const searchText = (document.getElementById('searchPage')?.value || '').toLowerCase().trim();
+function SelectPageupl() {
+  const searchText = (document.getElementById('searchPageupl')?.value || '').toLowerCase().trim();
   if (!searchText) {
-    renderTable(); // Reset if empty
+    renderTableupl(); // Reset if empty
     return;
   }
 
-  const filters = getFilters();
-  let filteredData = filterData(data, filters);
+  const filters = getFiltersupl();
+  let filteredDataupl = filterDataupl(dataupl, filters);
 
-  if (sortColumn !== null) {
-    filteredData = sortData(filteredData, sortColumn, sortAsc);
+  if (sortColumnupl !== null) {
+    filteredDataupl = sortDataupl(filteredDataupl, sortColumnupl, sortAscupl);
   }
 
-  const start = (currentPage - 1) * rowsPerPage;
-  const paginatedData = filteredData.slice(start, start + rowsPerPage);
+  const start = (currentPageupl - 1) * rowsPerPageupl;
+  const paginatedDataupl = filteredDataupl.slice(start, start + rowsPerPageupl);
 
-  const matchedData = paginatedData.filter(row =>
+  const matchedDataupl = paginatedDataupl.filter(row =>
     Object.values(row).some(val =>
       String(val).toLowerCase().includes(searchText)
     )
   );
 
-  const tableBody = document.getElementById('tableBody');
-  if (!tableBody) return;
+  const tbupl = document.getElementById('tbupl');
+  if (!tbupl) return;
 
-  if (matchedData.length === 0) {
-    tableBody.innerHTML = `
+  if (matchedDataupl.length === 0) {
+    tbupl.innerHTML = `
       <tr>
         <td colspan="9" class="text-center p-4 text-sm text-gray-900">
           No matching record found on this page.
@@ -292,35 +294,35 @@ function SelectPage() {
     return;
   }
 
-  tableBody.innerHTML = matchedData.map(row => {
-    const responseClass =
-      row.response?.toLowerCase() === 'verified' ? 'text-green-600' :
-        row.response?.toLowerCase() === 'success' ? 'text-green-600' :
-          row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
-            row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
+    tbupl.innerHTML = matchedDataupl.map(row => {
+        const responseClass =
+        row.response?.toLowerCase() === 'verified' ? 'text-green-600' :
+            row.response?.toLowerCase() === 'success' ? 'text-green-600' :
+            row.response?.toLowerCase() === 'failed' ? 'text-red-600' :
+                row.response?.toLowerCase() === 'pending' ? 'text-yellow-600' : 'text-gray-600';
 
-    return `
-     <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
-  <td class="py-2 pr-3 pl-4 font-sm text-center text-gray-700 sm:pl-0">${row.clientId || ''}</td>
-  <td class="px-2 py-2 text-sm font-sm text-center whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.bidQty || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.upiId || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.uploadedBy || ''}</td>
-  <td class="px-2 py-2 text-sm text-center whitespace-nowrap ${responseClass}">${row.response || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.date || ''}</td>
-  <td class="px-2 py-2 font-sm text-center text-gray-700">${row.time || ''}</td>
-  <td class="px-2 py-2 text-sm text-center whitespace-nowrap">
-    <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-500 hover:bg-blue-600 p-1 rounded-sm">
-      View<span class="sr-only">, ${row.clientId || 'record'}</span>
-    </a>
-  </td>
-</tr>  `;
-  }).join('');
+        return `
+        <tr class="hover:bg-gray-50 divide-y divide-gray-200 bg-white">
+    <td class="py-2 pr-3 pl-4 font-sm text-center text-gray-700 sm:pl-0">${row.clientId || ''}</td>
+    <td class="px-2 py-2 text-sm font-sm text-center whitespace-nowrap text-gray-900">${row.symbol || ''}</td>
+    <td class="px-2 py-2 font-sm text-center text-gray-700">${row.bidQty || ''}</td>
+    <td class="px-2 py-2 font-sm text-center text-gray-700">${row.upiId || ''}</td>
+    <td class="px-2 py-2  text-sm text-center whitespace-nowrap ${responseClass}">${row.response || ''}</td>
+    <td class="px-2 py-2 font-sm text-center text-gray-700">${row.date || ''}</td>
+    <td class="px-2 py-2 font-sm text-center text-gray-700">${row.time || ''}</td>
+    <td class="px-2 py-2 text-sm text-center whitespace-nowrap">
+        <a href="${row.viewLink || '#'}" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-500 hover:bg-blue-600 p-1 rounded-sm">
+        View<span class="sr-only">, ${row.clientId || 'record'}</span>
+        </a>
+    </td>
+   
+    </tr>  `;
+    }).join('');
 
   // Update page info to indicate it's a filtered view
-  const pageInfo = document.getElementById('pageInfo');
-  if (pageInfo) {
-    pageInfo.textContent = `Search result in page ${currentPage}`;
+  const pageInfoupl = document.getElementById('pageInfoupl');
+  if (pageInfoupl) {
+    pageInfoupl.textContent = `Search result in page ${currentPageupl}`;
   }
 
 
@@ -328,21 +330,23 @@ function SelectPage() {
 }
 
 
- function toggleDropdown() {
-    const dropdownMenu = document.getElementById("dropdownMenu");
-    dropdownMenu.classList.toggle("hidden");
+
+
+
+ function toggleDropdownupl() {
+    const dropdownMenuupl = document.getElementById("dropdownMenuupl");
+    dropdownMenuupl.classList.toggle("hidden");
   }
 
  
 
- function clearDropdownCheckboxes() {
-    const checkboxes = document.querySelectorAll('#dropdownMenu input[type="checkbox"]');
+ function clearDropdownCheckboxesupl() {
+    const checkboxes = document.querySelectorAll('#dropdownMenuupl input[type="checkbox"]');
     checkboxes.forEach(cb => cb.checked = false);
   }
 
-  function toggleDropdown() {
-    const menu = document.getElementById('dropdownMenu');
+  function toggleDropdownupl() {
+    const menu = document.getElementById('dropdownMenuupl');
     menu.classList.toggle('hidden');
   }
-
 

@@ -2,7 +2,7 @@
 <div class="sticky top-0 z-30 bg-white border-b border-gray-200">
   <!-- Title -->
   <div class="max-w-md h-auto">
-    <h3 class="text-lg text-gray-800 font-semibold pt-3">Transaction Uploaded List</h3>
+    <h3 class="text-lg text-gray-800 font-semibold pt-3"> Transaction Uploaded List</h3>
     <!-- <hr class=" bg-blue-500 w-[15px] h-[6px] border-none" /> -->
   </div>
 
@@ -10,9 +10,9 @@
 
     <!-- Client ID -->
     <div class="relative flex-1 min-w-full sm:min-w-[100px]">
-      <input type="text" id="ClientId" placeholder="Client ID"
+      <input type="text" id="ClientIdupl" placeholder="Client ID"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <span onclick="document.getElementById('ClientId').value=''"
+      <span onclick="document.getElementById('ClientIdupl').value=''"
         class="absolute top-1.5 right-2 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
         &times;
       </span>
@@ -20,18 +20,19 @@
 
     <!-- Symbol -->
     <div class="relative flex-1 min-w-full sm:min-w-[100px]">
-      <input type="text" id="symbolSearch" placeholder="Symbol"
+      <input type="text" id="symbolSearchupl" placeholder="Symbol"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <span onclick="document.getElementById('symbolSearch').value=''"
+      <span onclick="document.getElementById('symbolSearchupl').value=''"
         class="absolute top-1.5 right-2 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
         &times;
       </span>
     </div>
 
+
     <!-- Dropdown -->
     <div class="relative flex-1 min-w-full sm:min-w-[100px]">
       <div>
-        <button onclick="toggleDropdown()" id="dropdownButton" type="button"
+        <button onclick="toggleDropdownupl()" id="dropdownButtonupl" type="button"
           class="w-full inline-flex justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm text-gray-400 shadow-xs ring-1 focus:ring-2 focus:ring-blue-500"
           aria-expanded="false" aria-haspopup="true">
           RESPONSE
@@ -40,7 +41,7 @@
               d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
               clip-rule="evenodd" />
           </svg>
-          <span onclick="clearDropdownCheckboxes()"
+          <span onclick="clearDropdownCheckboxesupl()"
             class="absolute top-1 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
             &times;
           </span>
@@ -48,53 +49,11 @@
         </button>
       </div>
 
-      <div id="dropdownMenu"
+      <div id="dropdownMenuupl"
         class="hidden absolute right-0 z-40 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
         role="menu" aria-orientation="vertical" tabindex="-1">
 
         <!-- Group 1 -->
-        <div class="py-1 space-y-1" role="none">
-          <label
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
-            <input type="checkbox">
-            <span>System Error</span>
-          </label>
-          <label
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
-            <input type="checkbox">
-            <span>Invalid Ben.Id</span>
-          </label>
-        </div>
-
-        <!-- Group 2 -->
-        <div class="py-1 space-y-1" role="none">
-          <label
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
-            <input type="checkbox">
-            <span>Application Submitted</span>
-          </label>
-          <label
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
-            <input type="checkbox">
-            <span>Bid Canceled</span>
-          </label>
-        </div>
-
-        <!-- Group 3 -->
-        <div class="py-1 space-y-1" role="none">
-          <label
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
-            <input type="checkbox">
-            <span>Market is not open</span>
-          </label>
-          <label
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
-            <input type="checkbox">
-            <span>Invalid Depository Name</span>
-          </label>
-        </div>
-
-        <!-- Group 4 -->
         <div class="py-1 space-y-1" role="none">
           <label
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
@@ -104,7 +63,40 @@
           <label
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
             <input type="checkbox">
+            <span>Bid Canceled</span>
+          </label>
+        </div>
+
+        <!-- Group 2 -->
+        <div class="py-1 space-y-1" role="none">
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>Market is not open</span>
+          </label>
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
             <span>Invalid field: UPI</span>
+          </label>
+        </div>
+
+        <!-- Group 3 -->
+        <div class="py-1 space-y-1" role="none">
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>Invalid Depository Name</span>
+          </label>
+           <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>application Submitted</span>
+          </label>
+          <label
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer flex items-center space-x-2 ">
+            <input type="checkbox">
+            <span>invalid Ben.Id</span>
           </label>
         </div>
 
@@ -116,10 +108,10 @@
 
     <!-- Start Date -->
     <div class="relative flex flex-col min-w-full sm:min-w-[100px]">
-      <label for="startDate" class="mb-1 text-sm text-gray-600">Start Date</label>
-      <input type="date" id="startDate"
+      <label for="startDateupl" class="mb-1 text-sm text-gray-600">Start Date</label>
+      <input type="date" id="startDateupl"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <span onclick="document.getElementById('startDate').value=''"
+      <span onclick="document.getElementById('startDateupl').value=''"
         class="absolute top-7.5 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
         &times;
       </span>
@@ -127,17 +119,17 @@
 
     <!-- End Date -->
     <div class="relative flex flex-col min-w-full sm:min-w-[100px]">
-      <label for="endDate" class="mb-1 text-sm text-gray-600">End Date</label>
-      <input type="date" id="endDate"
+      <label for="endDateupl" class="mb-1 text-sm text-gray-600">End Date</label>
+      <input type="date" id="endDateupl"
         class="w-full pr-8 rounded-md border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <span onclick="document.getElementById('endDate').value=''"
+      <span onclick="document.getElementById('endDateupl').value=''"
         class="absolute top-7.5 right-1 w-6 h-6 text-center text-base leading-5 text-gray-400 hover:text-red-500 hover:text-3xl rounded-full transition flex items-center justify-center cursor-pointer">
         &times;
       </span>
     </div>
 
     <!-- Search Button -->
-    <button onclick="uploadsSearchFilter()"
+    <button onclick="filterupl()"
       class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition">
       Search
     </button>
@@ -149,88 +141,86 @@
   <div class="flex justify-end items-center gap-2 w-full">
     <!-- Search input with clear button -->
     <div class="relative flex-1 py-[4px] sm:flex-none sm:w-48">
-      <input type="text" id="searchPage" placeholder="Selected Page Search"
+      <input type="text" id="searchPageupl" placeholder="Selected Page Search"
         class="w-full pr-8 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <span onclick="document.getElementById('searchPage').value=''"
+      <span onclick="document.getElementById('searchPageupl').value=''"
         class="absolute right-2 top-1.0 text-2xl cursor-pointer text-gray-400 hover:text-red-500">
         &times;
       </span>
     </div>
 
     <!-- Select button -->
-    <button id="rowSelect" onclick="SelectPage()"
+    <button id="rowSelectupl" onclick="SelectPageupl()"
       class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
-      Select
+      Search
     </button>
   </div>
   <!-- End Controls -->
 
 
   <!-- Scrollable Table Container -->
-  <div class="relative bg-white  max-h-[70vh] overflow-auto">
+  <div class="relative bg-white  max-h-[66vh] overflow-auto">
     <table class="min-w-full text-sm text-left">
       <thead class="sticky top-0  z-20 bg-white border-b border-gray-200">
         <tr class="cursor-pointer bg-stone-100 ">
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(0)">Client ID <span><i
+            onclick="sortupl(0)">Client ID <span><i
                 class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span> </th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(1)">Symbol <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+            onclick="sortupl(1)">Symbol <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
           </th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(2)">BID Quantity <span><i
+            onclick="sortupl(2)">BID Quantity <span><i
                 class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span> </th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(3)">UPI ID <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+            onclick="sortupl(3)">UPI ID <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+          </th>
+         
+          <th class="px-3 py-2  text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
+            onclick="sortupl(4)">Response <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
           </th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(4)">Uploaded By <span><i
-                class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span> </th>
-          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(5)">Response <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+            onclick="sortupl(5)">Date <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
           </th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(6)">Date <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+            onclick="sortupl(6)">Time <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
           </th>
           <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(7)">Time <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
+            onclick="sortupl(7)">View <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
           </th>
-          <th class="px-3 py-2 text-xs sm:text-sm font-medium text-center text-gray-700 hover:text-blue-600"
-            onclick="sortTable(8)">View <span><i class="fa-solid fa-sort text-gray-400 text-sm pl-[2px]"></i></span>
-          </th>
-        </tr>
+           
 
       </thead>
-      <tbody id="tableBody">
+      <tbody id="tbupl">
         <!-- Dynamic rows go here -->
       </tbody>
     </table>
   </div>
   <!-- Fixed Footer -->
-  <div class="bg-white  p-2 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
-    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 pb-2  ">
+  <div class="bg-white  py-1 sm:mt-4 relative pb-0 text-sm font-semibold sticky bottom-0 z-30 ">
+    <div class="flex flex-row items-center justify-between gap-1 sm:gap-3 p-3 ">
       <!-- Rows Per Page Selector -->
       <div class="flex items-center gap-1 sm:gap-2">
-        <select id="rowsPerPage"
+        <select id="rowsPerPageupl"
           class="rounded-md border border-gray-300 px-2 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option value="10">10 rows</option>
           <option value="15" selected>15 rows</option>
           <option value="50">50 rows</option>
           <option value="250">250 rows</option>
         </select>
-        <button onclick="rowSelect()"
+        <button onclick="rowSelectupl()"
           class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition whitespace-nowrap">
           Go
         </button>
       </div>
       <!-- Pagination Buttons -->
       <div class="flex items-center gap-1 sm:gap-2">
-        <button onclick="prevPage()"
+        <button onclick="prevPageupl()"
           class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
           Prev
         </button>
-        <span id="pageInfo" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
-        <button onclick="nextPage()"
+        <span id="pageInfoupl" class="text-gray-900 text-xs sm:text-sm font-medium whitespace-nowrap"></span>
+        <button onclick="nextPageupl()"
           class="px-3 py-1.5 sm:px-4 sm:py-1 bg-blue-500 text-white text-xs sm:text-sm font-medium rounded-md hover:bg-blue-600 transition">
           Next
         </button>
@@ -239,12 +229,8 @@
   </div>
 
 
-
-
-
-
   <script>
-    const inputsToUppercase = ['searchPage', 'symbolSearch', 'ClientId', 'uploadedBy'];
+    const inputsToUppercase = ['searchPageupl', 'symbolSearchupl', 'ClientIdupl'];
 
     inputsToUppercase.forEach(id => {
       const input = document.getElementById(id);
