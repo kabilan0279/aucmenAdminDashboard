@@ -1,0 +1,265 @@
+
+<div class="bg-gray-50 font-sans">
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-gray-500/20 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out"></div>
+
+  <div class="container mx-auto px-4 py-8 max-w-7xl">
+    <header class="mb-8 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-semibold text-gray-800">Investment Portfolio</h1>
+        <p class="text-gray-600 mt-2">Track and manage your investments in one place</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="global-search" 
+            placeholder="Search anything..." 
+            class="pl-10 pr-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-64"
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-gray-400 absolute left-3 top-2.5">
+            <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <button id="column-visibility-toggle" class="p-2 text-gray-600 hover:text-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M15 3.75H9v16.5h6V3.75zM16.5 20.25h3.375c1.035 0 1.875-.84 1.875-1.875V5.625c0-1.036-.84-1.875-1.875-1.875H16.5v16.5zM4.125 3.75H7.5v16.5H4.125a1.875 1.875 0 01-1.875-1.875V5.625c0-1.036.84-1.875 1.875-1.875z" />
+          </svg>
+        </button>
+        <button id="download-csv" class="p-2 text-gray-600 hover:text-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Column Visibility Popup -->
+    <div id="column-visibility-popup" class="hidden">
+      <div class="column-toggle-header">
+        <span>Show</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </div>
+      <div class="column-toggle-content">
+        <label class="column-toggle-item">
+          <input type="checkbox" class="column-toggle" data-column="name" checked>
+          <span>Script Name</span>
+        </label>
+        <label class="column-toggle-item">
+          <input type="checkbox" class="column-toggle" data-column="isin" checked>
+          <span>ISIN</span>
+        </label>
+        <label class="column-toggle-item">
+          <input type="checkbox" class="column-toggle" data-column="qty" checked>
+          <span>Free QTY</span>
+        </label>
+        <label class="column-toggle-item">
+          <input type="checkbox" class="column-toggle" data-column="value" checked>
+          <span>Script Value</span>
+        </label>
+        <label class="column-toggle-item">
+          <input type="checkbox" class="column-toggle" data-column="invested" checked>
+          <span>Amount Invested</span>
+        </label>
+        <label class="column-toggle-item">
+          <input type="checkbox" class="column-toggle" data-column="poa" checked>
+          <span>POA</span>
+        </label>
+        <label class="column-toggle-item">
+          <input type="checkbox" class="column-toggle" data-column="status" checked>
+          <span>Status</span>
+        </label>
+        <button id="reset-columns">Reset</button>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <div class="overflow-x-auto">
+        <table id="portfolio-table" class="min-w-full">
+          <thead>
+            <tr class="bg-gray-100 border-b">
+              <th class="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 cursor-pointer" data-sort="name">
+                    <span>Script Name</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <button class="filter-button ml-2" data-column="name">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.208.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 cursor-pointer" data-sort="isin">
+                    <span>ISIN</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <button class="filter-button ml-2" data-column="isin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.208.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 cursor-pointer" data-sort="qty">
+                    <span>Free QTY</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <button class="filter-button ml-2" data-column="qty">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.208.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 cursor-pointer" data-sort="value">
+                    <span>Script Value</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <button class="filter-button ml-2" data-column="value">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.208.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 cursor-pointer" data-sort="invested">
+                    <span>Amount Invested</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <button class="filter-button ml-2" data-column="invested">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.208.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 cursor-pointer" data-sort="poa">
+                    <span>POA</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <button class="filter-button ml-2" data-column="poa">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.208.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 cursor-pointer" data-sort="status">
+                    <span>Status</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <button class="filter-button ml-2" data-column="status">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-500">
+                      <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.208.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="portfolio-body"></tbody>
+        </table>
+      </div>
+      
+      <!-- Filter Popup -->
+      <div id="filter-popup" class="hidden fixed bg-white rounded-lg shadow-lg border p-4 w-64">
+        <div class="space-y-3">
+          <select id="match-type" class="w-full p-2 border rounded-md text-sm">
+            <option value="all">Match All</option>
+            <option value="any">Match Any</option>
+          </select>
+          
+          <select id="filter-type" class="w-full p-2 border rounded-md text-sm">
+            <option value="startsWith">Starts with</option>
+            <option value="contains">Contains</option>
+            <option value="equals">Equals</option>
+            <option value="endsWith">Ends with</option>
+          </select>
+          
+          <input type="text" id="filter-value" class="w-full p-2 border rounded-md text-sm" placeholder="Search...">
+          
+          <div class="flex justify-between pt-2">
+            <button id="clear-filter" class="px-4 py-2 text-sm text-gray-600 hover:text-gray-800">
+              Clear
+            </button>
+            <button id="apply-filter" class="px-4 py-2 text-sm text-white bg-green-500 rounded-md hover:bg-green-600">
+              Apply
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row justify-between items-center px-6 py-4 bg-white border-t">
+        <div class="text-sm text-gray-600 mb-4 sm:mb-0">
+          <span id="row-count">No of Rows 0</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button id="first-page" class="pagination-btn px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600">
+            «
+          </button>
+          <button id="prev-page" class="pagination-btn px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600">
+            ‹
+          </button>
+          <div id="page-numbers" class="flex space-x-2">
+            <!-- Page numbers will be inserted here by JavaScript -->
+          </div>
+          <button id="next-page" class="pagination-btn px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600">
+            ›
+          </button>
+          <button id="last-page" class="pagination-btn px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600">
+            »
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sliding Panel -->
+  <div id="sliding-panel" class="fixed top-0 right-0 h-full w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-semibold text-gray-800">Investment Details</h2>
+        <button id="close-panel" class="text-gray-500 hover:text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="panel-content" class="space-y-4">
+        <!-- Content will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+
+</div>
