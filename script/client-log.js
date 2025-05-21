@@ -4,7 +4,7 @@ let rowsPerPageClog = 15;
 let sortDirectionClog = [true, true, true, true, true, true]; // for 6 columns
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('json/ClientLog.json')
+    fetch('json/clientlog.json')
         .then(res => res.json())
         .then(json => {
             dataClog = json;
