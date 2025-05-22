@@ -54,7 +54,6 @@ function searchClient() {
 
 }
 
-
 function emptyVAlue() {
     document.getElementById('search-client').value = '';
     const clientTab = document.getElementById('client-details');
